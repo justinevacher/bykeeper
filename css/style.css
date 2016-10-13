@@ -9,7 +9,7 @@
 }
 
 body {
-	background: url("/img/velo.jpg");
+	background: url("../img/velo.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	font-family: "Nunito", sans-serif;
@@ -24,18 +24,27 @@ body {
 	z-index: 1;
 }
 
-h3 {
+h2 {
+	font-size: 400%;
 	font-family: "Nunito", sans-serif;
-	font-size: 130%;
 	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+h3 {
+
+	font-size: 300%;
+	font-family: "Open Sans", sans-serif;
+	padding-top: 150px;
 }
 
 p {
-	font-size: 400%;
+	font-size: 200%;
 	font-family: "Nunito", sans-serif;
+	padding-top: 20px;
 }
 
-p strong {
+strong {
 	color : #72bbf9;
 }
 
@@ -52,15 +61,6 @@ input {
 	position: relative;
 }
 
-footer {
-	text-align: left;
-	position: absolute;
-	top: 510px;
-}
-
-footer p {
-	font-size:150%;
-}
 
 button {
 	color:#72bbf9;

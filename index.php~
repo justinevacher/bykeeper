@@ -1,6 +1,0 @@
-<HTML>
-<BODY>
-<div><center><img src="/images/iut-logo.png" alt="iut"></center></div>
-<div><center><b><?php echo $_SERVER['HTTP_HOST'] ?></b></center></div>
-</BODY>
-</HTML>
