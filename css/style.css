@@ -1,0 +1,67 @@
+@font-face {
+    font-family: "Nunito";
+    src: url("../font/NUNITO-REGULAR.TTF");
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url("../font/OPENSANS-REGULAR.TTF");
+}
+
+body {
+	background: url("/img/velo.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: "Nunito", sans-serif;
+	padding-left: 70px;
+	padding-right: 70px;
+	color: white;
+}
+
+#avertissement {
+	font-family: "Open Sans", sans-serif;
+	text-align: center;
+	z-index: 1;
+}
+
+h3 {
+	font-family: "Nunito", sans-serif;
+	font-size: 130%;
+	padding-top: 40px;
+}
+
+p {
+	font-size: 400%;
+	font-family: "Nunito", sans-serif;
+}
+
+p strong {
+	color : #72bbf9;
+}
+
+input {
+	font-size: 110%;
+	width: 470px;
+	height: 40px;
+	position: relative;
+}
+
+#confirm {
+	width: 80px;
+	height: 45px;
+	position: relative;
+}
+
+footer {
+	text-align: left;
+	position: absolute;
+	top: 510px;
+}
+
+footer p {
+	font-size:150%;
+}
+
+button {
+	color:#72bbf9;
+}
