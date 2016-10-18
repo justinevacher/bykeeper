@@ -1,4 +1,6 @@
 html,body{
+	display: flex;
+	align-items: center;
 	width:100%;
 	height: 100%;
 	background: url(../img/velo.jpg) ;
@@ -6,7 +8,7 @@ html,body{
 }
 
 header{
-	height: 100%;
+	height: auto;
 }
 
 
@@ -16,21 +18,40 @@ header img{
 }
 
 header section{
+	width:90%;
 	background:rgba(0,0,0,0.4);
 	color:white;
-	width:90%;
-	padding:4% 4%;
 	text-align: center;
+	padding:4% 4%;
 	margin: auto;
 }
 
 
 header section a {
 	display: block;
-	padding: 2% 5%;
-	background: #72BBF9;
 	width: 70%;
-	margin: 4% auto;
+	background: #72BBF9;
 	color:white;
-	box-shadow:;
+	padding: 2% 5%;	
+	margin: 4% auto;
 }
+
+
+
+
+
+
+@media screen and (min-width:690px){
+	header img,header section{
+		width: 49%;
+		display: inline-block;
+		vertical-align: middle;
+		padding: 3%;
+	}
+}
+
+
+
+
+
+
