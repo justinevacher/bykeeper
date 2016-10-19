@@ -43,10 +43,13 @@ header section a {
 
 @media screen and (min-width:690px){
 	header img,header section{
-		width: 49%;
+		width:46%;
 		display: inline-block;
 		vertical-align: middle;
 		padding: 3%;
+	}
+	header section{
+		margin:3%;
 	}
 }
 
