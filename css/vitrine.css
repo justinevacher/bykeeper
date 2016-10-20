@@ -1,10 +1,21 @@
+/*FONTS */
+@font-face {
+    font-family: "Nunito";
+    src: url("../font/NUNITO-REGULAR.TTF");
+}
+
+@font-face {
+    font-family: "Open Sans Condensed";
+    src: url("../font/OpenSans-CondLight.ttf");
+}
+
 html, body {
 	display: flex;
 	align-items: center;
 	width: 100%;
 	height: 100%;
 	background: url(../img/velo.jpg);
-	font-family: "Open Sans", sans-serif;
+	font-family: "Open Sans Condensed", sans-serif;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -26,6 +37,7 @@ header section {
 	text-align: center;
 	padding: 4% 4%;
 	margin: auto;
+	font-size: 150%;
 }
 
 
@@ -34,7 +46,7 @@ header section a {
 	width: 70%;
 	background: #72BBF9;
 	color: white;
-	padding: 2% 5%;	
+	padding: 2% 5%;
 	margin: 4% auto;
 }
 
