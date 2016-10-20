@@ -2,51 +2,90 @@
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <title>Page inexistante</title>
+    <title>404 - Page Not Found</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="img/fav.png" />
     <style>
 
-        * {
-            line-height: 1.2;
-            margin: 0;
-        }
-
-        html {
-            color: #888;
-            display: table;
-            font-family: sans-serif;
-            height: 100%;
-            text-align: center;
-            width: 100%;
+        @font-face {
+            font-family: "Nunito";
+            src: url("font/NUNITO-REGULAR.TTF");
         }
 
         body {
-            display: table-cell;
-            vertical-align: middle;
-            margin: 2em auto;
+            background: url("img/vélo404_2.jpg");
+            background-position: right;
+            background-repeat: no-repeat;
+            background-size:cover;
+            height:100vh;
+            vertical-align: left;
+            margin:0;
+
+        }
+
+        body p {
+            background-color:rgba(0,0,0,0.3);
+            color : #72bbf9;
+            font-family: "Nunito", sans-serif;
+            margin: 0 auto;
+            position:relative;
+            text-align:center;
+            top:150px;
+            width:100%; 
         }
 
         h1 {
-            color: #555;
-            font-size: 2em;
+            color : #72bbf9;
             font-weight: 400;
+            font-family: "Nunito", sans-serif;
+            font-size: 2.5em;
+            padding-right: 5px;
+            text-align: center;
+            background-color:rgba(0,0,0,0.3);
+            margin-top:30px;
         }
 
-        p {
-            margin: 0 auto;
-            width: 280px;
-        }
-
-        @media only screen and (max-width: 280px) {
-
-            body, p {
-                width: 95%;
+    /* taille d'écran mobile min */
+        @media only screen and (min-width: 360px) {
+            
+            body{
+                background-position: right bottom;
             }
 
-            h1 {
-                font-size: 1.5em;
-                margin: 0 0 0.3em;
+            body p{
+                font-size:1.5em;
+                top:300px;
+                position:relative;
+            }
+
+        }
+    /* Taille d'écran mobile max */
+        @media only screen and (min-width: 360px) {
+            
+            body{
+                background-position: right bottom;
+                
+            }
+
+            body p{
+                font-size:1.5em;
+                top:300px;
+                position:relative;
+            }
+
+        }
+
+    /* Taille d'écran mobile tablette */
+        @media only screen and (min-width: 360px) {
+            
+            body{
+                background-position: right bottom;
+                
+            }
+
+            body p{
+                font-size:2.3em;
+                top:300px;
+                position:relative;
             }
 
         }
@@ -54,8 +93,10 @@
     </style>
 </head>
 <body>
-	<h1>:(</h1>
-    <h1>Page inexistante</h1>
-    <p>La page à laquelle vous essayez d'accéder n'existe pas.</p>
+    <h1><strong>Erreur 404 </strong></h1>
+    <h1><strong>Page non trouvée</strong></h1>
+
+    <p>Zut ! on a déraillé... la page n'est pas disponible :(</p>
 </body>
 </html>
+<!-- IE needs 512+ bytes: http://blogs.msdn.com/b/ieinternals/archive/2010/08/19/http-error-pages-in-internet-explorer.aspx -->
