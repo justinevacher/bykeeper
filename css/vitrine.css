@@ -1,29 +1,30 @@
-html,body{
+html, body {
 	display: flex;
 	align-items: center;
-	width:100%;
+	width: 100%;
 	height: 100%;
-	background: url(../img/velo.jpg) ;
+	background: url(../img/velo.jpg);
+	font-family: "Open Sans", sans-serif;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
-header{
+header {
 	height: auto;
 }
 
 
-header img{
+header img {
 	width: 100%;
 	height: 60%;
 }
 
-header section{
-	width:90%;
-	background:rgba(0,0,0,0.4);
-	color:white;
+header section {
+	width: 90%;
+	background: rgba(0,0,0,0.4);
+	color: white;
 	text-align: center;
-	padding:4% 4%;
+	padding: 4% 4%;
 	margin: auto;
 }
 
@@ -32,30 +33,19 @@ header section a {
 	display: block;
 	width: 70%;
 	background: #72BBF9;
-	color:white;
+	color: white;
 	padding: 2% 5%;	
 	margin: 4% auto;
 }
 
-
-
-
-
-
-@media screen and (min-width:690px){
-	header img,header section{
-		width:46%;
+@media screen and (min-width:690px) {
+	header img, header section {
+		width: 46%;
 		display: inline-block;
 		vertical-align: middle;
 		padding: 3%;
 	}
-	header section{
-		margin:3%;
+	header section {
+		margin: 3%;
 	}
 }
-
-
-
-
-
-
