@@ -37,6 +37,7 @@ h2{
 header{
 	height:55px;
 	background: url(../img/fond-mobile.jpg) no-repeat;
+	background-position-y: -53px;
 }
 
 header>div:first-of-type{
@@ -173,13 +174,32 @@ body>div>section:nth-of-type(2) form label{
 }
 
 
+@media screen and (min-width:720px) and (max-width:992px){
+	/*arriere plan*/
+
+	header{
+	height:55px;
+	background: url(../img/fond-mobile.jpg) no-repeat;
+	background-size:cover;
+	}
+
+}
+
 @media screen and (min-width:992px){
+	/*arriere plan*/
+	header{
+		height:115px;
+		background: url(../img/velo.jpg) no-repeat;
+		background-size: cover;
+		background-position-y: -258px;
+	}
+
 	/*données + enregistrer trajet côte à côte*/
 	body>div>section:nth-of-type(1),body>div>section:nth-of-type(2){
 		width: 48%;
 		background:white;
 		margin: 1%;
-		height: 240px;
+		height: 250px;
 	}
 
 	/*enregistrer trajet*/
@@ -187,6 +207,26 @@ body>div>section:nth-of-type(2) form label{
 		width: 14%;
 		height: 40px;
 	}
+
 }
 
+@media screen and (min-width:1400px){
+	/*enregistrer trajet*/
+	body>div>section:nth-of-type(2) form {
+		padding: 2% 0;
+	}
+
+}
+
+@media screen and (min-width:1700px){
+	/*arriere plan*/
+	header{
+		height:160px;
+	}
+
+	/*données + enregistrer trajet côte à côte*/
+	body>div>section:nth-of-type(1),body>div>section:nth-of-type(2){
+		height: 270px;
+	}
+}
 
