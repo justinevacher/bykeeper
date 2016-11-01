@@ -75,6 +75,9 @@ body>section:first-of-type{
 
 /*############################CORPS */
 
+
+
+
 /*données*/
 body>div>section:nth-of-type(1){
 	height:200px;
@@ -91,7 +94,7 @@ body>div>section:nth-of-type(1) div{
 	width:90px;
 	height: 90px;
 	border-radius: 50%;	
-	margin:auto;
+	margin : 0 auto 5% auto;
 
 	-webkit-box-shadow: 4px 2px 4px -3px rgba(9,3,38,1);
 	-moz-box-shadow: 4px 2px 4px -3px rgba(9,3,38,1);
@@ -160,16 +163,30 @@ body>div>section:nth-of-type(2) form label{
 }
 
 
+/*media queries*/
 
-@media screen and (min-width:800px){
-/*	body>section:nth-of-type(2),body>section:nth-of-type(3){
-		display: inline-block;
-		width: 47%;
-		height:300px;
-		background: white;
+@media screen and (min-width: 390px){
+	.wrap{
+	width:90%;
+	margin:auto;
+	}
+}
+
+
+@media screen and (min-width:992px){
+	/*données + enregistrer trajet côte à côte*/
+	body>div>section:nth-of-type(1),body>div>section:nth-of-type(2){
+		width: 48%;
+		background:white;
 		margin: 1%;
-		vertical-align: top;
-	}*/
+		height: 240px;
+	}
+
+	/*enregistrer trajet*/
+	body>div>section:nth-of-type(2) button{
+		width: 14%;
+		height: 40px;
+	}
 }
 
 
