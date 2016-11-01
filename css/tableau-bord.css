@@ -66,7 +66,7 @@ header>div+div img{
 }
 
 /*#################################alarme connectée*/
-body section:first-of-type{
+body>section:first-of-type{
 	height:30px;
 	background: white;
 	text-align: center;
@@ -76,21 +76,20 @@ body section:first-of-type{
 /*############################CORPS */
 
 /*données*/
-body>section:nth-of-type(2){
+body>div>section:nth-of-type(1){
 	height:200px;
 	font-family: Nunito;
+	display: flex;
+	align-items: center;
 }
-body>section:nth-of-type(2) div{
-	display: inline-block;
-	width: 48%;
-	height: 100%;
+body>div>section:nth-of-type(1) div{
+	width:48%;
 	text-align: center;
-	vertical-align: top;
 }
 
 #rondVitesse,#rondDistance{
-	width:100px;
-	height: 100px;
+	width:90px;
+	height: 90px;
 	border-radius: 50%;	
 	margin:auto;
 
@@ -109,7 +108,7 @@ body>section:nth-of-type(2) div{
 }
 #rondVitesse span:first-of-type,#rondDistance span:first-of-type{
 	position: relative;
-	top: 10px;
+	top: 9px;
 	left: 0;
 	font-size: 3.3em;
 }
@@ -125,34 +124,52 @@ body>section:nth-of-type(2) div{
 
 /*Enregistrer un trajet*/
 
-body>section:nth-of-type(3){
-	height:300px;
+body>div>section:nth-of-type(2){
+	height:100%;
 	background: white;
 	text-align: center;
 }
+body>div>section:nth-of-type(2) form {
+	width: 54%;
+	margin:auto;
+	padding: 3% 0;
+}
 
-body>section:nth-of-type(3) button#play{
-	width: 15%;
+body>div>section:nth-of-type(2) button{
+	width: 27%;
 	height: 58px;
-	background: url(../img/play.svg) no-repeat;
 	border: 0;
 }
 
-body>section:nth-of-type(3) button[type=submit]{
-	width: 15%;
-	height: 58px;
-	background: url(../img/floppy.svg) no-repeat;
-	border:0;
+
+body>div>section:nth-of-type(2) button#play{	
+	background: url(../img/play.svg) no-repeat;
+	background-position: right;
 }
 
-body>section:nth-of-type(3) p{
+body>div>section:nth-of-type(2) button[type=submit]{
+	background: url(../img/floppy.svg) no-repeat;
+}
+
+body>div>section:nth-of-type(2) p{
 	margin:5%;
 }
 
-body>section:nth-of-type(3) form label{
+body>div>section:nth-of-type(2) form label{
 	display: block;
 }
 
 
+
+@media screen and (min-width:800px){
+/*	body>section:nth-of-type(2),body>section:nth-of-type(3){
+		display: inline-block;
+		width: 47%;
+		height:300px;
+		background: white;
+		margin: 1%;
+		vertical-align: top;
+	}*/
+}
 
 

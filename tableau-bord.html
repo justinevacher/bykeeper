@@ -21,29 +21,36 @@
 			<img src="img/profil.svg" alt="logo profil">
 		</div>
 	</header>
+
 	<section class="row">
 	<p>Alarme activé</p>
 	</section>
+
 	<h1>Tableau de Bord</h1>
-	<section class="row">
-		<div>
-			<div id="rondVitesse"><span>20</span><span>km/h</span></div>
-			<p>Vitesse Moyenne</p>
-		</div>
-		<div>
-			<div id="rondDistance"><span>120</span><span>km</span></div>
-			<p>Distance Parcourue</p>
-		</div>
-	</section>
-	<section class="row">
-		<h2>Enregistrer un trajet</h2>
-		<form action="">
-			<button id="play"></button>
-			<button type="submit"></button>
-			<p>Ce trajet a commencé<br> le lundi 31 Octobre à 18h36</p>
-			<label for="nom">Nom du Trajet</label>
-			<input type="text" name="trajet">
-		</form>
-	</section>
-</body>
+
+	<div class="row">
+		<section class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+			 <div>
+				<div id="rondVitesse"><span>20</span><span>km/h</span></div>
+				<p>Vitesse Moyenne</p>
+			</div>
+			<div>
+				<div id="rondDistance"><span>120</span><span>km</span></div>
+				<p>Distance Parcourue</p>
+			</div>
+		</section>
+
+		<section class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+			<h2>Enregistrer un trajet</h2>
+			<form action="">
+					<button id="play" ></button>
+					<button type="submit"></button>
+				<p>Ce trajet a commencé<br> le lundi 31 Octobre à 18h36</p>
+				<label for="nom">Nom du Trajet</label>
+				<input type="text" name="trajet">
+			</form>
+		</section>
+		
+	</div>
+
 </html>
