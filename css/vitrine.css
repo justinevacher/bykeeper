@@ -24,7 +24,6 @@ header {
 	height: auto;
 }
 
-
 header img {
 	width: 100%;
 	height: 60%;
@@ -41,7 +40,7 @@ header section {
 }
 
 
-header section button {
+header section a {
 	display: block;
 	width: 70%;
 	background: #72BBF9;
@@ -63,98 +62,7 @@ header section button {
 	}
 }
 
-
-/****FORMULAIRE****/
-form {
-    border: 3px solid #f1f1f1;
-}
-
-input[type=text], input[type=email], input[type=password], input[type=tel] {
-    width: 100%;
-    padding: 5px 10px;
-    margin-bottom: 10px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-section form button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 5px 10px;
-    margin: 8px 0;
-    border: none;
-    width: 100%;
-}
-
-.formulaire {
-    padding: 20px;
-}
-
-.footer-formulaire {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: #f1f1f1;
-}
-
-.g-recaptcha {
-    margin-bottom: 10px;
-}
-
-span.mdpOublie {
-    float: right;
-    padding-top: 16px;
-}
-
-.btnAnnuler {
-    width: auto;
-    padding: 5px 10px;
-    background-color: #f44336;
-}
-
-@media screen and (max-width: 320px) {
-    span.mdpOublie {
-        display: block;
-        float: none;
-    }
-    .btnAnnuler {
-        width: 100%;
-    }
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto; /* Scroll si besoin */
-    background-color: rgba(0,0,0,0.4);
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 5% auto;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-/* Animation zoom */
-.animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)} 
-    to {-webkit-transform: scale(1)}
-}
-    
-@keyframes animatezoom {
-    from {transform: scale(0)} 
-    to {transform: scale(1)}
+content {
+	position: absolute;
+	background-color: yellow;
 }
