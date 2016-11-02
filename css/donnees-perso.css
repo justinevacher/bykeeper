@@ -79,7 +79,7 @@ form{
 
 input[type=text]{
 	border: 2px solid #72bbf9;
-	width : 50%;
+	width : 20em;
 	color : black;
 	text-align : left;
 }
@@ -89,19 +89,8 @@ input[type=submit]{
 	color : white;
 }
 
-input[size]{
-	size :40;
-}
 
 /*media queries*/
-
-@media screen and (min-width: 390px){
-	.wrap{
-	width:90%;
-	margin:auto;
-	}
-}
-
 
 @media screen and (min-width:720px) and (max-width:992px){
 	/*arriere plan*/
