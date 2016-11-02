@@ -3,12 +3,12 @@
 <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>ByKeeper - Paramétrage</title>
+        <title>ByKeeper - Paramétrages</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/png" href="img/fav.png" />
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/tableau-bord.css" >
+        <link rel="stylesheet" href="css/parametrage_alarme.css" >
       <!--   <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
     </head>
 <body>
@@ -27,29 +27,35 @@
 
 	</section>
 
-	<h1>Paramétrage</h1>
+	<h1>Paramétrages de l'alarme</h1>
+	
+	<form action="">
+		<div class="row wrap">
+			<section class="col-xs-12 col-sm-12 col-md-5  col-lg-6">
+					<h3> J'accepte de recevoir des notifications : </h3> <br\>
+					<p><input type="checkbox" class="button_on_off" name="smsSwitch"> Par SMS </p>
+					<p><input type="checkbox" class="button_on_off" name="smsSwitch"> Par MAIL </p>
+			</section>
 
-	<div class="row wrap">
-		<section class="col-xs-12 col-sm-12 col-md-5  col-lg-6">
-			 <h2>J'accepte de recevoir des notifications : </h2> </br>
-			 <p>Par sms </p> 
-			 <input type="checkbox" class="button_on_off" name="sms" value="on">
-			 <br>
-			 <p>Par mail </p> 
-			 <input type="checkbox" class="button_on_off" name="sms" value="off">
-			 <br>
-		</section>
-
-		<section class="col-xs-12 col-sm-12 col-md-5 col-lg-6">
-			<input type="checkbox" class="button_on_off" name="sms" value="off">
-			<p>J'accepte de recevoir une notification quand j'active mon alarme dans une zone à risque</p>
-			<input type="checkbox" class="button_on_off" name="sms" value="off">
-			<p>Activation et désactivation de l'alarme si mon smartphone est à proximité</p>
-			<input type="checkbox" class="button_on_off" name="sms" value="off">
-			<p>Activer l'alarme quand mon vélo reste trop longtemps sans bouger (tout en prenant compte les autres paramètres)</p>
-		</section>
-		
-	</div>
-
+			<section class="col-xs-12 col-sm-12 col-md-5 col-lg-6">
+				<h3> <input type="checkbox" class="button_on_off" name="sms" value="off"> J'accepte de recevoir une notification quand j'active mon alarme dans une zone à risque  </h3>
+			
+				<h3> <input type="checkbox" class="button_on_off" name="sms" value="off"> Activation et désactivation de l'alarme si mon smartphone est à proximité </h3>
+				<h3> <input type="checkbox" class="button_on_off" name="sms" value="off"> Activer l'alarme quand mon vélo reste trop longtemps sans bouger (tout en prenant compte les autres paramètres) </h3>
+				
+			</section>
+		</div>
+		<section class="row">
+				<section class="col-lg-3 col-md-3 col-xs-3 col-sm-3">
+				</section>
+				<section class="col-lg-6 col-md-6 col-xs-6 col-sm-6">
+					<button class="btn btn-default">Valider</button> <br>
+					<a href="">Délimiter mes zones "safes"</a>
+				</section>
+				<section class="col-lg-3 col-md-3 col-xs-3 col-sm-3">
+				</section>
+				
+			</section>
+	</form>
 </body>
 </html>
