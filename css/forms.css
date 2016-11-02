@@ -1,0 +1,91 @@
+/*FONTS */
+@font-face {
+    font-family: "Nunito";
+    src: url("../font/NUNITO-REGULAR.TTF");
+}
+
+@font-face {
+    font-family: "Open Sans Condensed";
+    src: url("../font/OpenSans-CondLight.ttf");
+}
+
+body {
+	font-family: "Open Sans Condensed", sans-serif;
+	background-color: rgba(0,0,0,0.4);
+}
+
+input[type=text], input[type=email], input[type=password], input[type=tel] {
+    width: 100%;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    margin: 8px 0;
+    border: none;
+    width: 100%;
+}
+
+.formulaire {
+    padding: 20px;
+}
+
+.footer-formulaire {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #f1f1f1;
+}
+
+.g-recaptcha {
+    margin-bottom: 10px;
+}
+
+span.mdpOublie {
+    float: right;
+}
+
+.btnAnnuler {
+    color: white;
+    width: auto;
+    padding: 5px 10px;
+    background-color: #f44336;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 5% auto;
+    border: 1px solid #888;
+    width: 60%;
+}
+
+@media screen and (max-width: 575px) {
+	.g-recaptcha {
+    	transform:scale(0.77);
+    	-webkit-transform:scale(0.77);
+    	transform-origin:0 0;
+    	-webkit-transform-origin:0 0;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    span.mdpOublie {
+        display: block;
+        float: none;
+    	padding-top: 16px;
+    }
+    .btnAnnuler {
+        width: 100%;
+    }
+    .modal-content {
+    	margin: auto auto auto auto;
+    	width: 100%;
+    }
+}
