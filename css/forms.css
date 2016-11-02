@@ -11,7 +11,7 @@
 
 body {
 	font-family: "Open Sans Condensed", sans-serif;
-	background-color: rgba(0,0,0,0.4);
+	background-color: rgba(0,0,0,0.2);
 }
 
 input[type=text], input[type=email], input[type=password], input[type=tel] {

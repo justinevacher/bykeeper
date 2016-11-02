@@ -9,19 +9,17 @@
     src: url("../font/OpenSans-CondLight.ttf");
 }
 
-html, body {
-	display: flex;
+body {
 	align-items: center;
-	width: 100%;
-	height: 100%;
-	background: url(../img/velo.jpg);
 	font-family: "Open Sans Condensed", sans-serif;
-	background-size: cover;
-	background-repeat: no-repeat;
+	background: #F1F1F1;
 }
 
 header {
-	height: auto;
+	height: 100vh;
+	background: url(../img/velo.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 header img {
@@ -50,6 +48,11 @@ header section a {
 	border: none;
 }
 
+i {
+	text-align: center;
+	color: white;
+}
+
 @media screen and (min-width:690px) {
 	header img, header section {
 		width: 46%;
@@ -62,7 +65,17 @@ header section a {
 	}
 }
 
-content {
-	position: absolute;
-	background-color: yellow;
+content h1 {
+	font-family: "Nunito", sans-serif;
+	text-align: center;
+	margin-bottom: 25px;
+	margin-top: 50px;
+}
+
+.img {
+	width: 100%;
+}
+
+footer {
+	background: #72BBF9;
 }
