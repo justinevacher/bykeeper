@@ -22,7 +22,7 @@
 	</header>
 
 	<section class="row">
-	<p>Alarme activé</p>
+		<p>Alarme activé</p>
 	</section>
 
 	<h1>Tableau de Bord</h1>
@@ -49,7 +49,53 @@
 				<input type="text" name="trajet">
 			</form>
 		</section>
-		
 	</div>
 
+	<section>
+		<h2>Trajets</h2>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+				<form class="row">
+					<select class="col-xs-6 col-xs-offset-2 col-sm-6 col-sm-offset-2 col-md-6 col-md-offset-2 col-lg-6 col-lg-offset-2">
+					    <option value="0">-- Choisis ton trajet --</option>
+					    <option value="1">Mon trajet du lundi</option>
+					    <option value="2">Mon trajet chez papi</option>
+					    <option value="3">Mon trajet boulangerie</option>
+					</select> 
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+						<button type="submit"><img src="img/validate.svg" alt="bouton valider"></button>
+					</div>
+				</form>
+				<h3>Mon trajet du lundi</h3>
+				<p><i>Enregistré le lundi 27 Septembre 2016<br>De 9h05 à 9h34</i></p>
+			</div>
+			<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+				<section class="row">
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+						<div id="rondDuree2"><span>25</span><span>min</span></div>
+						<p>Durée du trajet</p>
+					</div>
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+						<div id="rondVitesse2"><span>20</span><span>km/h</span></div>
+						<p>Vitesse Moyenne</p>
+					</div>
+					<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+						<div id="rondDistance2"><span>120</span><span>km</span></div>
+						<p>Distance Parcourue</p>
+					</div>
+				</section>
+			</div>
+		</div>
+		<button type="submit">Supprimer</button>
+		<section class="row">
+			<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5 toggleWrapper">
+			  <input type="checkbox" name="toggle1" class="mobileToggle" id="toggle1" checked>
+			  <label for="toggle1"></label>
+			</div>
+			<p class="col-xs-7 col-sm-7 col-md-7 col-lg-7">Afficher les zones à risques</p>
+		</section>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2830.1434089862655!2d-0.5862783643469881!3d44.81864298740239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd552798fee9859b%3A0xa1ce49b8c9251407!2s80+Cours+Gambetta%2C+33400+Talence!5e0!3m2!1sfr!2sfr!4v1478034780984" frameborder="0" allowfullscreen></iframe>
+	</section>
+
+</body>
 </html>
