@@ -191,6 +191,10 @@ body>section:nth-child(5) select{
 	padding-bottom: 2px;
 }
 
+body > section:nth-child(5) > div > div:nth-child(1) > form > div{
+	text-align: left;
+}
+
 body>section:nth-child(5) form button{
 	width: 40px;
 	height: 25px;
@@ -198,6 +202,7 @@ body>section:nth-child(5) form button{
 	border: none;
 	padding: 0 0 5px 0;
 }
+
 
 body>section:nth-child(5) form button img{
 	width: 16px;
@@ -209,6 +214,10 @@ body>section:nth-child(5) form button img{
 
 body>section:nth-child(5) section{
 	font-family: Nunito;
+}
+
+body > section:nth-child(5) > div > div:nth-child(2){
+	margin-top: 10px;
 }
 
 #rondVitesse2,#rondDistance2,#rondDuree2{
@@ -275,15 +284,14 @@ body>section:nth-child(5)>button{
 
 /* bouton ios */
 
-body>section:nth-child(5) section:nth-of-type(2){
+body > section:nth-child(5) > section{
 	margin: 20px 0 5px 0;
 } 
 
 .toggleWrapper{
 	text-align: right;
 }
-
-body>section:nth-child(5) section:nth-of-type(2)>p{
+body > section:nth-child(5) > section > p{
 	padding: 5px 0 0 10px;
 	text-align: left;
 } 
@@ -367,7 +375,7 @@ body>section:nth-child(5) section:nth-of-type(2)>p{
   left: 24px;
 }
 
-
+/* google map */
 iframe{
 	width: 90%;
 	height: 250px;
@@ -405,6 +413,19 @@ iframe{
 	background-size:cover;
 	}
 
+
+	/* mes trajets */
+	/* bouton ios */
+	body > section:nth-child(5) > section{
+		margin: 20px 0 5px 5%;
+	}
+
+	/* google map */
+	iframe{
+		height: 500px;
+	}
+
+
 }
 
 @media screen and (min-width:992px){
@@ -438,8 +459,19 @@ iframe{
 		padding-top: 10px;
 	}
 
-	body > section:nth-child(5) > div > div:nth-child(1){
+	body > section:nth-child(5) > div > div:nth-child(1) > div > div{
 		text-align: left;
+		padding: 0px;
+	}
+
+	/* bouton ios */
+	body > section:nth-child(5) > section{
+		margin: 20px 0 5px 8%;
+	}
+
+	/* google map */
+	iframe{
+		height: 500px;
 	}
 
 }
@@ -462,5 +494,20 @@ iframe{
 	body>div>section:nth-of-type(1),body>div>section:nth-of-type(2){
 		height: 270px;
 	}
+
+	/* mes trajets */
+	/* google map */
+	iframe{
+		height: 700px;
+	}
 }
 
+
+
+
+
+
+
+
+
+	
