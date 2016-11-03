@@ -9,22 +9,27 @@
     src: url("../font/OpenSans-CondLight.ttf");
 }
 
-body {
+html, body {
+	height: 100%;
+	margin: 0;
 	align-items: center;
 	font-family: "Open Sans Condensed", sans-serif;
 	background: #F1F1F1;
 }
 
 header {
+	display: flex;
+	align-items: center;
 	height: 100vh;
 	background: url(../img/velo.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
+	position: relative;
 }
 
 header img {
 	width: 100%;
-	height: 60%;
+	height: auto;
 }
 
 header section {
@@ -33,10 +38,9 @@ header section {
 	color: white;
 	text-align: center;
 	padding: 4% 4%;
-	margin: auto;
+	margin: 2%;
 	font-size: 150%;
 }
-
 
 header section a {
 	display: block;
@@ -48,34 +52,106 @@ header section a {
 	border: none;
 }
 
-i {
-	text-align: center;
+nav {
+	background: #72BBF9;
+	z-index: 100;
+	font-family: "Nunito", sans-serif;
+}
+
+nav a {
 	color: white;
 }
 
-@media screen and (min-width:690px) {
-	header img, header section {
-		width: 46%;
-		display: inline-block;
-		vertical-align: middle;
-		padding: 3%;
-	}
-	header section {
-		margin: 3%;
-	}
+nav.fixed {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
 }
 
-content h1 {
+nav img {
+	height: 100%;
+}
+
+#collapse {
+	z-index: 1000;
+}
+
+header a div {
+	position: absolute;
+	text-align: center;
+	color: white;
+	top: 90%;
+	left: 50%;
+}
+
+main {
+	padding: 60px 0;
+}
+
+main h1 {
 	font-family: "Nunito", sans-serif;
 	text-align: center;
-	margin-bottom: 25px;
+	margin-bottom: 30px;
 	margin-top: 50px;
 }
 
+main p {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 20px;
+	text-align: justify;
+}
+
 .img {
+	margin-top: 50px;
+	margin-bottom: 50px;
 	width: 100%;
 }
 
 footer {
 	background: #72BBF9;
+}
+
+@media screen and (max-width: 690px) {
+	header {
+		display: block;
+	}
+	
+	header img, header section {
+		padding: 3%;
+	}
+	
+	header img {
+		height: auto;
+	}
+	
+	main p {
+		font-size: 15px;
+	}
+}
+
+
+/**************ANIMATION FLECHE**************/
+.animated {
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);}
+    40% {-webkit-transform: translateY(-30px);}
+    60% {-webkit-transform: translateY(-15px);}
+} 
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
+} 
+
+.bounce {
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
 }
