@@ -102,9 +102,10 @@ body>div>section:nth-of-type(1) div{
 	border-radius: 50%;	
 	margin : 0 auto 5% auto;
 
-	-webkit-box-shadow: 4px 2px 4px -3px rgba(9,3,38,1);
-	-moz-box-shadow: 4px 2px 4px -3px rgba(9,3,38,1);
-	box-shadow:4px 2px 4px -3px rgba(9,3,38,1);
+	-moz-box-shadow: 2px 2px 6px 0px #656565;
+	-webkit-box-shadow: 2px 2px 6px 0px #656565;
+	-o-box-shadow: 2px 2px 6px 0px #656565;
+	box-shadow: 2px 2px 6px 0px #656565;
 }
 #rondVitesse{
 	color:#97cff2;
