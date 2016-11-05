@@ -1,12 +1,12 @@
 /*FONTS */
 @font-face {
     font-family: "Nunito";
-    src: url("../font/NUNITO-REGULAR.TTF");
+    src: url("../fonts/NUNITO-REGULAR.TTF");
 }
 
 @font-face {
     font-family: "Open Sans Condensed";
-    src: url("../font/OpenSans-CondLight.ttf");
+    src: url("../fonts/OpenSans-CondLight.ttf");
 }
 
 html, body {
@@ -87,6 +87,7 @@ header a div {
 
 main {
 	padding: 60px 0;
+	padding-bottom: 0;
 }
 
 main h1 {
@@ -109,8 +110,22 @@ main p {
 	width: 100%;
 }
 
-footer {
-	background: #72BBF9;
+footer::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+    height: 300px;
+	background: url("../img/footer-desktop.png");
+    background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+footer div {
+	margin-top: 60px;
+}
+
+footer a {
+	color: white;
 }
 
 @media screen and (max-width: 690px) {
@@ -128,6 +143,9 @@ footer {
 	
 	main p {
 		font-size: 15px;
+	}
+	footer::before {
+		background: url("../img/footer-mobile.png");
 	}
 }
 
