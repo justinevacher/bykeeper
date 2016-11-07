@@ -1,12 +1,12 @@
 /*FONTS */
 @font-face {
     font-family: "Nunito";
-    src: url("../font/NUNITO-REGULAR.TTF");
+    src: url("../fonts/NUNITO-REGULAR.TTF");
 }
 
 @font-face {
     font-family: "Open Sans Condensed";
-    src: url("../font/OpenSans-CondLight.ttf");
+    src: url("../fonts/OpenSans-CondLight.ttf");
 }
 
 
@@ -23,13 +23,16 @@ h1,h2{
 }
 
 h1{
-	font-size: 1.8em;
+	font-size: 2em;
 	color: #5a96c8;
 }
 
 h2{
+	font-size:1.5em;
+}
+
+h3{
 	font-size:1.2em;
-	color: #72bbf9;
 }
 
 
@@ -54,6 +57,7 @@ header>div:first-of-type img{
 	max-width: 100%;
 	height: 100%;
 }
+
 /*profil*/
 header>div+div{
 	height:100%;
@@ -62,38 +66,42 @@ header>div+div{
 /*#################################alarme connectée*/
 body>section:first-of-type{
 	height:30px;
-	background: white;
 	text-align: center;
+	background: white;
 }
-
 
 /*############################CORPS */
+body>section:nth-child(2){
+	margin-top:8%;
+}
 
-/*Formulaire*/
-
-form{
-	font-size:1.5em;
-	color: #72bbf9;
+body>section>form{
 	text-align: center;
 }
 
-input[type=text]{
-	border: 2px solid #72bbf9;
-	color : black;
-	text-align : left;
-	padding-left: 0.5em;
-	margin-bottom: 0.2em;
-	font-size: 0.8em;
-	width: 15em;
+/*Paramètre gauche*/
+
+/*Paramètres droite*/
+.glyphicon-info-sign{
+	color:#72BBF9;
+	font-size:1.5em;
+	margin-right:2%; 
+	vertical-align: bottom;
 }
 
-input[type=submit]{
-	background-color: #72bbf9;
-	color : white;
-}
+
 
 
 /*media queries*/
+
+@media screen and (min-width: 390px){
+	.wrap{
+	width:90%;
+	margin:auto;
+	}
+
+}
+
 
 @media screen and (min-width:720px) and (max-width:992px){
 	/*arriere plan*/
@@ -102,6 +110,18 @@ input[type=submit]{
 	height:55px;
 	background: url(../img/fond-mobile.jpg) no-repeat;
 	background-size:cover;
+	}
+
+	h1{
+		font-size: 2.5em;
+	}
+
+	h2{
+		font-size: 1.5em;
+		text-align: center;
+	}
+	h3{
+		font-size: 
 	}
 
 }
@@ -115,25 +135,28 @@ input[type=submit]{
 		background-position-y: -258px;
 	}
 
-	input[type=text]{
-		width: 20em;
-	}
 
-	h1{
-	font-size: 2.5em;
-	color: #5a96c8;
-	}
-
-	h2{
-	font-size:1.8em;
-	color: #72bbf9;
-	}
 }
 
+@media screen and (min-width:1400px){
+	/*enregistrer trajet*/
+	body>div>section>form {
+		padding: 2% 0;
+	}
+
+}
 
 @media screen and (min-width:1700px){
 	/*arriere plan*/
 	header{
 		height:160px;
 	}
+
+	/*données + enregistrer trajet côte à côte*/
+	body>div>section:nth-of-type(1),body>div>section:nth-of-type(2){
+		height: 270px;
+	}
 }
+
+
+ 

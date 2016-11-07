@@ -1,12 +1,12 @@
 /*FONTS */
 @font-face {
     font-family: "Nunito";
-    src: url("../font/NUNITO-REGULAR.TTF");
+    src: url("../fonts/NUNITO-REGULAR.TTF");
 }
 
 @font-face {
     font-family: "Open Sans Condensed";
-    src: url("../font/OpenSans-CondLight.ttf");
+    src: url("../fonts/OpenSans-CondLight.ttf");
 }
 
 body {
