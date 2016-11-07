@@ -59,33 +59,16 @@ header section a:hover {
 	text-decoration: none;
 }
 
-nav {
-	background: #72BBF9;
-	z-index: 100;
-	font-family: "Nunito", sans-serif;
-}
-
-nav a {
-	color: white;
-}
-
-nav.fixed {
-	position: fixed;
-	width: 100%;
-	top: 0;
-	left: 0;
-}
-
-nav img {
-	height: 100%;
-}
-
 header a div {
 	position: absolute;
 	text-align: center;
 	color: white;
 	top: 90%;
 	left: 50%;
+}
+
+nav img {
+	height: 100%;
 }
 
 main h1 {
@@ -109,7 +92,7 @@ main p {
 	width: 100%;
 }
 
-.imgRonde {
+#photos div {
 	display: inline-block;
     overflow: hidden;
     border-radius: 150px;
@@ -133,7 +116,7 @@ footer::before {
 	background-repeat: no-repeat;
 }
 
-footer div {
+footer section {
 	margin-top: 60px;
 }
 
@@ -205,4 +188,44 @@ footer img:hover {
 
 .bounce {
     animation-name: bounce;
+}
+
+
+/**************NAVBAR BOOTSTRAP CUSTOM**************/
+.navbar-custom {
+    font-size: 14px;
+    background-color: rgba(114, 187, 249, 1);
+    font-family: "Nunito", sans-serif;
+    border-width: 0px;
+    border-radius: 0px;
+    z-index: 1!important;
+}
+.navbar-custom .navbar-nav>li>a {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(248, 248, 248, 0);
+}
+.navbar-custom .navbar-nav>li>a:hover,
+.navbar-custom .navbar-nav>li>a:focus {
+    color: rgba(51, 51, 51, 1);
+    background-color: rgba(248, 248, 248, 0);
+}
+.navbar-custom .navbar-nav>.active>a,
+.navbar-custom .navbar-nav>.active>a:hover,
+.navbar-custom .navbar-nav>.active>a:focus {
+    color: rgba(114, 187, 249, 1);
+    background-color: rgba(241, 241, 241, 1);
+}
+.navbar-custom .navbar-toggle {
+    border-color: #f1f1f1;
+}
+.navbar-custom .navbar-toggle:hover,
+.navbar-custom .navbar-toggle:focus {
+    background-color: #f1f1f1;
+}
+.navbar-custom .navbar-toggle .icon-bar {
+    background-color: #f1f1f1;
+}
+.navbar-custom .navbar-toggle:hover .icon-bar,
+.navbar-custom .navbar-toggle:focus .icon-bar {
+    background-color: #72bbf9;
 }
