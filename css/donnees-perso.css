@@ -1,12 +1,12 @@
 /*FONTS */
 @font-face {
     font-family: "Nunito";
-    src: url("../font/NUNITO-REGULAR.TTF");
+    src: url("../fonts/NUNITO-REGULAR.TTF");
 }
 
 @font-face {
     font-family: "Open Sans Condensed";
-    src: url("../font/OpenSans-CondLight.ttf");
+    src: url("../fonts/OpenSans-CondLight.ttf");
 }
 
 
@@ -32,6 +32,24 @@ h2{
 	color: #72bbf9;
 }
 
+/* liens */
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+a:focus{
+  text-decoration: none;
+}
+
+a:active{
+  text-decoration: none;
+} 
+
+
 
 /*##############################HEADER*/
 header{
@@ -40,31 +58,235 @@ header{
 	background-position-y: -53px;
 }
 
-header>div:first-of-type{
+header > div:nth-child(2){
 	height:100%;
 	text-align: center;
 }
 
-nav{
-	height: 100%;
-}
+
 
 /*logo*/
-header>div:first-of-type img{
+header > div:nth-child(2) > img{
 	max-width: 100%;
 	height: 100%;
 }
-/*profil*/
-header>div+div{
-	height:100%;
-}
+
 
 /*#################################alarme connectée*/
-body>section:first-of-type{
+body > section{
+	clear: both;
 	height:30px;
 	background: white;
 	text-align: center;
 }
+
+
+
+/* Menu Burger */
+
+@-webkit-keyframes slideInLeft {
+  0% {
+    -webkit-transform: translate3d(-250px, 0, 0);
+            transform: translate3d(-250px, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInLeft {
+  0% {
+    -webkit-transform: translate3d(-250px, 0, 0);
+            transform: translate3d(-250px, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes slideOutLeft {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-250px, 0, 0);
+            transform: translate3d(-250px, 0, 0);
+    visibility: hidden;
+  }
+}
+@keyframes slideOutLeft {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(-250px, 0, 0);
+            transform: translate3d(-250px, 0, 0);
+    visibility: hidden;
+  }
+}
+
+.b-nav {
+  position: absolute;
+  z-index: 11;
+  background: url(../img/fond-mobile.jpg) no-repeat;
+  width: 250px;
+}
+.b-nav:not(.open) {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: slideOutLeft;
+          animation-name: slideOutLeft;
+  visibility: hidden;
+}
+.b-nav li {
+  	list-style-type: none;
+  	padding: 10px;
+  	text-align: left;
+  -webkit-transform: translateX(-250px);
+          transform: translateX(-250px);
+}
+.b-nav li:not(.open) {
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: slideOutLeft;
+          animation-name: slideOutLeft;
+}
+.b-nav li:first-child {
+  padding-top: 120px;
+}
+.b-nav.open {
+  visibility: visible;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: slideInLeft;
+          animation-name: slideInLeft;
+}
+.b-nav.open li {
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: slideInLeft;
+          animation-name: slideInLeft;
+}
+
+.b-link {
+  display: inline-block;
+  border-left: rgba(68, 68, 68, 0) solid 2px;
+  color: white;
+  font-family: Nunito, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  background-color: #72bbf9;
+  width: 230px;
+  height: 50px;
+  padding: 14px 0px 0px 25px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.b-link:hover, .b-link:focus {
+  border-left: #444444 solid 2px;
+  padding-left: 30px;
+  color:white;
+  background-color: #767676;
+}
+
+.b-menu {
+  cursor: pointer;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  z-index: 12;
+  padding-left: 6px;
+  padding-top: 7px;
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.b-menu div{
+	background-color: white;
+}
+
+.b-bun {
+  background: #444444;
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.b-bun--top {
+  height: 2px;
+  top: 0;
+  width: 25px;
+}
+.b-bun--mid {
+  height: 2px;
+  top: 8px;
+  width: 25px;
+}
+.b-bun--bottom {
+  height: 2px;
+  top: 16px;
+  width: 25px;
+}
+
+.b-container {
+  height: 60px;
+  left: 30px;
+  position: absolute;
+  top: 10px;
+}
+
+.b-container.open .b-bun--top {
+  top: 9px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.b-container.open .b-bun--mid {
+  opacity: 0;
+}
+.b-container.open .b-bun--bottom {
+  top: 5px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+/* Menu Desktop */
+
+body > div:nth-child(3) > nav > li{
+	position: relative;
+	list-style-type: none;
+	text-align: center;
+	height: 50px;
+	border: 2px solid #72bbf9;
+}
+
+body > div:nth-child(3) > nav > li > a{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color:#72bbf9;
+	font-family: Nunito, Helvetica, Arial, sans-serif;
+	font-size: 1.2em;
+}
+
+
+
 
 
 /*############################CORPS */
@@ -94,6 +316,25 @@ input[type=submit]{
 
 
 /*media queries*/
+
+@media screen and (min-width: 720px){
+	/* menu Burger */
+	.b-nav{
+		display: none;
+	}
+	.b-container{
+		display: none;
+	}
+
+}
+
+@media screen and (max-width: 720px){
+	/* menu Desktop */
+	body > div:nth-child(3) > nav{
+		display: none;
+	}
+
+}
 
 @media screen and (min-width:720px) and (max-width:992px){
 	/*arriere plan*/
