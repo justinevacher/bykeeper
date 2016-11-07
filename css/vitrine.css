@@ -86,10 +86,14 @@ main p {
 	text-align: justify;
 }
 
-.img {
+main>section:nth-child(2) img,main>section:nth-child(3) img{
 	margin-top: 50px;
 	margin-bottom: 50px;
 	width: 100%;
+}
+
+#photos{
+	text-align: center;
 }
 
 #photos div {
@@ -102,7 +106,7 @@ main p {
     box-shadow: 5px 5px 10px 0px;
 }
 
-.imgRonde > img {
+#photos div> img {
 	width: 100%;
 }
 
@@ -160,7 +164,7 @@ footer img:hover {
 		font-size: 15px;
 	}
 
-	.imgRonde {
+	#photos div {
 	    border-radius: 80px;
 	    width: 90px;
 	    height: 90px;
