@@ -139,6 +139,22 @@ section.col-xs-12:nth-child(1){
 	margin-bottom: 50px;
 }
 
+#fenetreConfirm
+{
+	position: absolute;
+    top: 50%;
+    left:2px;
+    background-color: white;
+    font-weight: bold;
+    font-color; white;
+ 	text-align: center;
+    z-index: 9999; /*partie importante: à l'affichage, la div sera au-dessus de tout le reste*/
+    visibility: hidden; /*partie importante: cacher la div et son contenu*/
+    border:1px solid black;
+ 	padding:5px;
+}
+
+
 
 /*media queries*/
 
@@ -182,6 +198,12 @@ section.col-xs-12:nth-child(1){
 	section>h3 {
 		padding-left: 60px;
 	}
+
+	#fenetreConfirm
+	{
+	    top: 50%;
+	    left:35%;
+	}
 }
 
 @media screen and (min-width:992px){
@@ -207,6 +229,11 @@ section.col-xs-12:nth-child(1){
 		margin-bottom: 30px;
 		border-left: 2px solid grey;
 	}
+
+	#fenetreConfirm
+	{
+		left:39%;
+	}
 	
 }
 
@@ -216,6 +243,11 @@ section.col-xs-12:nth-child(1){
 		top:40px;
 		left:25px;
 	}	
+	
+	#fenetreConfirm
+	{
+		left:42%;
+	}
 
 }
 
@@ -312,3 +344,4 @@ section.col-xs-12:nth-child(1){
 .toggleWrapper input.mobileToggle:checked + label:after {
   left: 24px;
 }
+

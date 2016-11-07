@@ -18,3 +18,7 @@ $(document).ready(function() {
         $(".navbar").sticky({topSpacing:0});
     });
 });
+
+function afficherFenetre(idFenetre) {
+    document.getElementById(idFenetre).style.visibility = 'visible';
+}
