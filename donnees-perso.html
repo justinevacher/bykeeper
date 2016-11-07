@@ -7,22 +7,47 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/png" href="img/fav.png" />
-        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/donnees-perso.css" >
+        <script type="text/javascript" src="js/burger.js" async></script>
       <!--   <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
-    </head>
+</head>
 <body>
 	<header class="row">
-		<div class="col-xs-4 col-xs-offset-4 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4" >
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+			<!-- Navigation -->
+			<nav class="b-nav">
+				<li><a class="b-link" href="#">Tableau de bord</a></li>
+				<li><a class="b-link" href="#">Paramétrages</a></li>
+				<li><a class="b-link" href="#">Retrouver mon vélo</a></li>
+			</nav>
+
+			<!-- Burger-Icon -->
+			<div class="b-container">
+				<div class="b-menu">
+				    <div class="b-bun b-bun--top"></div>
+				    <div class="b-bun b-bun--mid"></div>
+				    <div class="b-bun b-bun--bottom"></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" >
 			<img src="img/logo2.svg" alt="logo bykeeper">
 		</div>
+	
 	</header>
 
 	<section class="row">
-	<p>Alarme activé</p>
-	
-
+		<p>Alarme activé</p>
 	</section>
+	<div class="row">
+		<nav class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4 row">
+			<li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a class="d-link" href="#">Tableau de bord</a></li>
+			<li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a class="d-link" href="#">Paramétrages</a></li>
+			<li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a class="d-link" href="#">Retrouver mon vélo</a></li>
+		</nav>
+
+	</div>
 
 	<h1>Données Personnelles</h1>
 
