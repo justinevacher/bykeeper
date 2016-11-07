@@ -23,12 +23,12 @@ h1,h2{
 }
 
 h1{
-	font-size: 2.5em;
+	font-size: 1.8em;
 	color: #5a96c8;
 }
 
 h2{
-	font-size:1.8em;
+	font-size:1.2em;
 	color: #72bbf9;
 }
 
@@ -79,9 +79,12 @@ form{
 
 input[type=text]{
 	border: 2px solid #72bbf9;
-	width : 20em;
 	color : black;
 	text-align : left;
+	padding-left: 0.5em;
+	margin-bottom: 0.2em;
+	font-size: 0.8em;
+	width: 15em;
 }
 
 input[type=submit]{
@@ -111,7 +114,22 @@ input[type=submit]{
 		background-size: cover;
 		background-position-y: -258px;
 	}
+
+	input[type=text]{
+		width: 20em;
+	}
+
+	h1{
+	font-size: 2.5em;
+	color: #5a96c8;
+	}
+
+	h2{
+	font-size:1.8em;
+	color: #72bbf9;
+	}
 }
+
 
 @media screen and (min-width:1700px){
 	/*arriere plan*/
