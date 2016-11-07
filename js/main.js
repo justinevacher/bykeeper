@@ -22,4 +22,8 @@ $(document).ready(function() {
     addEventListener("scroll", scrolled, false);
 });
 
+    function afficherFenetre(idFenetre) {
+        document.getElementById(idFenetre).style.visibility = 'visible';
+    }
+
 
