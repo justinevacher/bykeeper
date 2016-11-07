@@ -142,6 +142,19 @@ footer img:hover {
 	filter: invert(1);
 }
 
+footer section h3, footer section aside{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+footer aside{
+	margin-left:2%;
+	padding-left:2%;
+	border-left:1px solid white;
+	width: 69%;
+}
+
+
 @media screen and (max-width: 690px) {
 	header {
 		display: block;
@@ -179,20 +192,19 @@ footer img:hover {
 
 
 /**************ANIMATION FLECHE**************/
-.animated {
+header>a>div {
+	animation-name: bounce;
     animation-duration: 1s;
     animation-fill-mode: both;
 }
+
 
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
     40% {transform: translateY(-30px);}
     60% {transform: translateY(-15px);}
-} 
-
-.bounce {
-    animation-name: bounce;
 }
+
 
 
 /**************NAVBAR BOOTSTRAP CUSTOM**************/
