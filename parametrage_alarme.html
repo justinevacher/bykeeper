@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/png" href="img/fav.png" />
-        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/parametrage_alarme.css" >
       <!--   <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
     </head>
@@ -31,20 +31,42 @@
 	
 	<form action="">
 		<div class="row wrap">
-			<section class="col-xs-12 col-sm-12 col-md-5  col-lg-6">
-					<h3> J'accepte de recevoir des notifications : </h3> <br\>
-					<p><input type="checkbox" class="button_on_off" name="smsSwitch"> Par SMS </p>
-					<p><input type="checkbox" class="button_on_off" name="smsSwitch"> Par MAIL </p>
-			</section>
-
 			<section class="col-xs-12 col-sm-12 col-md-5 col-lg-6">
-				<h3> <input type="checkbox" class="button_on_off" name="sms" value="off"> J'accepte de recevoir une notification quand j'active mon alarme dans une zone à risque  </h3>
+					<h3> J'accepte de recevoir des notifications : </h3> <br\>
+					<div class="toggleWrapper">
+						<input type="checkbox" name="toggle1" class="mobileToggle" id="toggle1" checked> 
+			  			<label for="toggle1"></label>
+			  			<p> Par SMS </p>
+					</div>
+					
+					<div class="toggleWrapper">
+						<input type="checkbox" name="toggle2" class="mobileToggle" id="toggle2" checked> 
+			  			<label for="toggle2"></label>
+			  			<p> Par MAIL </p>
+					</div>
+			</section>
 			
-				<h3> <input type="checkbox" class="button_on_off" name="sms" value="off"> Activation et désactivation de l'alarme si mon smartphone est à proximité </h3>
-				<h3> <input type="checkbox" class="button_on_off" name="sms" value="off"> Activer l'alarme quand mon vélo reste trop longtemps sans bouger (tout en prenant compte les autres paramètres) </h3>
+			<section class="col-xs-12 col-sm-12 col-md-5 col-lg-6">
+				<div class="toggleWrapper">
+					<input type="checkbox" name="toggle3" class="mobileToggle" id="toggle3" checked> 
+					<label for="toggle3"></label>
+					<h3>  J'accepte de recevoir une notification quand j'active mon alarme dans une zone à risque </h3>
+				</div>
 				
+				<div class="toggleWrapper">
+					<input type="checkbox" name="toggle4" class="mobileToggle" id="toggle4" checked> 
+					<label for="toggle4"></label>
+					<h3> Activation et désactivation de l'alarme si mon smartphone est à proximité </h3>
+				</div>
+
+				<div class="toggleWrapper">
+					<input type="checkbox" name="toggle5" class="mobileToggle" id="toggle5" checked> 
+					<label for="toggle5"></label>
+					<h3> Activer l'alarme quand mon vélo reste trop longtemps sans bouger (tout en prenant compte les autres paramètres) </h3>
+				</div>
 			</section>
 		</div>
+		<hr>
 		
 		<section class="row">
 			<section class="col-lg-4 col-lg-offset-4 col-md-4 col-md-offset-4 col-xs-4 col-xs-offset-4 col-sm-4 col-sm-offset-4 text-center">
