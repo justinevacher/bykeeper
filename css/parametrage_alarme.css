@@ -32,10 +32,21 @@ h2{
 }
 
 h3{
-	font-size:1.2em;
+	font-size:1.0em;
 	text-align: left;
+	
 }
 
+/* position des trois switchs */
+section > section > div > label{
+	position: relative;
+	top:12px;
+	left:5px;
+}
+
+section>section>h3 {
+	padding-left: 60px;
+}
 
 /*##############################HEADER*/
 header{
@@ -83,6 +94,7 @@ body>form>div>section:nth-of-type(1){
 body>form>div>section:nth-of-type(1) div{
 	width:48%;
 	text-align: right;
+
 }
 
 body>form>div>section:nth-of-type(1) h3{
@@ -116,9 +128,15 @@ body>form>div>section:nth-of-type(2) h3{
 }
 
 
-body>form>section>section>button{
-	margin-top:20px;
-	margin-bottom:20px;
+div>p h3{
+	font-size: 1.2em;
+}
+div>p {
+	padding-bottom: 20px;
+}
+
+section.col-xs-12:nth-child(1){
+	margin-bottom: 50px;
 }
 
 
@@ -150,10 +168,20 @@ body>form>section>section>button{
 		font-size: 1.5em;
 		text-align: center;
 	}
-	h3{
-		font-size: 
+
+	section > section > div > label{
+		position: relative;
+		top:35px;
+		left:15px;
+	}	
+
+	h3 {
+		font-size: 1.3em;
 	}
 
+	section>h3 {
+		padding-left: 60px;
+	}
 }
 
 @media screen and (min-width:992px){
@@ -164,15 +192,30 @@ body>form>section>section>button{
 		background-size: cover;
 		background-position-y: -258px;
 	}
+	
+	section > section > div > label{
+		position: relative;
+		top:30px;
+		left:15px;
+	}	
 
+	h3 {
+		font-size: 1.5em;
+	}
 
+	section.col-xs-12:nth-child(2){
+		margin-bottom: 30px;
+		border-left: 2px solid grey;
+	}
+	
 }
 
 @media screen and (min-width:1400px){
-	/*enregistrer trajet*/
-	body>div>section>form {
-		padding: 2% 0;
-	}
+	section > section > div > label{
+		position: relative;
+		top:40px;
+		left:25px;
+	}	
 
 }
 
@@ -181,11 +224,6 @@ body>form>section>section>button{
 	header{
 		height:160px;
 	}
-
-	/*données + enregistrer trajet côte à côte*/
-	body>div>section:nth-of-type(1),body>div>section:nth-of-type(2){
-		height: 270px;
-	}
 }
 
 
@@ -193,7 +231,6 @@ body>form>section>section>button{
 
 .toggleWrapper{
 	text-align: left;
-
 }
 
 
