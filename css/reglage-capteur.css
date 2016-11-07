@@ -71,12 +71,25 @@ body>section:first-of-type{
 }
 
 /*############################CORPS */
-body>section:nth-child(2){
+body form section:nth-child(2){
 	margin-top:8%;
 }
 
 body>section>form{
 	text-align: center;
+}
+
+#alerte1, #alerte2{
+	width: 62%;
+	margin: 13% auto;
+}
+
+.noUi-base>div:nth-child(1)>div:nth-child(1) {
+	display: none;
+}
+
+.noUi-connect{
+	background:#72BBF9;
 }
 
 /*Paramètre gauche*/
@@ -95,13 +108,19 @@ body>section>form{
 /*media queries*/
 
 @media screen and (min-width: 390px){
+	#alerte1, #alerte2{
+		margin: 8% auto;
+	}
+
+}
+
+@media screen and (min-width: 549px){
 	.wrap{
 	width:90%;
 	margin:auto;
 	}
 
 }
-
 
 @media screen and (min-width:720px) and (max-width:992px){
 	/*arriere plan*/
@@ -124,6 +143,11 @@ body>section>form{
 		font-size: 
 	}
 
+
+	#alerte1, #alerte2{
+		margin: 5% auto;
+	}
+
 }
 
 @media screen and (min-width:992px){
@@ -135,11 +159,16 @@ body>section>form{
 		background-position-y: -258px;
 	}
 
+	/**/
+	body form section:nth-child(2){
+		margin-top:0;
+	}
+
 
 }
 
 @media screen and (min-width:1400px){
-	/*enregistrer trajet*/
+	/*parametre right*/
 	body>div>section>form {
 		padding: 2% 0;
 	}
@@ -152,7 +181,7 @@ body>section>form{
 		height:160px;
 	}
 
-	/*données + enregistrer trajet côte à côte*/
+	/*parametre gauche + droite*/
 	body>div>section:nth-of-type(1),body>div>section:nth-of-type(2){
 		height: 270px;
 	}
