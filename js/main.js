@@ -14,16 +14,11 @@ $(document).ready(function() {
         return false;
     });
 
-    var nav = document.querySelector("nav");
-    function scrolled() {
-        var windowHeight = document.body.clientHeight, currentScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        nav.className = (currentScroll >= windowHeight + 50 - nav.offsetHeight) ? "fixed" : "";
-    }
-    addEventListener("scroll", scrolled, false);
+    $(function() {
+        $(".navbar").sticky({topSpacing:0});
+    });
 });
 
-    function afficherFenetre(idFenetre) {
-        document.getElementById(idFenetre).style.visibility = 'visible';
-    }
-
-
+function afficherFenetre(idFenetre) {
+    document.getElementById(idFenetre).style.visibility = 'visible';
+}
