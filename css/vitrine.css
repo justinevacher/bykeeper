@@ -45,16 +45,16 @@ header section {
 header section a {
 	display: block;
 	width: 70%;
-	background: #72BBF9;
+	background-color: #72BBF9;
 	color: white;
 	padding: 2% 5%;
 	margin: 4% auto;
 	border: none;
-	transition: background 0.5s, color 0.5s;
+	transition: background-color 0.5s, color 0.5s;
 }
 
 header section a:hover {
-	background: white;
+	background-color: #F1F1F1;
 	color: #72BBF9;
 	text-decoration: none;
 }
