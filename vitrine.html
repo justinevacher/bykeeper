@@ -10,10 +10,10 @@
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/vitrine.css">
-        <script src="js/jquery-3.1.1.js"></script>
-        <script src="js/jquery.sticky.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
+        <script type="application/javascript" src="js/jquery-3.1.1.js"></script>
+        <script type="application/javascript" src="js/jquery.sticky.js"></script>
+        <script type="application/javascript" src="js/bootstrap.min.js"></script>
+        <script type="application/javascript" src="js/main.js"></script>
     </head>
     <body>
     	<header id="header">
@@ -25,24 +25,24 @@
                 <a href="inscription.php">Inscription</a>
     		</section>
             <a class="js-scrollTo" href="#lekeeper">
-                <div class="animated bounce hidden-xs">
+                <div class="hidden-xs">
                     <span><i class="fa fa-angle-down fa-4x"></i></span>
                 </div>
             </a>
     	</header>
 
         <nav class="navbar navbar-custom" role="navigation">
-            <section class="container-fluid">
+            <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>                        
                     </button>
                     <a class="js-scrollTo navbar-brand" href="#header"><img src="img/logo2Blanc.png" alt="Logo ByKeeper"></a>
                 </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav">
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">
                         <li><a class="js-scrollTo" href="#lekeeper">Le Keeper</a></li>
                         <li><a class="js-scrollTo" href="#quisommesnous">Qui sommes-nous ?</a></li>
                     </ul>
@@ -51,12 +51,12 @@
                         <li><a href="connexion.php"><span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>
                     </ul>
                 </div>
-            </section>
+            </div>
         </nav>
 
         <main class="container">
             <section class="row">
-                <section class="col-md-12 col-sm-12">
+                <section class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <h1 id="lekeeper">Le Keeper</h1>
                     <p>Soyez avertis des mouvements suspects détectés sur votre vélo grâce à notre alarme connectée. Vous alertant par un SMS ou un email, ByKeeper vous prévient quand votre vélo subit des secousses suspectes ou encore lorsqu'il est en  mouvement. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit essecillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -64,33 +64,36 @@
                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </section>
             </section>
+
             <section class="row">
-                <section class="col-md-6 col-sm-6">
-                    <img src="img/liste_trajets.png" class="img" alt="image">
+                <section class="col-xs-12 col-sm-12 col-md-6 col-sm-6">
+                    <img src="img/liste_trajets.png" alt="image">
                 </section>
-                <section class="col-md-6 col-sm-6" style="display: flex; align-items: center;">
+                <section class="col-xs-12 col-sm-12 col-md-6 col-sm-6">
                     <p>Jetez un coup d'oeil à vos performances et à vos itinéraires. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </section>
             </section>
+
             <section class="row">
-                <section class="col-md-6 col-sm-6">
+                <section class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                     <p>Un paramétrage simple avec une personnalisation affinée. Activez ou désactivez l'alarme selon votre rythme quotidien. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </section>
-                <section class="col-md-6 col-sm-6">
-                    <img src="img/liste_trajets.png" class="img" alt="image">
+                <section class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                    <img src="img/liste_trajets.png" alt="image">
                 </section>
             </section>
+
             <section class="row">
-                <section class="col-md-12 col-sm-12">
-                    <h1 id="quisommesnous">Qui sommes-nous ?</h1>
+                <section class="col-xs-12 col-md-12 col-sm-12">
+                 <h1 id="quisommesnous">Qui sommes-nous ?</h1>
                     <section id="photos">
-                        <div class="imgRonde"><img src="img/baptiste.png" alt="Baptiste"/></div>
-                        <div class="imgRonde"><img src="img/roger.png" alt="Jérémy"/></div>
-                        <div class="imgRonde"><img src="img/gautier.png" alt="Gautier"/></div>
-                        <div class="imgRonde"><img src="img/greg.png" alt="Greg"/></div>
-                        <div class="imgRonde"><img src="img/justine.png" alt="Justine"/></div>
+                        <figure><img src="img/baptiste.png" alt="Baptiste"/><figcaption>Baptiste Castagnet</figcaption></figure>
+                        <figure><img src="img/roger.png" alt="Jérémy"/><figcaption>Jérémy Cuesta-Oger</figcaption></figure>
+                        <figure><img src="img/gautier.png" alt="Gautier"/><figcaption>Gautier Maire</figcaption></figure>
+                        <figure><img src="img/greg.png" alt="Greg"/><figcaption>Grégory Prince</figcaption></figure>
+                        <figure><img src="img/justine.png" alt="Justine"/><figcaption>Justine Vacher</figcaption></figure>
                     </section>
                     <p>Nous somme une équipe composée de 5 étudiants en Licence Professionnelle Développement d'Applications Web et Innovation Numérique. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </section>
@@ -99,20 +102,33 @@
 
         <footer>
             <section class="container">
-                <section class="row">
-                    <section class="col-md-4">
-                        <p><a href="#">Mentions légales</a></p>
-                        <hr>
-                        <p><a href="#">Contact</a></p>
-                        <hr>
-                        <p><a href="#">Plan du site</a></p>
+                <section class="row" >
+                    <section class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <h3>Informations</h3>
+                        <aside>
+                            <p><a href="#">FAQ</a></p>
+                            <p><a href="#">Mentions légales</a></p>
+                            <p><a href="#">Plan du site</a></p>
+                        <aside>
                     </section>
-                    <section class="col-md-4"></section>
-                    <section class="col-md-4">
-                        <h3>Rejoignez-nous !</h3>
-                        <a target="_blank" href="https://www.facebook.com/bykeeperconnect"><img src="img/facebook-icon.png" alt="Facebook"></a>
-                        <a target="_blank" href="https://www.twitter.com/bykeeperconnect"><img src="img/twitter-icon.png" alt="Twitter"></a>
+                    <section class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <h3>Social</h3>
+                        <aside>
+                            <div>
+                                <a target="_blank" href="https://www.facebook.com/bykeeperconnect"><img src="img/facebook-icon.png" alt="Facebook"></a>
+                                <a target="_blank" href="https://www.twitter.com/bykeeperconnect"><img src="img/twitter-icon.png" alt="Twitter"></a>
+                            </div>
+                            <p>bykeeper@gmail.com</p>
+                            <p>(+33)5 56 74 26 74</p>
+                        </aside>
                     </section>
+                    <section class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <h3>Partenaires</h3>
+                        <aside class="partenaires">
+                            <a target="_blank" href="https://www.iut.u-bordeaux.fr/info/"><img src="img/logoiut.png" alt="IUT de Bordeaux">
+                            <a target="_blank" href="https://mink.so/"><img src="img/minklogo.png" alt="Mink"></a></a>
+                        </div>
+                    </aside>
                 </section>
             </section>
         </footer>
