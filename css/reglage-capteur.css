@@ -98,6 +98,17 @@ body>section>form{
   text-align: center;
 }
 
+#alerte1>span:nth-child(1),#alerte2>span:nth-child(1){
+	position: relative;
+	top:12px;
+	left:0px;
+}
+
+#alerte1>span:nth-child(2),#alerte2>span:nth-child(2){
+	position: relative;
+	top:12px;
+	right: -85%;
+}
 
 /*Paramètre gauche*/
 
