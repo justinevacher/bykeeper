@@ -25,20 +25,24 @@ header {
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
+	text-align: center;
 }
 
 header img {
-	width: 100%;
+	width: 75%;
 	height: auto;
 }
 
 header section {
 	width: 90%;
+	margin: 2%;
+}
+
+header section+section {
 	background-color: rgba(0,0,0,0.4);
+	padding: 4% 4%;
 	color: white;
 	text-align: center;
-	padding: 4% 4%;
-	margin: 2%;
 	font-size: 150%;
 }
 
@@ -69,6 +73,18 @@ header a div {
 
 nav img {
 	height: 100%;
+}
+
+.navbrand {
+	padding: 0;
+}
+
+.navbrand img {
+	padding: 15px;
+}
+
+main {
+	margin-bottom: 140px;
 }
 
 main h1 {
@@ -103,20 +119,23 @@ figure {
     width: 180px;
     height: 180px;
     margin: 22px 22px;
-    box-shadow: 5px 5px 10px 0px;
+    box-shadow: 0px 0px 10px 0px;
     position: relative;
 }
 
 figure>img {
-	width: 100%;
+	border-radius: 150px;
+    width: 180px;
+    height: 180px;
+	-webkit-filter: grayscale(0) blur(0);
 	filter: grayscale(0) blur(0);
-	transform: scale(1);
 	transition: 0.25s ease-in-out;
+	border:1px solid transparent;
 }
 
 figure:hover img {
+	-webkit-filter: grayscale(100%) blur(3px);
 	filter: grayscale(100%) blur(3px);
-	transform: scale(1.1);
 }
 
 figcaption {
@@ -128,22 +147,14 @@ figcaption {
 	top: 75px;
 	left: 0;
 	right: 0;
+	transition: 0.25s ease-in-out;
 }
  
 figure:hover figcaption {
-	transition: all 1s;
+	transition: all 0.25s;
 	opacity: 1;
 }
 
-footer::before {
-	content: "";
-	position: absolute;
-	width: 100%;
-    height: 300px;
-	background: url("../img/footer-desktop.png");
-    background-size: cover;
-	background-repeat: no-repeat;
-}
 
 footer section {
 	margin-top: 60px;
@@ -151,6 +162,24 @@ footer section {
 
 footer {
 	color: white;
+	background-color: #72BBF9;
+	position: relative;
+}
+
+footer>div {
+	width: 100%;
+	height: 240px;
+	top: -180px;
+	position: absolute;
+	background: url("../img/footer-desktop.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position-x: right;
+}
+
+footer h3 {
+	margin-left: -10px;
+
 }
 
 footer a {
@@ -162,20 +191,21 @@ footer a:hover {
 }
 
 footer img {
-	width: 10%;
+	width: 25px;
 	margin-right: 5px;
 	margin-bottom: 5px;
 	transition: filter 0.25s;
 }
 
 .partenaires img {
-	width: 25%;
+	width: 50px;
 	margin-right: 5px;
 	margin-bottom: 5px;
 	transition: filter 0.25s;
 }
 
 footer img:hover {
+	-webkit-filter: invert(1);
 	filter: invert(1);
 }
 
@@ -184,6 +214,12 @@ footer aside {
 	padding-left:2%;
 	border-left:1px solid white;
 	width: 69%;
+}
+
+body>section {
+	color: black;
+	text-align: center;
+	margin: 10px 10px;
 }
 
 
@@ -217,19 +253,25 @@ footer aside {
 	    box-shadow: 5px 5px 10px 0px;
 	}
 
-	footer::before {
-		background: url("../img/footer-mobile.png");
-	}
+
 }
 
 
 /**************ANIMATION FLECHE**************/
 header>a>div {
+	-webkit-animation-name: bounce;
 	animation-name: bounce;
+	-webkit-animation-duration: 1s;
     animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
 
+@-webkit-keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
+}
 
 @keyframes bounce {
     0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
