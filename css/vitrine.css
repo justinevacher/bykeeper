@@ -34,13 +34,13 @@ header img {
 }
 
 header section {
-	width: 90%;
-	margin: 2%;
+	width: 96%;
 }
 
 header section+section {
 	background-color: rgba(0,0,0,0.4);
 	padding: 4% 4%;
+	margin: 2%;
 	color: white;
 	text-align: center;
 	font-size: 150%;
@@ -67,7 +67,7 @@ header a div {
 	position: absolute;
 	text-align: center;
 	color: white;
-	top: 90%;
+	top: 90vh;
 	left: 50%;
 }
 
@@ -90,7 +90,7 @@ main {
 main h1 {
 	font-family: "Nunito", sans-serif;
 	text-align: center;
-	padding-top: 120px;
+	padding-top: 80px;
 	margin-top: 0;
 	margin-bottom: 30px;
 }
@@ -115,7 +115,7 @@ main>section:nth-child(2) img,main>section:nth-child(3) img{
 figure {
 	display: inline-block;
     overflow: hidden;
-    border-radius: 150px;
+    border-radius: 180px;
     width: 180px;
     height: 180px;
     margin: 22px 22px;
@@ -155,11 +155,6 @@ figure:hover figcaption {
 	opacity: 1;
 }
 
-
-footer section {
-	margin-top: 60px;
-}
-
 footer {
 	color: white;
 	background-color: #72BBF9;
@@ -168,7 +163,7 @@ footer {
 
 footer>div {
 	width: 100%;
-	height: 240px;
+	height: 250px;
 	top: -180px;
 	position: absolute;
 	background: url("../img/footer-desktop.png");
@@ -179,7 +174,6 @@ footer>div {
 
 footer h3 {
 	margin-left: -10px;
-
 }
 
 footer a {
@@ -223,9 +217,12 @@ body>section {
 }
 
 
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 767px) {
 	header {
 		display: block;
+		min-height: 100vh;
+		height: auto;
+		padding-bottom: 2%;
 	}
 	
 	header img, header section {
@@ -245,7 +242,11 @@ body>section {
 		font-size: 15px;
 	}
 
-	#photos div {
+	h1 {
+		font-size: 30px;
+	}
+
+	figure {
 	    border-radius: 80px;
 	    width: 90px;
 	    height: 90px;
@@ -253,14 +254,54 @@ body>section {
 	    box-shadow: 5px 5px 10px 0px;
 	}
 
+	figure>img {
+		border-radius: 80px;
+	    width: 90px;
+	    height: 90px;
+	}
 
+	figure:active img {
+		-webkit-filter: grayscale(100%) blur(3px);
+		filter: grayscale(100%) blur(3px);
+	}
+
+	figcaption {
+		font-size: 12px;
+		top: 36px;
+	}
+
+	figure:active figcaption {
+		transition: all 0.25s;
+		opacity: 1;
+	}
 }
 
+@media screen and (max-height: 350px) {
+	header section+section {
+		height: 80vh;
+	}
 
-@media screen and (max-width: 1000px) {
+	header section p {
+		font-size: auto;
+		margin-bottom: 0px;
+	}
+
+	header section a {
+		font-size: auto;
+		padding: 1%;
+		margin-top: 0px;
+		margin-bottom: 2%;
+	}
+}
+
+@media screen and (min-width: 1900px) {
 	footer>div {
-		height: 600px;
-		top: -180px;
+		height: 500px;
+		top: -350px;
+	}
+
+	main {
+		margin-bottom: 200px;
 	}
 }
 
