@@ -10,6 +10,7 @@
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/donnees-perso.css" >
         <script type="text/javascript" src="js/burger.js" async></script>
+        <script type="text/javascript" src="js/main.js" async></script>
       <!--   <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
 </head>
 <body>
@@ -36,18 +37,27 @@
 		</div>
 	
 		<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-		 <img src="img/profil.svg">
-			<select> <!-- sélecteur du profil en haut à droite -->
-			  <option>Données personnelles</option>
-			  <option>Déconnexion</option>
-			</select>
-
+			<section class="row">
+				<section class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<img src="img/Profil.svg" onclick="afficherMenuProfil('fleche')">
+				</section>
+				<section class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+					<i class="glyphicon glyphicon-triangle-bottom" id="fleche" onclick="afficherMenuProfil('fleche')"></i>
+				</section>
+				<section class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<ul id="menuProfil">
+						<li><a href="">Données personnelles</a></li>
+						<li><a href=""> Déconnexion </a></li>
+					</ul>
+				</section>
+			</section>
 		</div>
-
+		
 	</header>
 
 	<section class="row">
 		<p>Alarme activé</p>
+		
 	</section>
 	<div class="row">
 		<nav class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4 row">
@@ -62,6 +72,7 @@
 
 	<div class="row">
 		<section class="col-xs-12 col-sm-12 col-md-12  col-lg-12">
+
 		 <form action="#">
 		 	<center>
 				Numéro de boitier<br>

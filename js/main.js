@@ -22,3 +22,18 @@ $(document).ready(function() {
 function afficherFenetre(idFenetre) {
     document.getElementById(idFenetre).style.visibility = 'visible';
 }
+
+function afficherMenuProfil(id){
+    
+    var liste = document.getElementById('menuProfil'); // récupération de l'<ul>
+
+    if (liste.className == 'profil')
+    {
+        liste.classList.remove('profil');
+    }
+    else 
+    {
+        liste.className='profil';
+    }
+
+}
