@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>ByKeeper - Paramétrages</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" href="img/fav.png" />
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  		<link rel="stylesheet" href="css/reglage-capteur.css" >
-  		<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
-  		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-        <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-
-    </head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ByKeeper - Paramétrages</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="img/fav.png" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/reglage-capteur.css" >
+	<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+</head>
 <body>
 	<header class="row">
 		<nav class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></nav>
@@ -22,12 +21,7 @@
 		</div>
 		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
 			
-			<img src="img/profil.svg">
-			<select> <!-- sélecteur du profil en haut à droite -->
-			  <option>Données personnelles</option>
-			  <option>Déconnexion</option>
-			</select>
-
+			
 		</div>
 	</header>
 
@@ -40,13 +34,13 @@
 	<h1>Réglages Capteur</h1>
 	
 	<section class="row wrap">
-		<form action="">
+		<form>
 
 				<section class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 						<h3>1ère alerte : la sensibilité du capteur vibration</h3>
 						<p>Représente un mouvement suspect du vélo.</p>
 						<p>Simple envoie de sms/email.</p>
-						<div id="alerte1"></div>
+						<div id="alerte1"><span>0%</span><span>100%</span></div>
 						<div>Valeur : <span id="val1">50%</span></div>
 						<p><i class="glyphicon glyphicon-info-sign"></i>À 0%, vous ne recevrez pas la première alerte</p>
 						
@@ -56,11 +50,11 @@
 					<h3>2ème alerte : la sensibilité de la distance</h3>
 					<p>Représente un déplacement du vélo.</p>
 					<p>Envoie de sms/email et activation de l'alarme.</p>
-					<div id="alerte2"></div>
+					<div id="alerte2"><span>10m</span><span>100m</span></div>
 					<div>Valeur : <span id="val2">50m</span></div>
 				</section>
 			
-			<section clas="row">
+			<section class="row">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 						<button class="btn btn-default">Valider</button>
 					</div>
