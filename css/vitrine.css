@@ -253,6 +253,14 @@ body>section {
 }
 
 
+@media screen and (max-width: 1000px) {
+	footer>div {
+		height: 600px;
+		top: -180px;
+	}
+}
+
+
 /**************ANIMATION FLECHE**************/
 header>a>div {
 	-webkit-animation-name: bounce;
