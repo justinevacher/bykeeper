@@ -25,10 +25,11 @@ header {
 	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
+	text-align: center;
 }
 
 header img {
-	width: 100%;
+	width: 75%;
 	height: auto;
 }
 
@@ -155,6 +156,10 @@ figure:hover figcaption {
 }
 
 
+footer section {
+	margin-top: 60px;
+}
+
 footer {
 	color: white;
 	background-color: #72BBF9;
@@ -174,6 +179,7 @@ footer>div {
 
 footer h3 {
 	margin-left: -10px;
+
 }
 
 footer a {
@@ -247,9 +253,7 @@ body>section {
 	    box-shadow: 5px 5px 10px 0px;
 	}
 
-	footer::before {
-		background: url("../img/footer-mobile.png");
-	}
+
 }
 
 
