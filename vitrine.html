@@ -10,10 +10,10 @@
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
         <link rel="stylesheet" href="css/vitrine.css">
-        <script src="js/jquery-3.1.1.js"></script>
-        <script src="js/jquery.sticky.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/main.js"></script>
+        <script type="application/javascript" src="js/jquery-3.1.1.js"></script>
+        <script type="application/javascript" src="js/jquery.sticky.js"></script>
+        <script type="application/javascript" src="js/bootstrap.min.js"></script>
+        <script type="application/javascript" src="js/main.js"></script>
     </head>
     <body>
     	<header id="header">
@@ -34,15 +34,15 @@
         <nav class="navbar navbar-custom" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".collapse">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>                        
                     </button>
                     <a class="js-scrollTo navbar-brand" href="#header"><img src="img/logo2Blanc.png" alt="Logo ByKeeper"></a>
                 </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav">
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">
                         <li><a class="js-scrollTo" href="#lekeeper">Le Keeper</a></li>
                         <li><a class="js-scrollTo" href="#quisommesnous">Qui sommes-nous ?</a></li>
                     </ul>
@@ -86,15 +86,14 @@
             </section>
 
             <section class="row">
-               
                 <section class="col-xs-12 col-md-12 col-sm-12">
                  <h1 id="quisommesnous">Qui sommes-nous ?</h1>
                     <section id="photos">
-                        <div><img src="img/baptiste.png" alt="Baptiste"/></div>
-                        <div><img src="img/roger.png" alt="Jérémy"/></div>
-                        <div><img src="img/gautier.png" alt="Gautier"/></div>
-                        <div><img src="img/greg.png" alt="Greg"/></div>
-                        <div><img src="img/justine.png" alt="Justine"/></div>
+                        <figure><img src="img/baptiste.png" alt="Baptiste"/><figcaption>Baptiste Castagnet</figcaption></figure>
+                        <figure><img src="img/roger.png" alt="Jérémy"/><figcaption>Jérémy Cuesta-Oger</figcaption></figure>
+                        <figure><img src="img/gautier.png" alt="Gautier"/><figcaption>Gautier Maire</figcaption></figure>
+                        <figure><img src="img/greg.png" alt="Greg"/><figcaption>Grégory Prince</figcaption></figure>
+                        <figure><img src="img/justine.png" alt="Justine"/><figcaption>Justine Vacher</figcaption></figure>
                     </section>
                     <p>Nous somme une équipe composée de 5 étudiants en Licence Professionnelle Développement d'Applications Web et Innovation Numérique. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </section>
@@ -118,17 +117,16 @@
                             <div>
                                 <a target="_blank" href="https://www.facebook.com/bykeeperconnect"><img src="img/facebook-icon.png" alt="Facebook"></a>
                                 <a target="_blank" href="https://www.twitter.com/bykeeperconnect"><img src="img/twitter-icon.png" alt="Twitter"></a>
-                                
                             </div>
-                            <p>contact@bykeeper.fr</p>
+                            <p>bykeeper@gmail.com</p>
                             <p>(+33)5 56 74 26 74</p>
                         </aside>
                     </section>
                     <section class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                         <h3>Partenaires</h3>
-                        <aside>
-                            <a target="_blank" href="https://www.facebook.com/bykeeperconnect"><img src="img/facebook-icon.png" alt="Facebook"></a>
-                            <a target="_blank" href="https://www.twitter.com/bykeeperconnect"><img src="img/twitter-icon.png" alt="Twitter"></a>
+                        <aside class="partenaires">
+                            <a target="_blank" href="https://www.iut.u-bordeaux.fr/info/"><img src="img/logoiut.png" alt="IUT de Bordeaux">
+                            <a target="_blank" href="https://mink.so/"><img src="img/minklogo.png" alt="Mink"></a></a>
                         </div>
                     </aside>
                 </section>
