@@ -235,39 +235,39 @@ div > section:nth-child(1) div{
 
 /*Enregistrer un trajet*/
 
-body>div>section:nth-of-type(2){
+div>section:nth-of-type(2){
 	height:100%;
 	background: white;
 	text-align: center;
 }
-body>div>section:nth-of-type(2) form {
+div>section:nth-of-type(2) form {
 	width: 54%;
 	margin:auto;
 	padding: 3% 0;
 }
 
-body>div>section:nth-of-type(2) button{
+div>section:nth-of-type(2) button{
 	width: 27%;
 	height: 58px;
 	border: 0;
 }
 
 
-body>div>section:nth-of-type(2) button#play{	
+#play{	
 	background: url(../img/play.svg) no-repeat;
 	background-position: right;
 }
 
-body>div>section:nth-of-type(2) button[type=submit]{
+div>section:nth-of-type(2) button[type=submit]{
 	background: url(../img/floppy.svg) no-repeat;
 	background-position: left;
 }
 
-body>div>section:nth-of-type(2) p{
+div>section:nth-of-type(2) p{
 	margin:5%;
 }
 
-body>div>section:nth-of-type(2) form label{
+div>section:nth-of-type(2) form label{
 	display: block;
 }
 
@@ -277,15 +277,15 @@ body>div>section:nth-of-type(2) form label{
 
 /* Mes trajets */
 
-body>section:nth-child(4){
+section:nth-child(4){
 	text-align: center;
 }
 
-body>section:nth-child(4) form{
+section:nth-child(4) form{
 	margin-top: 18px;
 }
 
-body>section:nth-child(4) select{
+section:nth-child(4) select{
 	height: 25px;
 	background-color: #BFBFBF;
 	color: white;
@@ -293,11 +293,11 @@ body>section:nth-child(4) select{
 	padding-bottom: 2px;
 }
 
-body > section:nth-child(4) > div > div:nth-child(1) > form > div{
+section:nth-child(4) > div > div:nth-child(1) > form > div{
 	text-align: left;
 }
 
-body>section:nth-child(4) form button{
+section:nth-child(4) form button{
 	width: 40px;
 	height: 25px;
 	background-color: #72bbf9;
@@ -306,7 +306,7 @@ body>section:nth-child(4) form button{
 }
 
 
-body>section:nth-child(4) form button img{
+section:nth-child(4) form button img{
 	width: 16px;
 	margin-top: 2px;
 }
@@ -314,11 +314,11 @@ body>section:nth-child(4) form button img{
 
 /*données*/
 
-body>section:nth-child(4) section{
+section:nth-child(4) section{
 	font-family: Nunito;
 }
 
-body > section:nth-child(4) > div > div:nth-child(2){
+section:nth-child(4) > div > div:nth-child(2){
 	margin-top: 10px;
 }
 
@@ -360,12 +360,12 @@ body > section:nth-child(4) > div > div:nth-child(2){
 	left: 0;
 }
 
-body>section:nth-child(4) section>div:nth-child(1){
+section:nth-child(4) section>div:nth-child(1){
 	padding-left: 6%;
 	padding-right: 0px;
 }
 
-body>section:nth-child(4) section>div:nth-child(3){
+section:nth-child(4) section>div:nth-child(3){
 	padding-left: 0px;
 	padding-right: 6%;
 } 
@@ -374,7 +374,7 @@ body>section:nth-child(4) section>div:nth-child(3){
 
 /* bouton supprimer */
 
-body>section:nth-child(4)>button{
+section:nth-child(4)>button{
 	width: 100px;
 	height: 35px;
 	border: none;
@@ -386,14 +386,14 @@ body>section:nth-child(4)>button{
 
 /* bouton ios */
 
-body > section:nth-child(4) > section{
+section:nth-child(4) > section{
 	margin: 20px 0 5px 0;
 } 
 
 .toggleWrapper{
 	text-align: right;
 }
-body > section:nth-child(4) > section > p{
+section:nth-child(4) > section > p{
 	padding: 5px 0 0 10px;
 	text-align: left;
 } 
@@ -570,7 +570,7 @@ body > section:nth-child(4) > section > p{
 	}
 
 	/*données + enregistrer trajet côte à côte*/
-	body>div>section:nth-of-type(1),body>div>section:nth-of-type(2){
+	div>section:nth-of-type(1),div>section:nth-of-type(2){
 		width: 48%;
 		background:white;
 		margin: 1%;
@@ -578,20 +578,20 @@ body > section:nth-child(4) > section > p{
 	}
 
 	/*enregistrer trajet*/
-	body>div>section:nth-of-type(2) button{
+	div>section:nth-of-type(2) button{
 		width: 14%;
 		height: 40px;
 	}
 
 	/* mes trajets */
-	body>section:nth-child(4){
+	section:nth-child(4){
 		width:90%;
 		margin:auto;
 		background-color: white;
 		padding-top: 10px;
 	}
 
-	body > section:nth-child(4) > div > div:nth-child(1) > div > div{
+	section:nth-child(4) > div > div:nth-child(1) > div > div{
 		text-align: left;
 		padding: 0px;
 	}
@@ -605,7 +605,7 @@ body > section:nth-child(4) > section > p{
 
 @media screen and (min-width:1400px){
 	/*enregistrer trajet*/
-	body>div>section:nth-of-type(2) form {
+	div>section:nth-of-type(2) form {
 		padding: 2% 0;
 	}
 
@@ -618,7 +618,7 @@ body > section:nth-child(4) > section > p{
 	}
 
 	/*données + enregistrer trajet côte à côte*/
-	body>div>section:nth-of-type(1),body>div>section:nth-of-type(2){
+	div>section:nth-of-type(1),div>section:nth-of-type(2){
 		height: 270px;
 	}
 
