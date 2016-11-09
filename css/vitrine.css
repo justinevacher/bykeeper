@@ -155,11 +155,6 @@ figure:hover figcaption {
 	opacity: 1;
 }
 
-
-footer section {
-	margin-top: 60px;
-}
-
 footer {
 	color: white;
 	background-color: #72BBF9;
@@ -168,7 +163,7 @@ footer {
 
 footer>div {
 	width: 100%;
-	height: 240px;
+	height: 250px;
 	top: -180px;
 	position: absolute;
 	background: url("../img/footer-desktop.png");
@@ -179,7 +174,6 @@ footer>div {
 
 footer h3 {
 	margin-left: -10px;
-
 }
 
 footer a {
@@ -252,15 +246,17 @@ body>section {
 	    margin: 10px 10px;
 	    box-shadow: 5px 5px 10px 0px;
 	}
-
-
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (min-width: 2000px) {
 	footer>div {
-		height: 600px;
-		top: -180px;
+		height: 500px;
+		top: -350px;
+	}
+
+	main {
+		margin-bottom: 200px;
 	}
 }
 
