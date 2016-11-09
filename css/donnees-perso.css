@@ -134,7 +134,9 @@ body > section{
   z-index: 11;
   background: url(../img/fond-mobile.jpg) no-repeat;
   width: 250px;
+  
 }
+
 .b-nav:not(.open) {
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
