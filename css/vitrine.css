@@ -71,6 +71,10 @@ nav img {
 	height: 100%;
 }
 
+main {
+	margin-bottom: 140px;
+}
+
 main h1 {
 	font-family: "Nunito", sans-serif;
 	text-align: center;
@@ -128,29 +132,34 @@ figcaption {
 	top: 75px;
 	left: 0;
 	right: 0;
+	transition: 0.25s ease-in-out;
 }
  
 figure:hover figcaption {
-	transition: all 1s;
+	transition: all 0.25s;
 	opacity: 1;
 }
 
-footer::before {
-	content: "";
-	position: absolute;
-	width: 100%;
-    height: 300px;
-	background: url("../img/footer-desktop.png");
-    background-size: cover;
-	background-repeat: no-repeat;
-}
-
-footer section {
-	margin-top: 60px;
-}
 
 footer {
 	color: white;
+	background-color: #72BBF9;
+	position: relative;
+}
+
+footer>div {
+	width: 100%;
+    height: 240px;
+    top: -180px;
+    position: absolute;
+	background: url("../img/footer-desktop.png");
+    background-size: cover;
+	background-repeat: no-repeat;
+	background-position-x: right;
+}
+
+footer h3 {
+	margin-left: -10px;
 }
 
 footer a {
@@ -162,14 +171,14 @@ footer a:hover {
 }
 
 footer img {
-	width: 10%;
+	width: 25px;
 	margin-right: 5px;
 	margin-bottom: 5px;
 	transition: filter 0.25s;
 }
 
 .partenaires img {
-	width: 25%;
+	width: 50px;
 	margin-right: 5px;
 	margin-bottom: 5px;
 	transition: filter 0.25s;
@@ -184,6 +193,12 @@ footer aside {
 	padding-left:2%;
 	border-left:1px solid white;
 	width: 69%;
+}
+
+body>section {
+	color: black;
+	text-align: center;
+	margin: 10px 10px;
 }
 
 
