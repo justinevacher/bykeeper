@@ -186,44 +186,44 @@ header > div > div > p{
 /*############################CORPS */
 
 /*Paramètre gauche*/
-body>form>div>section:nth-of-type(1){
+form>div>section:nth-of-type(1){
 	height:170px;
 	font-family: Nunito;
 	align-items: center;
 }
 
-body>form>div>section:nth-of-type(1) div{
+form>div>section:nth-of-type(1) div{
 	width:48%;
 	text-align: right;
 
 }
 
-body>form>div>section:nth-of-type(1) h3{
+form>div>section:nth-of-type(1) h3{
 	margin:5%;
 	text-align: center;
 }
 
-body>form>div>section:nth-of-type(1) p{
+form>div>section:nth-of-type(1) p{
 	padding-left:50%;
 }
 
 /*Paramètres droite*/
 
-body>form>div>section:nth-of-type(2){
+form>div>section:nth-of-type(2){
 	height:100%;
 	font-family: Nunito;
 	
 }
 
-body>form>button[type=submit]{
+form>button[type=submit]{
 	background: url(../img/floppy.svg) no-repeat;
 }
 
-body>form>div>section:nth-of-type(2) p{
+form>div>section:nth-of-type(2) p{
 	margin:5%;
 }
 
-body>form>div>section:nth-of-type(2) h3{
+form>div>section:nth-of-type(2)>section>h3{
 	margin:5%;
 	text-align: left;
 }
@@ -300,9 +300,7 @@ section.col-xs-12:nth-child(1){
 		font-size: 1.3em;
 	}
 
-	section>h3 {
-		padding-left: 60px;
-	}
+	
 
 	#fenetreConfirm
 	{
