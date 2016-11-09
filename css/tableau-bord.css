@@ -47,7 +47,7 @@ p{
 
 /*##############################HEADER*/
 header{
-	height:55px;
+	height:100px;
 	background: url(../img/fond-mobile.jpg) no-repeat;
 	background-position-y: -53px;
 }
@@ -64,19 +64,120 @@ nav{
 /*logo*/
 header>div:first-of-type img{
 	max-width: 100%;
-	height: 100%;
+	height: 55%;
 }
 /*profil*/
 header>div+div{
 	height:100%;
 }
 
-/*#################################alarme connectée*/
-body>section:first-of-type{
-	height:30px;
-	background: white;
-	text-align: center;
+/*################################# bouton alarme connectée/déconnectée */
+
+.toggle {
+  display: block;
+  user-select: none;
+  width: 115px;
+  margin: 0 auto;
+  padding-left: 6px;
+
 }
+.toggle--checkbox {
+  display: none;
+}
+.toggle--btn {
+  display: block;
+  margin: 0 auto;
+  font-size: 1.4em;
+  transition: all 350ms ease-in;
+}
+.toggle--btn:hover {
+  cursor: pointer;
+}
+.toggle--btn, .toggle--btn:before, .toggle--btn:after,
+.toggle--checkbox,
+.toggle--checkbox:before,
+.toggle--checkbox:after{
+  transition: all 250ms ease-in;
+}
+.toggle--btn:before, .toggle--btn:after,
+.toggle--checkbox:before,
+.toggle--checkbox:after {
+  content: '';
+  display: block;
+}
+
+.toggle--push .toggle--btn {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: #f9f8f6;
+  border-radius: 50%;
+  box-shadow: 0 5px 10px 0px #333, 0 15px 20px 0px #cccccc;
+}
+.toggle--push .toggle--btn:before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: #FF9900;
+  box-shadow: inset 0 0 0 5px #ccc, inset 0 0 0 14px #f9f8f6;
+}
+.toggle--push .toggle--btn:after {
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  width: 3px;
+  height: 8.5px;
+  background-color: #ccc;
+  box-shadow: 0 0 0 2.5px #f9f8f6;
+}
+.toggle--push--glow .toggle--btn {
+  background-color: #dfdfdf;
+  box-shadow: 0 5px 10px 0px #333, 0 0 0 3px #444444, 0 0 8px 2px transparent, 0 0 0 6px #919191;
+}
+.toggle--push--glow .toggle--btn:before {
+  box-shadow: inset 0 0 0 5px #aaa, inset 0 0 0 14px #dfdfdf;
+}
+.toggle--push--glow .toggle--btn:after {
+  background-color: #aaa;
+  box-shadow: 0 0 0 2.5px #dfdfdf;
+}
+.toggle--push--glow .toggle--btn:hover:before {
+  box-shadow: inset 0 0 0 5px #777777, inset 0 0 0 14px #dfdfdf;
+}
+.toggle--push--glow .toggle--btn:hover:after {
+  background-color: #777777;
+}
+.toggle--push--glow .toggle--checkbox:checked + .toggle--btn {
+  box-shadow: 0 0px 8px 0 #0072ad, 0 0 0 3px #0094e0, 0 0 30px 0 #0094e0, 0 0 0 6px #777777;
+}
+.toggle--push--glow .toggle--checkbox:checked + .toggle--btn:before {
+  box-shadow: inset 0 0 0 5px #0094e0, inset 0 0 0 14px #dfdfdf;
+}
+.toggle--push--glow .toggle--checkbox:checked + .toggle--btn:after {
+  background-color: #0094e0;
+}
+
+header > div > div > *{
+	float: left;
+}
+
+header > div > div > p{
+	padding-top: 6px;
+	padding-left: 12px;
+	font-family: Nunito, Helvetica, Arial, sans-serif;
+	font-size: 1em;
+	color: white;
+}
+
+.stopFloat{
+	clear: both;
+}
+
 
 
 /*############################CORPS */
@@ -85,13 +186,13 @@ body>section:first-of-type{
 
 
 /*données*/
-body>div>section:nth-of-type(1){
+div > section:nth-child(1){
 	height:200px;
 	font-family: Nunito;
 	display: flex;
 	align-items: center;
 }
-body>div>section:nth-of-type(1) div{
+div > section:nth-child(1) div{
 	width:48%;
 	text-align: center;
 }
@@ -134,39 +235,39 @@ body>div>section:nth-of-type(1) div{
 
 /*Enregistrer un trajet*/
 
-body>div>section:nth-of-type(2){
+div>section:nth-of-type(2){
 	height:100%;
 	background: white;
 	text-align: center;
 }
-body>div>section:nth-of-type(2) form {
+div>section:nth-of-type(2) form {
 	width: 54%;
 	margin:auto;
 	padding: 3% 0;
 }
 
-body>div>section:nth-of-type(2) button{
+div>section:nth-of-type(2) button{
 	width: 27%;
 	height: 58px;
 	border: 0;
 }
 
 
-body>div>section:nth-of-type(2) button#play{	
+#play{	
 	background: url(../img/play.svg) no-repeat;
 	background-position: right;
 }
 
-body>div>section:nth-of-type(2) button[type=submit]{
+div>section:nth-of-type(2) button[type=submit]{
 	background: url(../img/floppy.svg) no-repeat;
 	background-position: left;
 }
 
-body>div>section:nth-of-type(2) p{
+div>section:nth-of-type(2) p{
 	margin:5%;
 }
 
-body>div>section:nth-of-type(2) form label{
+div>section:nth-of-type(2) form label{
 	display: block;
 }
 
@@ -176,15 +277,15 @@ body>div>section:nth-of-type(2) form label{
 
 /* Mes trajets */
 
-body>section:nth-child(5){
+section:nth-child(4){
 	text-align: center;
 }
 
-body>section:nth-child(5) form{
+section:nth-child(4) form{
 	margin-top: 18px;
 }
 
-body>section:nth-child(5) select{
+section:nth-child(4) select{
 	height: 25px;
 	background-color: #BFBFBF;
 	color: white;
@@ -192,11 +293,11 @@ body>section:nth-child(5) select{
 	padding-bottom: 2px;
 }
 
-body > section:nth-child(5) > div > div:nth-child(1) > form > div{
+section:nth-child(4) > div > div:nth-child(1) > form > div{
 	text-align: left;
 }
 
-body>section:nth-child(5) form button{
+section:nth-child(4) form button{
 	width: 40px;
 	height: 25px;
 	background-color: #72bbf9;
@@ -205,7 +306,7 @@ body>section:nth-child(5) form button{
 }
 
 
-body>section:nth-child(5) form button img{
+section:nth-child(4) form button img{
 	width: 16px;
 	margin-top: 2px;
 }
@@ -213,11 +314,11 @@ body>section:nth-child(5) form button img{
 
 /*données*/
 
-body>section:nth-child(5) section{
+section:nth-child(4) section{
 	font-family: Nunito;
 }
 
-body > section:nth-child(5) > div > div:nth-child(2){
+section:nth-child(4) > div > div:nth-child(2){
 	margin-top: 10px;
 }
 
@@ -259,12 +360,12 @@ body > section:nth-child(5) > div > div:nth-child(2){
 	left: 0;
 }
 
-body>section:nth-child(5) section>div:nth-child(1){
+section:nth-child(4) section>div:nth-child(1){
 	padding-left: 6%;
 	padding-right: 0px;
 }
 
-body>section:nth-child(5) section>div:nth-child(3){
+section:nth-child(4) section>div:nth-child(3){
 	padding-left: 0px;
 	padding-right: 6%;
 } 
@@ -273,7 +374,7 @@ body>section:nth-child(5) section>div:nth-child(3){
 
 /* bouton supprimer */
 
-body>section:nth-child(5)>button{
+section:nth-child(4)>button{
 	width: 100px;
 	height: 35px;
 	border: none;
@@ -285,14 +386,14 @@ body>section:nth-child(5)>button{
 
 /* bouton ios */
 
-body > section:nth-child(5) > section{
+section:nth-child(4) > section{
 	margin: 20px 0 5px 0;
 } 
 
 .toggleWrapper{
 	text-align: right;
 }
-body > section:nth-child(5) > section > p{
+section:nth-child(4) > section > p{
 	padding: 5px 0 0 10px;
 	text-align: left;
 } 
@@ -418,9 +519,13 @@ body > section:nth-child(5) > section > p{
 	/*arriere plan*/
 
 	header{
-	height:55px;
+	height:115px;
 	background: url(../img/fond-mobile.jpg) no-repeat;
 	background-size:cover;
+	}
+
+	header>div:first-of-type img{
+	height: 60%;
 	}
 
 
@@ -445,8 +550,27 @@ body > section:nth-child(5) > section > p{
 		background-position-y: -258px;
 	}
 
+	/* bouton alarme connectée/déconnectée */
+	.toggle--push .toggle--btn {
+	  width: 35px;
+	  height: 35px;
+	}
+	.toggle--push .toggle--btn:before {
+	  width: 20px;
+	  height: 20px;
+	}
+	.toggle--push .toggle--btn:after {
+	  width: 4px;
+	  height: 10px;
+	}
+	header > div > div > p{
+	padding-top: 8px;
+	padding-left: 13px;
+	font-size: 1.2em;
+	}
+
 	/*données + enregistrer trajet côte à côte*/
-	body>div>section:nth-of-type(1),body>div>section:nth-of-type(2){
+	div>section:nth-of-type(1),div>section:nth-of-type(2){
 		width: 48%;
 		background:white;
 		margin: 1%;
@@ -454,20 +578,20 @@ body > section:nth-child(5) > section > p{
 	}
 
 	/*enregistrer trajet*/
-	body>div>section:nth-of-type(2) button{
+	div>section:nth-of-type(2) button{
 		width: 14%;
 		height: 40px;
 	}
 
 	/* mes trajets */
-	body>section:nth-child(5){
+	section:nth-child(4){
 		width:90%;
 		margin:auto;
 		background-color: white;
 		padding-top: 10px;
 	}
 
-	body > section:nth-child(5) > div > div:nth-child(1) > div > div{
+	section:nth-child(4) > div > div:nth-child(1) > div > div{
 		text-align: left;
 		padding: 0px;
 	}
@@ -481,7 +605,7 @@ body > section:nth-child(5) > section > p{
 
 @media screen and (min-width:1400px){
 	/*enregistrer trajet*/
-	body>div>section:nth-of-type(2) form {
+	div>section:nth-of-type(2) form {
 		padding: 2% 0;
 	}
 
@@ -490,11 +614,11 @@ body > section:nth-child(5) > section > p{
 @media screen and (min-width:1700px){
 	/*arriere plan*/
 	header{
-		height:160px;
+		height:125px;
 	}
 
 	/*données + enregistrer trajet côte à côte*/
-	body>div>section:nth-of-type(1),body>div>section:nth-of-type(2){
+	div>section:nth-of-type(1),div>section:nth-of-type(2){
 		height: 270px;
 	}
 
