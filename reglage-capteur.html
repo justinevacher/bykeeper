@@ -8,8 +8,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/png" href="img/fav.png" />
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  		<link href="css/nouislider.min.css" rel="stylesheet">
   		<link rel="stylesheet" href="css/reglage-capteur.css" >
+  		<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+  		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
     </head>
 <body>
@@ -38,6 +40,7 @@
 						<p>Représente un mouvement suspect du vélo.</p>
 						<p>Simple envoie de sms/email.</p>
 						<div id="alerte1"></div>
+						<div>Valeur : <span id="val1">50%</span></div>
 						<p><i class="glyphicon glyphicon-info-sign"></i>À 0%, vous ne recevrez pas la première alerte</p>
 						
 				</section>
@@ -47,6 +50,7 @@
 					<p>Représente un déplacement du vélo.</p>
 					<p>Envoie de sms/email et activation de l'alarme.</p>
 					<div id="alerte2"></div>
+					<div>Valeur : <span id="val2">50m</span></div>
 				</section>
 			
 			<section clas="row">
@@ -57,38 +61,37 @@
 		</form>
 	</section>
 
-<script type="application/javascript" src="js/nouislider.min.js"></script>
 <script>
-var alerte1 = document.getElementById('alerte1');
-var alerte2 = document.getElementById('alerte2');
-// slider.style.height = '10px';
-noUiSlider.create(alerte1, {
-	start: [0,0],
-	connect: true,
-	range: {
-		'min': 0,
-		'max': 100
-	},
-	pips: { // Show a scale with the slider
-		mode: 'steps',
-		stepped: true,
-		density: 10
-	}
-});
 
-noUiSlider.create(alerte2, {
-	start: [0,0],
-	connect: true,
-	range: {
-		'min': 0,
-		'max': 100
-	},
-	pips: { // Show a scale with the slider
-		mode: 'steps',
-		stepped: true,
-		density: 10
-	}
-});
+	// Slider de la sensibilité
+	$("#alerte1").slider({
+	    min: 0,
+	    max: 100,
+	    step: 10,
+	    value: 50,
+	    range: "min",
+	    slide: function(event, ui){}
+	});
+
+	//Affichage valeur
+	$( "#alerte1" ).on( "slide", function( event, ui ) {
+		$("#val1").text(ui.value + "%");
+	} );
+
+	// Slider de la distance
+	$("#alerte2").slider({
+	    min: 10,
+	    max: 100,
+	    step: 10,
+	    value: 50,
+	    range: "min",
+	    slide: function(event, ui){}
+	});
+	// Affichage valeur
+$( "#alerte2" ).on( "slide", function( event, ui ) {
+	$("#val2").text(ui.value + "m");
+} );
+
 
 </script>
 	

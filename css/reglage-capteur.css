@@ -84,13 +84,16 @@ body>section>form{
 	margin: 13% auto;
 }
 
-.noUi-base>div:nth-child(1)>div:nth-child(1) {
-	display: none;
+#alerte1 .ui-slider-range, #alerte2 .ui-slider-range { background: #72BBF9; }
+
+#alerte1 label {
+  position: absolute;
+  width: 20px;
+  margin-top: 20px;
+  margin-left: -10px;
+  text-align: center;
 }
 
-.noUi-connect{
-	background:#72BBF9;
-}
 
 /*Paramètre gauche*/
 
