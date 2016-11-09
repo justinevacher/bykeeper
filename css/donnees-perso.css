@@ -57,10 +57,14 @@ header{
 	background: url(../img/fond-mobile.jpg) no-repeat;
 	background-position-y: -53px;
 }
-/*
-header>section{
 
-}*/
+header.row > div:nth-child(4) > img:nth-child(1){
+  position:relative;
+  top:5px;
+  left:10px;
+  height:43%;
+  width:43%;
+}
 
 header > div:nth-child(3){
 	height:100%;
