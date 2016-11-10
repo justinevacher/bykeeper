@@ -23,17 +23,26 @@ function afficherFenetre(idFenetre) {
     document.getElementById(idFenetre).style.visibility = 'visible';
 }
 
-function afficherMenuProfil(id){
+function afficherMenuProfil(){
     
     var liste = document.getElementById('menuProfil'); // récupération de l'<ul>
+    var img = document.querySelector('section.col-xs-6:nth-child(1) > img:nth-child(1)');
+    var arrow = document.getElementsByClassName('glyphicon');
+    var profil = document.querySelector('section.col-xs-6:nth-child(1) > p:nth-child(2)');
 
     if (liste.className == 'profil')
     {
         liste.classList.remove('profil');
+        img.src = 'img/Profil.svg';
+        arrow[0].style.color='white';
+        profil.style.color = 'white';
     }
     else 
     {
         liste.className='profil';
+        img.src = 'img/profilBlue.svg';
+        arrow[0].style.color='#72bbf9';
+        profil.style.color = '#72bbf9';
     }
 
 }
