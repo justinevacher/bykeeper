@@ -22,7 +22,12 @@ body {
 }
 
 form {
+    width: 60%;
+    background-color: #fefefe;
     padding:2%;
+    margin: 5% auto;
+    border: 1px solid #888;
+   
 }
 
 form label{
@@ -68,12 +73,13 @@ input[type=tel]{
 
 
 form button {
-    background-color: #76BBF9;
+    width: 100%;
     color: white;
+    background-color: #76BBF9;
     padding: 5px 10px;
     margin: 8px 0;
     border: none;
-    width: 100%;
+    
 }
 
 .g-recaptcha {
@@ -85,17 +91,11 @@ button[type=submit]+a+span {
 }
 
 button[type=submit]+a{
-    color: white;
     width: auto;
-    padding: 5px 10px;
     background-color: #ccc;
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 5% auto;
-    border: 1px solid #888;
-    width: 60%;
+    color: white;
+    padding: 5px 10px;
+    
 }
 
 @media screen and (max-width: 575px) {
@@ -108,6 +108,11 @@ button[type=submit]+a{
 }
 
 @media screen and (max-width: 460px) {
+    form {
+        width: 100%;
+        margin: auto;
+        
+    }
      button[type=submit]+a+span{
         display: block;
         float: none;
@@ -118,8 +123,5 @@ button[type=submit]+a{
         width: 100%;
         text-align: center;
     }
-    .modal-content {
-    	margin: auto auto auto auto;
-    	width: 100%;
-    }
+    
 }
