@@ -11,9 +11,9 @@ FONTS */
 
 
 html, body {
-	background: #ededed;
 	width: 100%;
-	font-size:.9em;
+  font-size:.9em;
+  background: #ededed;
 }
 
 /*titre*/
@@ -34,8 +34,8 @@ h2{
 
 /* liens */
 a{
-  text-decoration: none;
   font-family: Nunito;
+  text-decoration: none;
 }
 
 a:hover{
@@ -52,7 +52,9 @@ a:active{
 
 
 
-/*##############################HEADER*/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+/* = header */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 header{
 	height:55px;
 	background: url(../img/fond-mobile.jpg) no-repeat;
@@ -67,46 +69,46 @@ div.col-xs-4:nth-child(3) > img:nth-child(1){
 /* menu déroulant */
 
 section.col-xs-6:nth-child(1) > img:nth-child(1){
-  cursor:pointer;
   position:relative;
+  width:40px;
   top:6px;
   left:20px;
-  width:40px;
+  cursor:pointer;
 }
 
 section.col-xs-6:nth-child(1) > p:nth-child(2){
-  font-family: Nunito;
-  font-size: 1.3em;
-  color:white;
-  cursor: pointer;
   position:absolute;
+  visibility:hidden;
+  font-family: Nunito;
+  font-size: 1.3em;  
   top:45%;
   left:50%;
-  visibility:hidden;
+  color:white;
+  cursor: pointer;
 }
 
 .glyphicon{
+  position:absolute; 
+  top:20px;
   cursor:pointer;
   color: white;
-  position:absolute;
-  top:20px;
  }
 
 section.col-xs-12:nth-child(3) > ul:nth-child(1){
   position: absolute;
-  list-style: none;
   padding:0px;
+  z-index: 9999;
   top:2px;
   opacity:0;
-  z-index: 9999;
+  list-style: none;
 }
 
 section.col-xs-12:nth-child(3) > ul:nth-child(1) > li{
-  background: white;
-  border: 1px solid #5a96c8;
   padding:5px;
+  border: 1px solid #5a96c8;
   font-size: 1.0em;
   text-align: left;
+  background: white;
 }
 
 section.col-xs-12:nth-child(3) > ul:nth-child(1) > li > a{
@@ -117,7 +119,7 @@ section.col-xs-12:nth-child(3) > ul:nth-child(1) > li > a:hover{
 color:grey;
 }
 
-/*TEST*/
+
 @keyframes profil{
   0%{
     opacity:0;
@@ -154,12 +156,14 @@ header > div:nth-child(3) > img{
 }
 
 
-/*#################################alarme connectée*/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+/* Alarme connectée */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 body > section{
-	clear: both;
 	height:30px;
+  clear: both;
+  text-align: center;
 	background: white;
-	text-align: center;
 }
 
 
@@ -356,10 +360,10 @@ body > section{
 
 body > div:nth-child(3) > nav > li{
 	position: relative;
+  height: 50px;
+  border: 2px solid #72bbf9;
+  text-align: center;
 	list-style-type: none;
-	text-align: center;
-	height: 50px;
-	border: 2px solid #72bbf9;
 }
 
 body > div:nth-child(3) > nav > li > a{
@@ -373,10 +377,9 @@ body > div:nth-child(3) > nav > li > a{
 }
 
 
-
-
-
-/*############################CORPS */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+/* Corps */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 
 /*Formulaire*/
 
@@ -387,13 +390,13 @@ form{
 }
 
 input[type=text]{
-	border: 2px solid #72bbf9;
+  width: 15em;
+  padding-left: 0.5em;
+  margin-bottom: 0.2em;
+  border: 2px solid #72bbf9;
+  font-size: 0.8em;
+  text-align : left;
 	color : black;
-	text-align : left;
-	padding-left: 0.5em;
-	margin-bottom: 0.2em;
-	font-size: 0.8em;
-	width: 15em;
 }
 
 input[type=submit]{
@@ -402,7 +405,9 @@ input[type=submit]{
 }
 
 
-/*media queries*/
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
+/* Média queries */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 
 @media screen and (min-width: 720px){
 	/* menu Burger */
@@ -447,8 +452,8 @@ input[type=submit]{
   }
 
   section.col-xs-6:nth-child(1) > p:nth-child(2){
-    font-size: 1.6em;
     visibility: visible;
+    font-size: 1.6em;
     left:75%;
     top:17px;
   }
@@ -484,8 +489,8 @@ input[type=submit]{
 	}
   
   section.col-xs-6:nth-child(1) > img:nth-child(1){
-    left:90%;
     width:55px;
+    left:90%;
     top:20px;
   }
   
