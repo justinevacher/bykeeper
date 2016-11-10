@@ -27,12 +27,10 @@ form {
     padding:2%;
     margin: 5% auto;
     border: 1px solid #888;
-   
 }
 
-form label{
+form label {
     font-family: nunito;
-
 }
 
 input[type=text], input[type=email], input[type=password], input[type=tel] {
@@ -43,34 +41,33 @@ input[type=text], input[type=email], input[type=password], input[type=tel] {
     box-sizing: border-box;
 }
 
-input{
-     border: 1px solid #ccc;
+input {
+    border: 1px solid #ccc;
     border-right-color: #76BBF9; 
 }
 
-input[name=login]{
+input[name=login] {
     background: url(../img/profilBlue.svg) no-repeat;
     background-position: 99% 3px;
     background-size: 20px;
 }
 
-input[type=password]{
+input[type=password] {
     background: url(../img/password.svg) no-repeat;
     background-position: 99% 4px;
     background-size: 20px;  
 }
 
-input[type=email]{
+input[type=email] {
     background: url(../img/mail.svg) no-repeat;
     background-position: 99% 3px;
     background-size: 20px;  
 }
-input[type=tel]{
+input[type=tel] {
     background: url(../img/phone.svg) no-repeat;
     background-position: 99% 4px;
     background-size: 20px; 
 }
-
 
 form button {
     width: 100%;
@@ -79,7 +76,6 @@ form button {
     padding: 5px 10px;
     margin: 8px 0;
     border: none;
-    
 }
 
 .g-recaptcha {
@@ -90,12 +86,15 @@ button[type=submit]+a+span {
     float: right;
 }
 
-button[type=submit]+a{
+button[type=submit]+a {
     width: auto;
     background-color: #ccc;
     color: white;
-    padding: 5px 10px;
-    
+    padding: 5px 10px;   
+}
+
+.row {
+    margin: 0px;
 }
 
 @media screen and (max-width: 575px) {
@@ -123,5 +122,4 @@ button[type=submit]+a{
         width: 100%;
         text-align: center;
     }
-    
 }

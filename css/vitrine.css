@@ -12,7 +12,6 @@
 html, body {
 	height: 100%;
 	margin: 0;
-	align-items: center;
 	font-family: "Open Sans Condensed", sans-serif;
 	background-color: #F1F1F1;
 }
@@ -20,11 +19,10 @@ html, body {
 header {
 	display: flex;
 	align-items: center;
-	height: 100vh;
+	height: 100%;
 	background: url(../img/velo.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	position: relative;
 	text-align: center;
 }
 
