@@ -22,60 +22,80 @@ body {
 }
 
 form {
+    width: 60%;
+    background-color: #fefefe;
     padding:2%;
+    margin: 5% auto;
+    border: 1px solid #888;
+   
 }
 
+form label{
+    font-family: nunito;
+
+}
 
 input[type=text], input[type=email], input[type=password], input[type=tel] {
     width: 100%;
     padding: 5px 10px;
     margin-bottom: 10px;
     display: inline-block;
-    border: 1px solid #ccc;
     box-sizing: border-box;
 }
 
+input{
+     border: 1px solid #ccc;
+    border-right-color: #76BBF9; 
+}
+
+input[name=login]{
+    background: url(../img/profilBlue.svg) no-repeat;
+    background-position: 99% 3px;
+    background-size: 20px;
+}
+
+input[type=password]{
+    background: url(../img/password.svg) no-repeat;
+    background-position: 99% 4px;
+    background-size: 20px;  
+}
+
+input[type=email]{
+    background: url(../img/mail.svg) no-repeat;
+    background-position: 99% 3px;
+    background-size: 20px;  
+}
+input[type=tel]{
+    background: url(../img/phone.svg) no-repeat;
+    background-position: 99% 4px;
+    background-size: 20px; 
+}
+
+
 form button {
-    background-color: #4CAF50;
+    width: 100%;
     color: white;
+    background-color: #76BBF9;
     padding: 5px 10px;
     margin: 8px 0;
     border: none;
-    width: 100%;
-}
-
-.formulaire {
-    padding: 20px;
-}
-
-.footer-formulaire {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: #f1f1f1;
+    
 }
 
 .g-recaptcha {
     margin-bottom: 10px;
 }
 
-span.mdpOublie {
+button[type=submit]+a+span {
     float: right;
 }
 
-.btnAnnuler {
-    color: white;
+button[type=submit]+a{
     width: auto;
+    background-color: #ccc;
+    color: white;
     padding: 5px 10px;
-    background-color: #f44336;
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 5% auto;
-    border: 1px solid #888;
-    width: 60%;
+    
 }
 
 @media screen and (max-width: 575px) {
@@ -88,16 +108,20 @@ span.mdpOublie {
 }
 
 @media screen and (max-width: 460px) {
-    span.mdpOublie {
+    form {
+        width: 100%;
+        margin: auto;
+        
+    }
+     button[type=submit]+a+span{
         display: block;
         float: none;
-    	padding-top: 16px;
+    	margin-top: 16px;
     }
-    .btnAnnuler {
+    button[type=submit]+a {
+        display: block;
         width: 100%;
+        text-align: center;
     }
-    .modal-content {
-    	margin: auto auto auto auto;
-    	width: 100%;
-    }
+    
 }

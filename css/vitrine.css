@@ -102,10 +102,11 @@ main p {
 	text-align: justify;
 }
 
-main>section>div:nth-child(2) img, main>section>div:nth-child(3) img {
+main>section>div:nth-child(2) img, main>section>div:nth-child(3) img, main>section>div:nth-child(4) img {
 	margin-top: 50px;
 	margin-bottom: 50px;
 	width: 100%;
+	border: 1px solid #72BBF9;
 }
 
 #photos {
@@ -216,8 +217,93 @@ footer aside {
 	margin: 10px 10px;
 }
 
+aside {
+	margin-bottom: 10px;
+}
 
-@media screen and (max-width: 767px) {
+
+@media screen and (max-width: 1024px) {
+	figure {
+	    border-radius: 120px;
+	    width: 120px;
+	    height: 120px;
+	    margin: 10px 10px;
+	    box-shadow: 5px 5px 10px 0px;
+	}
+
+	figure>img {
+		border-radius: 120px;
+	    width: 120px;
+	    height: 120px;
+	}
+
+	figure:active img {
+		-webkit-filter: grayscale(100%) blur(3px);
+		filter: grayscale(100%) blur(3px);
+	}
+
+	figcaption {
+		font-size: 16px;
+		top: 48px;
+	}
+
+	figure:active figcaption {
+		transition: all 0.25s;
+		opacity: 1;
+	}
+}
+
+@media screen and (max-width: 736px) {
+	header p {
+		font-size: 18px;
+	}
+
+	header a {
+		font-size: 18px;
+	}
+
+	figure {
+	    border-radius: 100px;
+	    width: 100px;
+	    height: 100px;
+	    margin: 10px 10px;
+	    box-shadow: 5px 5px 10px 0px;
+	}
+
+	figure>img {
+		border-radius: 100px;
+	    width: 100px;
+	    height: 100px;
+	}
+
+	figcaption {
+		font-size: 14px;
+		top: 40px;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	figure {
+	    border-radius: 85px;
+	    width: 85px;
+	    height: 85px;
+	    margin: 10px 10px;
+	    box-shadow: 5px 5px 10px 0px;
+	}
+
+	figure>img {
+		border-radius: 85px;
+	    width: 85px;
+	    height: 85px;
+	}
+
+	figcaption {
+		font-size: 12px;
+		top: 32px;
+	}
+}
+
+@media screen and (max-width: 630px) {
 	header {
 		display: block;
 		min-height: 100vh;
@@ -235,46 +321,68 @@ footer aside {
 		margin-left: auto;
 		margin-right: auto;
 	}
-	
+}
+
+@media screen and (max-width: 480px) {
+	header div {
+		padding-top: 20%;
+		padding-bottom: 20%;
+	}
+
 	main p {
-		font-size: 15px;
+		font-size: 22px;
 	}
 
 	h1 {
-		font-size: 30px;
+		font-size: 40px;
 	}
 
 	figure {
-	    border-radius: 80px;
-	    width: 90px;
-	    height: 90px;
+	    border-radius: 95px;
+	    width: 95px;
+	    height: 95px;
 	    margin: 10px 10px;
 	    box-shadow: 5px 5px 10px 0px;
 	}
 
 	figure>img {
-		border-radius: 80px;
-	    width: 90px;
-	    height: 90px;
-	}
-
-	figure:active img {
-		-webkit-filter: grayscale(100%) blur(3px);
-		filter: grayscale(100%) blur(3px);
+		border-radius: 95px;
+	    width: 95px;
+	    height: 95px;
 	}
 
 	figcaption {
-		font-size: 12px;
-		top: 36px;
+		font-size: 14px;
+		top: 38px;
 	}
 
-	figure:active figcaption {
-		transition: all 0.25s;
-		opacity: 1;
+	footer p {
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 380px) {
+	figure {
+	    border-radius: 105px;
+	    width: 105px;
+	    height: 105px;
+	    margin: 10px 10px;
+	    box-shadow: 5px 5px 10px 0px;
 	}
 
-	aside {
-		margin-bottom: 10px;
+	figure>img {
+		border-radius: 105px;
+	    width: 105px;
+	    height: 105px;
+	}
+
+	figcaption {
+		font-size: 14px;
+		top: 44px;
+	}
+
+	h1 {
+		font-size: 30px;
 	}
 }
 
@@ -283,6 +391,13 @@ footer aside {
 		padding: 1%;
 		margin-top: 0px;
 		margin-bottom: 2%;
+	}
+}
+
+@media screen and (min-width: 450px) {
+	header>div {
+		padding-top: 0px;
+		padding-bottom: 0px;
 	}
 }
 

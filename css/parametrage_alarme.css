@@ -216,10 +216,12 @@ body>div:nth-child(3) section button:nth-child(1){
 	background-position: 50%;
 }
 body>div:nth-child(3) section button:nth-child(2){
-	background: url(../img/sensibility2.svg) no-repeat,#76BBF9;
+	background: url(../img/sensibilityW.svg) no-repeat,#76BBF9;
 	background-position: 50%;
-	/*background: #76BBF9;*/
-	border-right:2px solid #ededed;
+}
+
+i.glyphicon:nth-child(2){
+	visibility: hidden;
 }
 
 body>div:nth-child(4){
