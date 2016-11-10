@@ -30,7 +30,7 @@ form {
 }
 
 form label {
-    font-family: nunito;
+    font-family: "Nunito";
 }
 
 input[type=text], input[type=email], input[type=password], input[type=tel] {
