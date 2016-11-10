@@ -44,6 +44,10 @@ header>div+div {
     font-size: 150%;
 }
 
+header>div+div>p {
+    margin-top: 10px;
+}
+
 header>div>a {
     display: block;
     width: 70%;
