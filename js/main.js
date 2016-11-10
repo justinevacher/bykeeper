@@ -6,19 +6,6 @@ r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
 ga('create','UA-86548692-1','auto');ga('send','pageview');
 
 
-$(document).ready(function() {
-    $('.js-scrollTo').on('click', function() { // Au clic sur un élément
-        var page = $(this).attr('href'); // Page cible
-        var speed = 750; // Durée de l'animation (en ms)
-        $('html, body').animate( { scrollTop: $(page).offset().top }, speed ); // Go
-        return false;
-    });
-
-    $(function() {
-        $(".navbar").sticky({topSpacing:0});
-    });
-});
-
 function afficherFenetre(idFenetre) {
     document.getElementById(idFenetre).style.visibility = 'visible';
 }
