@@ -37,6 +37,10 @@ h3{
 	
 }
 
+/*STYLE*/
+.clear{
+	clear:both;
+}
 /* position des trois switchs */
 section > section > div > label{
 	position: relative;
@@ -182,6 +186,59 @@ header > div > div > p{
 	clear: both;
 }
 
+
+/*menu parametre*/
+body>div:nth-child(3){
+	height: 70px;
+	background: #72BBF9;
+	margin-top: 1%;
+}
+
+body>div:nth-child(3) section{
+	width:140px;
+	height: 100%;
+	background:#ededed;
+	padding: 0;
+	margin: auto;
+}
+
+
+
+body>div:nth-child(3) section button{
+	width:70px;
+	height:70px;
+	float:left;
+	border:0;
+}
+
+body>div:nth-child(3) section button:nth-child(1){
+	background: url(../img/alarm.svg) no-repeat;
+	background-position: 50%;
+}
+body>div:nth-child(3) section button:nth-child(2){
+	background: url(../img/sensibility2.svg) no-repeat,#76BBF9;
+	background-position: 50%;
+	/*background: #76BBF9;*/
+	border-right:2px solid #ededed;
+}
+
+body>div:nth-child(4){
+	text-align: center;
+}
+
+body>div:nth-child(4) section{
+	width:140px;
+	height: auto;
+	padding: 0;
+	margin: auto;
+}
+
+
+body>div:nth-child(4) i{
+	font-size: 2em;
+	color: #76BBF9;
+	width: 68px;
+}
 
 /*############################CORPS */
 
