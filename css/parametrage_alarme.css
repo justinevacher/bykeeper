@@ -188,13 +188,13 @@ header > div > div > p{
 
 
 /*menu parametre*/
-body>div:nth-child(3){
+body>div:nth-child(2){
 	height: 70px;
 	background: #72BBF9;
 	margin-top: 1%;
 }
 
-body>div:nth-child(3) section{
+body>div:nth-child(2) section{
 	width:140px;
 	height: 100%;
 	background:#ededed;
@@ -204,29 +204,31 @@ body>div:nth-child(3) section{
 
 
 
-body>div:nth-child(3) section button{
+body>div:nth-child(2) section button{
 	width:70px;
 	height:70px;
 	float:left;
 	border:0;
 }
 
-body>div:nth-child(3) section button:nth-child(1){
+body>div:nth-child(2) section button:nth-child(1){
 	background: url(../img/alarm.svg) no-repeat;
 	background-position: 50%;
 }
-body>div:nth-child(3) section button:nth-child(2){
-	background: url(../img/sensibility2.svg) no-repeat,#76BBF9;
+body>div:nth-child(2) section button:nth-child(2){
+	background: url(../img/sensibilityW.svg) no-repeat,#76BBF9;
 	background-position: 50%;
-	/*background: #76BBF9;*/
-	border-right:2px solid #ededed;
 }
 
-body>div:nth-child(4){
+i.glyphicon:nth-child(2){
+	visibility: hidden;
+}
+
+body>div:nth-child(3){
 	text-align: center;
 }
 
-body>div:nth-child(4) section{
+body>div:nth-child(3) section{
 	width:140px;
 	height: auto;
 	padding: 0;
@@ -234,13 +236,17 @@ body>div:nth-child(4) section{
 }
 
 
-body>div:nth-child(4) i{
+body>div:nth-child(3) i{
 	font-size: 2em;
 	color: #76BBF9;
 	width: 68px;
 }
 
 /*############################CORPS */
+
+body>section>form{
+	text-align: center;
+}
 
 /*Paramètre gauche*/
 form>div>section:nth-of-type(1){
@@ -272,10 +278,6 @@ form>div>section:nth-of-type(2){
 	
 }
 
-form>button[type=submit]{
-	background: url(../img/floppy.svg) no-repeat;
-}
-
 form>div>section:nth-of-type(2) p{
 	margin:5%;
 }
@@ -297,21 +299,9 @@ section.col-xs-12:nth-child(1){
 	margin-bottom: 50px;
 }
 
-#fenetreConfirm
-{
-	position: absolute;
-    top: 50%;
-    left:2px;
-    background-color: white;
-    font-weight: bold;
-    font-color; white;
- 	text-align: center;
-    z-index: 9999; /*partie importante: à l'affichage, la div sera au-dessus de tout le reste*/
-    visibility: hidden; /*partie importante: cacher la div et son contenu*/
-    border:1px solid black;
- 	padding:5px;
+.btn-default{
+	background: #72BBF9;
 }
-
 
 
 /*media queries*/
@@ -355,14 +345,6 @@ section.col-xs-12:nth-child(1){
 
 	h3 {
 		font-size: 1.3em;
-	}
-
-	
-
-	#fenetreConfirm
-	{
-	    top: 50%;
-	    left:35%;
 	}
 
 
@@ -412,10 +394,6 @@ section.col-xs-12:nth-child(1){
 		border-left: 2px solid grey;
 	}
 
-	#fenetreConfirm
-	{
-		left:39%;
-	}
 	
 }
 
@@ -425,11 +403,6 @@ section.col-xs-12:nth-child(1){
 		top:40px;
 		left:25px;
 	}	
-	
-	#fenetreConfirm
-	{
-		left:42%;
-	}
 
 }
 
