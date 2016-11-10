@@ -94,15 +94,20 @@ main h1 {
 }
 
 main p {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     font-size: 20px;
     text-align: justify;
 }
 
+main .row {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
 main>section>div:nth-child(2) img, main>section>div:nth-child(3) img, main>section>div:nth-child(4) img {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     width: 100%;
     border: 1px solid #72BBF9;
 }
@@ -289,10 +294,10 @@ body>div:nth-child(5){
     }
 
     a.back-to-top {
-	    width: 40px;
-	    height: 40px;
-	    background-size: 60%;
-	}
+        width: 40px;
+        height: 40px;
+        background-size: 60%;
+    }
 }
 
 @media screen and (max-width: 650px) {
