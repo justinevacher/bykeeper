@@ -58,6 +58,11 @@ header{
 	background-position-y: -53px;
 }
 
+div.col-xs-4:nth-child(3) > img:nth-child(1){
+  width:120px;
+}
+
+
 /* menu déroulant */
 
 section.col-xs-6:nth-child(1) > img:nth-child(1){
@@ -65,9 +70,7 @@ section.col-xs-6:nth-child(1) > img:nth-child(1){
   position:relative;
   top:6px;
   left:20px;
-  height:150%;
-  width:150%;
- 
+  width:40px;
 }
 
 .glyphicon{
@@ -81,13 +84,15 @@ section.col-xs-12:nth-child(3) > ul:nth-child(1){
   position: absolute;
   list-style: none;
   padding:0px;
-  opacity : 0;
+  top:2px;
+  opacity:0;
 }
-
 
 section.col-xs-12:nth-child(3) > ul:nth-child(1) > li{
   background: #72bbf9;
   border: 1px solid #5a96c8;
+  padding:5px;
+  font-size: 1.0em;
 }
 
 section.col-xs-12:nth-child(3) > ul:nth-child(1) > li > a{
@@ -412,18 +417,6 @@ input[type=submit]{
 	background: url(../img/fond-mobile.jpg) no-repeat;
 	background-size:cover;
 	}
-
-  section.col-xs-6:nth-child(1) > img:nth-child(1){
-    left:60px;
-    height:40%;
-    width:40%;
-  }
-
- section.col-xs-12:nth-child(3) > ul:nth-child(1){
-    font-size: 1.2em;
-    padding-top:1px;
-    left:0px;
-  }
 
 }
 
