@@ -18,7 +18,7 @@ html, body {
 
 /*titre*/
 h1,h2{
-	font-family: Nunito;
+	font-family: "Nunito";
 	text-align: center;
 }
 
@@ -33,6 +33,11 @@ h2{
 
 h3{
 	font-size:1.2em;
+}
+
+/*STYLE*/
+.clear{
+	clear:both;
 }
 
 
@@ -72,6 +77,118 @@ body>section:first-of-type{
 	height:30px;
 	text-align: center;
 	background: white;
+}
+
+/*menu parametre*/
+body>div:nth-child(3){
+	height: 70px;
+	background: #72BBF9;
+	margin-top: 1%;
+}
+
+body>div:nth-child(3) section{
+	width:140px;
+	height: 100%;
+	background:#ededed;
+	padding: 0;
+	margin: auto;
+}
+
+
+
+body>div:nth-child(3) section button{
+	width:70px;
+	height:70px;
+	float:left;
+	border:0;
+}
+
+body>div:nth-child(3) section button:nth-child(1){
+	background: url(../img/alarmW.svg) no-repeat, #76BBF9;
+	background-position: 50%;
+}
+body>div:nth-child(3) section button:nth-child(2){
+	background: url(../img/sensibility.svg) no-repeat;
+	background-position: 50%;
+}
+
+i.glyphicon:nth-child(1){
+	visibility: hidden;
+}
+
+body>div:nth-child(4){
+	text-align: center;
+}
+
+body>div:nth-child(4) section{
+	width:140px;
+	height: auto;
+	padding: 0;
+	margin: auto;
+}
+
+
+body>div:nth-child(4) i{
+	font-size: 2em;
+	color: #76BBF9;
+	width: 68px;
+}
+
+/*############################CORPS */
+
+/*Paramètre gauche*/
+form>div>section:nth-of-type(1){
+	height:170px;
+	font-family: Nunito;
+	align-items: center;
+}
+
+form>div>section:nth-of-type(1) div{
+	width:48%;
+	text-align: right;
+
+}
+
+form>div>section:nth-of-type(1) h3{
+	margin:5%;
+	text-align: center;
+}
+
+form>div>section:nth-of-type(1) p{
+	padding-left:50%;
+}
+
+/*Paramètres droite*/
+
+form>div>section:nth-of-type(2){
+	height:100%;
+	font-family: Nunito;
+	
+}
+
+form>button[type=submit]{
+	background: url(../img/floppy.svg) no-repeat;
+}
+
+form>div>section:nth-of-type(2) p{
+	margin:5%;
+}
+
+form>div>section:nth-of-type(2)>section>h3{
+	margin:5%;
+	text-align: left;
+}
+
+
+div>p h3{
+	font-size: 1.2em;
+}
+div>p {
+	padding-bottom: 20px;
+}
+
+section.col-xs-12:nth-child(1){
+	margin-bottom: 50px;
 }
 
 /*############################CORPS */
