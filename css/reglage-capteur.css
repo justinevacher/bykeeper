@@ -166,10 +166,6 @@ form>div>section:nth-of-type(2){
 	
 }
 
-form>button[type=submit]{
-	background: url(../img/floppy.svg) no-repeat;
-}
-
 form>div>section:nth-of-type(2) p{
 	margin:5%;
 }
@@ -237,6 +233,9 @@ body>section>form{
 	vertical-align: bottom;
 }
 
+.btn-default{
+	background: #72BBF9;
+}
 
 
 
