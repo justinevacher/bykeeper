@@ -25,18 +25,50 @@ form {
     padding:2%;
 }
 
+form label{
+    font-family: nunito;
+
+}
 
 input[type=text], input[type=email], input[type=password], input[type=tel] {
     width: 100%;
     padding: 5px 10px;
     margin-bottom: 10px;
     display: inline-block;
-    border: 1px solid #ccc;
     box-sizing: border-box;
 }
 
+input{
+     border: 1px solid #ccc;
+    border-right-color: #76BBF9; 
+}
+
+input[name=login]{
+    background: url(../img/profilBlue.svg) no-repeat;
+    background-position: 99% 3px;
+    background-size: 20px;
+}
+
+input[type=password]{
+    background: url(../img/password.svg) no-repeat;
+    background-position: 99% 4px;
+    background-size: 20px;  
+}
+
+input[type=email]{
+    background: url(../img/mail.svg) no-repeat;
+    background-position: 99% 3px;
+    background-size: 20px;  
+}
+input[type=tel]{
+    background: url(../img/phone.svg) no-repeat;
+    background-position: 99% 4px;
+    background-size: 20px; 
+}
+
+
 form button {
-    background-color: #4CAF50;
+    background-color: #76BBF9;
     color: white;
     padding: 5px 10px;
     margin: 8px 0;
@@ -44,31 +76,19 @@ form button {
     width: 100%;
 }
 
-.formulaire {
-    padding: 20px;
-}
-
-.footer-formulaire {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-color: #f1f1f1;
-}
-
 .g-recaptcha {
     margin-bottom: 10px;
 }
 
-span.mdpOublie {
+button[type=submit]+a+span {
     float: right;
 }
 
-.btnAnnuler {
+button[type=submit]+a{
     color: white;
     width: auto;
     padding: 5px 10px;
-    background-color: #f44336;
+    background-color: #ccc;
 }
 
 .modal-content {
@@ -88,13 +108,15 @@ span.mdpOublie {
 }
 
 @media screen and (max-width: 460px) {
-    span.mdpOublie {
+     button[type=submit]+a+span{
         display: block;
         float: none;
-    	padding-top: 16px;
+    	margin-top: 16px;
     }
-    .btnAnnuler {
+    button[type=submit]+a {
+        display: block;
         width: 100%;
+        text-align: center;
     }
     .modal-content {
     	margin: auto auto auto auto;
