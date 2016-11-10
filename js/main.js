@@ -26,14 +26,20 @@ function afficherFenetre(idFenetre) {
 function afficherMenuProfil(id){
     
     var liste = document.getElementById('menuProfil'); // récupération de l'<ul>
+    var img = document.querySelector('section.col-xs-6:nth-child(1) > img:nth-child(1)');
+    var arrow = document.querySelector('#fleche');
 
     if (liste.className == 'profil')
     {
         liste.classList.remove('profil');
+        img.style.fill='white';
+        arrow.style.color='white';
     }
     else 
     {
         liste.className='profil';
+        img.style.fill='#72bbf9';
+        arrow.style.color='#72bbf9';
     }
 
 }
