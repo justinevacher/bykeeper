@@ -272,6 +272,10 @@ footer aside {
 		transition: all 0.25s;
 		opacity: 1;
 	}
+
+	aside {
+		margin-bottom: 10px;
+	}
 }
 
 @media screen and (max-height: 350px) {
