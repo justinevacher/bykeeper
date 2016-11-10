@@ -194,7 +194,7 @@ body>div:nth-child(2){
 	margin-top: 1%;
 }
 
-body>div:nth-child(2) section{
+body>div:nth-child(2) div{
 	width:140px;
 	height: 100%;
 	background:#ededed;
@@ -204,23 +204,24 @@ body>div:nth-child(2) section{
 
 
 
-body>div:nth-child(2) section button{
+body>div:nth-child(2) div button{
 	width:70px;
 	height:70px;
 	float:left;
 	border:0;
 }
 
-body>div:nth-child(2) section button:nth-child(1){
+body>div:nth-child(2) div button:nth-child(1){
 	background: url(../img/alarm.svg) no-repeat;
 	background-position: 50%;
 }
-body>div:nth-child(2) section button:nth-child(2){
+body>div:nth-child(2) div button:nth-child(2){
 	background: url(../img/sensibilityW.svg) no-repeat,#76BBF9;
 	background-position: 50%;
+	border-right:1px solid #ededed;
 }
 
-i.glyphicon:nth-child(2){
+div>i:nth-child(2){
 	visibility: hidden;
 }
 
@@ -228,7 +229,7 @@ body>div:nth-child(3){
 	text-align: center;
 }
 
-body>div:nth-child(3) section{
+body>div:nth-child(3) div{
 	width:140px;
 	height: auto;
 	padding: 0;
@@ -249,7 +250,7 @@ body>section>form{
 }
 
 /*Paramètre gauche*/
-form>div>section:nth-of-type(1){
+/*form>div>section:nth-of-type(1){
 	height:170px;
 	font-family: Nunito;
 	align-items: center;
@@ -268,10 +269,31 @@ form>div>section:nth-of-type(1) h3{
 
 form>div>section:nth-of-type(1) p{
 	padding-left:50%;
+}*/
+
+form>div:nth-of-type(1){
+	height:auto;
+	font-family: Nunito;
+	align-items: center;
+}
+
+form>div:nth-of-type(1) div{
+	width:48%;
+	text-align: right;
+
+}
+
+form>div:nth-of-type(1) h3{
+	margin:5%;
+	text-align: center;
+}
+
+form>div:nth-of-type(1) p{
+	padding-left:50%;
 }
 
 /*Paramètres droite*/
-
+/*
 form>div>section:nth-of-type(2){
 	height:100%;
 	font-family: Nunito;
@@ -301,8 +323,34 @@ section.col-xs-12:nth-child(1){
 
 .btn-default{
 	background: #72BBF9;
+}*/
+form>div:nth-of-type(2){
+	height:100%;
+	font-family: Nunito;
+	
 }
 
+}
+
+
+form>div:nth-of-type(2) h3{
+	margin:5%;
+	text-align: left;
+}
+
+
+div>p h3{
+	font-size: 1.2em;
+}
+
+
+form>div:nth-child(1){
+	margin-bottom: 50px;
+}
+
+.btn-default{
+	background: #72BBF9;
+}
 
 /*media queries*/
 
@@ -337,12 +385,17 @@ section.col-xs-12:nth-child(1){
 		text-align: center;
 	}
 
-	section > section > div > label{
+/*	section > section > div > label{
 		position: relative;
 		top:35px;
 		left:15px;
-	}	
+	}	*/
 
+	/*form label{
+		position: relative;
+		top:35px;
+		left:15px;
+	}*/
 	h3 {
 		font-size: 1.3em;
 	}
@@ -379,30 +432,49 @@ section.col-xs-12:nth-child(1){
 	}
 
 	
-	section > section > div > label{
+	/*section > section > div > label{
 		position: relative;
 		top:30px;
 		left:15px;
-	}	
+	}	*/
+	/*form label{
+		position: relative;
+		top:30px;
+		left:15px;
+	}*/	
 
 	h3 {
 		font-size: 1.5em;
 	}
 
-	section.col-xs-12:nth-child(2){
+	/*section.col-xs-12:nth-child(2){
 		margin-bottom: 30px;
 		border-left: 2px solid grey;
+	}*/
+
+	form>div:nth-child(2){
+		margin-bottom: 30px;
+		border-left: 1px solid #ccc;
 	}
 
 	
 }
 
 @media screen and (min-width:1400px){
-	section > section > div > label{
+/*	section > section > div > label{
+		position: relative;
+		top:40px;
+		left:25px;
+	}	*/
+
+
+	/*form label{
 		position: relative;
 		top:40px;
 		left:25px;
 	}	
+*/
+
 
 }
 
