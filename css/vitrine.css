@@ -163,21 +163,27 @@ figure:hover figcaption {
 
 a.back-to-top {
     display: none;
-    width: 60px;
-    height: 60px;
-    text-indent: -9999px;
+    width: 40px;
+    height: 40px;
     position: fixed;
     z-index: 999;
-    right: 20px;
+    right: 30px;
     bottom: 42px;
-    background: #72BBF9 url("../img/up-arrow.png") no-repeat center 43%;
-    box-shadow: 0px 0px 5px 0px;
+    background-color: rgba(114,187,249,0.8);
+    color: white;
+    box-shadow: 0px 0px 5px 0px #888888;
     border-radius: 30px;
-    transition: background 0.5s;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+a.back-to-top div {
+	text-align: center;
+	margin-top: 3px;
 }
 
 a.back-to-top:hover {
-    background: #FFFFFF url("../img/up-arrow-selected.png") no-repeat center 43%;
+    background-color: rgba(255,255,255,0.8);
+	color: #72BBF9;
 }
 
 footer {
@@ -304,12 +310,6 @@ body>div:nth-child(5){
 
     header a {
         font-size: 18px;
-    }
-
-    a.back-to-top {
-        width: 40px;
-        height: 40px;
-        background-size: 60%;
     }
 }
 
