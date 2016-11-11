@@ -100,8 +100,10 @@ header > div:nth-child(1) > div{
 
 /*logo*/
 header > div:nth-child(1) > div > img{
-	max-width: 100%;
+	display: block;
+	margin: 0 auto;
 	height: 55%;
+	max-width: 100%;
 }
 
 /*profil*/
@@ -280,10 +282,10 @@ header > div:nth-child(1) > div:nth-child(4){
 }
 
 .b-container {
-  height: 60px;
-  left: 30px;
   position: absolute;
-  top: 10px;
+  left: 30px;
+  top: 30px;
+  height: 60px;
 }
 
 .b-container.open .b-bun--top {
@@ -302,23 +304,27 @@ header > div:nth-child(1) > div:nth-child(4){
 
 
 /*----Menu Desktop----*/
-
 header > div:nth-child(2) > nav > li{
-	position: relative;
 	list-style-type: none;
 	text-align: center;
-	height: 50px;
-	border: 2px solid #72bbf9;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 header > div:nth-child(2) > nav > li > a{
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
+	display: inline-block;
+	width: 160px;
+	height: 40px;
+	padding-top: 6px;
+	border: 2px dotted #72bbf9;
 	color:#72bbf9;
 	font-family: Nunito, Helvetica, Arial, sans-serif;
 	font-size: 1.2em;
+}
+
+header > div:nth-child(2) > nav > li > a:hover, header > div:nth-child(2) > nav > li > a:active{
+	background-color: #72bbf9;
+	color: white;
 }
 
 
@@ -413,7 +419,7 @@ header > div:nth-child(2) > nav > li > a{
   background-color: #0094e0;
 }
 
-header > div:nth-child(1) > div:nth-child(3) > *{
+.toggle > *{
 	float: left;
 }
 
