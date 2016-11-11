@@ -32,46 +32,47 @@
 	</section>
 
 	<div class="row">
-		<section>
+		<div>
 			<button id = "alarme" onclick="location.href='parametrage_alarme.html'"></button>
 			<button id = "capteur" onclick="location.href='reglage-capteur.html'""></button>
 			<div class="clear"></div>
-		</section>
+		</div>
 	</div>
 	<div class="row">
-		<section>
+		<div>
 			<i class="glyphicon glyphicon-triangle-bottom"></i>
 			<i class="glyphicon glyphicon-triangle-bottom"></i>
-		</section>
+		</div>
 	</div>
 
-	<h1>Réglages Capteur</h1>
+	
 	
 	<section class="row wrap">
+		<h1>Réglages Capteur</h1>
 		<form action="#">
-				<section class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-						<h3>1ère alerte : la sensibilité du capteur vibration</h3>
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+						<h2>1ère alerte : la sensibilité du capteur vibration</h2>
 						<p>Représente un mouvement suspect du vélo.</p>
 						<p>Simple envoie de sms/email.</p>
 						<div id="alerte1"><span>0%</span><span>100%</span></div>
 						<div>Valeur : <span id="val1">50%</span></div>
 						<p><i class="glyphicon glyphicon-info-sign"></i>À 0%, vous ne recevrez pas la première alerte</p>
 						
-				</section>
+				</div>
 				
-				<section class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-					<h3>2ème alerte : la sensibilité de la distance</h3>
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+					<h2>2ème alerte : la sensibilité de la distance</h2>
 					<p>Représente un déplacement du vélo.</p>
 					<p>Envoie de sms/email et activation de l'alarme.</p>
 					<div id="alerte2"><span>10m</span><span>100m</span></div>
 					<div>Valeur : <span id="val2">50m</span></div>
-				</section>
+				</div>
 			
-			<section class="row">
+				<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 						<button class="btn btn-default">Valider</button>
 					</div>
-			</section>	
+				</div>	
 		</form>
 	</section>
 

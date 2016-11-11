@@ -31,75 +31,84 @@
 	</header>
 
 	<div class="row">
-		<section>
+		<div>
 			<button id = "alarme" onclick="location.href='parametrage_alarme.html'"></button>
 			<button id = "capteur" onclick="location.href='reglage-capteur.html'"></button>
 			<div class="clear"></div>
-		</section>
+		</div>
 	</div>
 	<div class="row">
-		<section>
+		<div>
 			<i class="glyphicon glyphicon-triangle-bottom"></i>
 			<i class="glyphicon glyphicon-triangle-bottom"></i>
-		</section>
+		</div>
 	</div>
 
-	<h1>Paramétrages de l'alarme</h1>
+	
 
 	<section class="row wrap">
+		<h1>Paramétrages de l'alarme</h1>
 		<form action="#">
-			<section class="col-xs-12 col-sm-12 col-md-5 col-lg-6"> <!-- premier bloque -->
-					<h3> J'accepte de recevoir des notifications : </h3>
-					<div class="toggleWrapper"> <!-- switch 1 -->
-						<input type="checkbox" name="toggle1" class="mobileToggle" id="toggle1"> 
-			  			<label for="toggle1"></label>
-			  			<p> Par SMS </p>
+			<!-- <div> -->
+				<div class="col-xs-12 col-sm-12 col-md-5 col-lg-6"> <!-- premier bloque -->
+						<h3> J'accepte de recevoir des notifications : </h3>
+						<div class="toggleWrapper"> <!-- switch 1 -->
+							<input type="checkbox" name="toggle1" class="mobileToggle" id="toggle1"> 
+				  			<label for="toggle1"></label>
+				  			<p> Par SMS </p>
+						</div>
+						
+						<div class="toggleWrapper"> <!-- switch 2 -->
+							<input type="checkbox" name="toggle2" class="mobileToggle" id="toggle2"> 
+				  			<label for="toggle2"></label>
+				  			<p> Par MAIL </p>
+						</div>
+				</div> <!-- end premier bloque --> 
+
+				<div class="col-xs-12 col-sm-12 col-md-5 col-lg-6"> <!--Deuxieme bloque -->
+					<div class="row">
+						<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+							<div class="toggleWrapper"> <!-- switch 3 -->
+								<input type="checkbox" name="toggle3" class="mobileToggle" id="toggle3"> 
+								<label for="toggle3"></label>
+							</div>
+						</div>
+						<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+							<h3> J'accepte de recevoir une notification quand j'active mon alarme dans une zone à risque </h3>
+						</div>
 					</div>
-					
-					<div class="toggleWrapper"> <!-- switch 2 -->
-						<input type="checkbox" name="toggle2" class="mobileToggle" id="toggle2"> 
-			  			<label for="toggle2"></label>
-			  			<p> Par MAIL </p>
+
+					<div class="row">
+						<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+							<div class="toggleWrapper"> <!-- switch 4 -->
+								<input type="checkbox" name="toggle4" class="mobileToggle" id="toggle4"> 
+								<label for="toggle4"></label>
+							</div>
+						</div>
+						<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+							<h3> Activation et désactivation de l'alarme si mon smartphone est à proximité </h3>
+						</div>
 					</div>
-			</section> <!-- end premier bloque --> 
 
-			<section class="col-xs-12 col-sm-12 col-md-5 col-lg-6"> <!--Deuxieme bloque -->
-				<section class="row">
-					<section class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-						<div class="toggleWrapper"> <!-- switch 3 -->
-							<input type="checkbox" name="toggle3" class="mobileToggle" id="toggle3"> 
-							<label for="toggle3"></label>
+					<div class="row">
+						<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+							<div class="toggleWrapper"><!-- switch 5 -->
+								<input type="checkbox" name="toggle5" class="mobileToggle" id="toggle5"> 
+								<label for="toggle5"></label>
+							</div>
 						</div>
-					</section>
-					<h3> J'accepte de recevoir une notification quand j'active mon alarme dans une zone à risque </h3>
-				</section>
+						<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+							<h3> Activer l'alarme quand mon vélo reste trop longtemps sans bouger (tout en prenant compte les autres paramètres) </h3>
+						</div>
+					</div>
+				</div>	<!-- end deuxieme bloque -->
 
-				<section class="row">
-					<section class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-						<div class="toggleWrapper"> <!-- switch 4 -->
-							<input type="checkbox" name="toggle4" class="mobileToggle" id="toggle4"> 
-							<label for="toggle4"></label>
-						</div>
-					</section>
-					<h3> Activation et désactivation de l'alarme si mon smartphone est à proximité </h3>
-				</section>
-
-				<section class="row">
-					<section class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-						<div class="toggleWrapper"><!-- switch 5 -->
-							<input type="checkbox" name="toggle5" class="mobileToggle" id="toggle5"> 
-							<label for="toggle5"></label>
-						</div>
-					</section>
-					<h3> Activer l'alarme quand mon vélo reste trop longtemps sans bouger (tout en prenant compte les autres paramètres) </h3>
-				</section>
-			</section>	<!-- end deuxieme bloque -->
-		</div> <!-- row wrap end -->
-			<section class="row">
+			<!-- </div> --> <!-- row wrap end -->
+			<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 						<button class="btn btn-default">Valider</button>
 					</div>
-			</section>
+			</div>
 		</form>
 	</section>
 		

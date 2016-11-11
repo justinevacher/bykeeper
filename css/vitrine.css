@@ -23,6 +23,7 @@ header {
     background: url(../img/velo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     text-align: center;
 }
 
@@ -119,20 +120,20 @@ main>section>div:nth-child(2) img, main>section>div:nth-child(3) img, main>secti
 figure {
     position: relative;
     display: inline-block;
-    width: 180px;
-    height: 180px;
+    width: 170px;
+    height: 170px;
     margin: 22px 22px;
     overflow: hidden;
     box-shadow: 0px 0px 10px 0px;
-    border-radius: 180px;
+    border-radius: 170px;
     
 }
 
 figure>img {
-    width: 180px;
-    height: 180px;
-    border:1px solid transparent;
-    border-radius: 150px;
+    width: 170px;
+    height: 170px;
+    border: 1px solid transparent;
+    border-radius: 170px;
     -webkit-filter: grayscale(0) blur(0);
     filter: grayscale(0) blur(0);
     transition: 0.25s ease-in-out;    
@@ -145,7 +146,7 @@ figure:hover img {
 
 figcaption {
     position: absolute;
-    top: 75px;
+    top: 68px;
     left: 0;
     right: 0;
     opacity: 0;
@@ -162,15 +163,27 @@ figure:hover figcaption {
 
 a.back-to-top {
     display: none;
-    width: 60px;
-    height: 60px;
-    text-indent: -9999px;
+    width: 40px;
+    height: 40px;
     position: fixed;
     z-index: 999;
-    right: 20px;
-    bottom: 40px;
-    background: #27AE61 url("../img/up-arrow.png") no-repeat center 43%;
+    right: 30px;
+    bottom: 42px;
+    background-color: rgba(114,187,249,0.8);
+    color: white;
+    box-shadow: 0px 0px 5px 0px #888888;
     border-radius: 30px;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+a.back-to-top div {
+	text-align: center;
+	margin-top: 3px;
+}
+
+a.back-to-top:hover {
+    background-color: rgba(255,255,255,0.8);
+	color: #72BBF9;
 }
 
 footer {
@@ -236,29 +249,31 @@ body>div:nth-child(5){
 }
 
 
-@media screen and (max-width: 1024px) {
-    figure { 
-        width: 120px;
-        height: 120px;
+@media screen and (max-width: 1199px) {
+	figure { 
+        width: 140px;
+        height: 140px;
         margin: 10px 10px;
         box-shadow: 5px 5px 10px 0px;
-        border-radius: 120px;
+        border-radius: 140px;
     }
 
     figure>img {
-        width: 120px;
-        height: 120px;
-        border-radius: 120px;
+        width: 140px;
+        height: 140px;
+        border-radius: 140px;
     }
 
+	figcaption {
+        font-size: 20px;
+        top: 54px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
     figure:active img {
         -webkit-filter: grayscale(100%) blur(3px);
         filter: grayscale(100%) blur(3px);
-    }
-
-    figcaption {
-        font-size: 16px;
-        top: 48px;
     }
 
     figure:active figcaption {
@@ -267,18 +282,12 @@ body>div:nth-child(5){
     }
 }
 
-@media screen and (max-width: 736px) {
-    header p {
-        font-size: 18px;
-    }
-
-    header a {
-        font-size: 18px;
-    }
-
-    figure {
+@media screen and (max-width: 992px) {
+    figure { 
         width: 100px;
         height: 100px;
+        margin: 10px 10px;
+        box-shadow: 5px 5px 10px 0px;
         border-radius: 100px;
     }
 
@@ -292,30 +301,34 @@ body>div:nth-child(5){
         font-size: 14px;
         top: 40px;
     }
+}
 
-    a.back-to-top {
-        width: 40px;
-        height: 40px;
-        background-size: 60%;
+@media screen and (max-width: 768px) {
+    header p {
+        font-size: 18px;
+    }
+
+    header a {
+        font-size: 18px;
     }
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 670px) {
     figure {
-        width: 85px;
-        height: 85px;
-        border-radius: 85px;
+        width: 90px;
+        height: 90px;
+        border-radius: 90px;
     }
 
     figure>img {
-        width: 85px;
-        height: 85px;
-        border-radius: 85px;
+        width: 90px;
+        height: 90px;
+        border-radius: 90px;
     }
 
     figcaption {
         font-size: 12px;
-        top: 32px;
+        top: 36px;
     }
 }
 
@@ -331,6 +344,60 @@ body>div:nth-child(5){
         padding-bottom: 10%;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    figure {
+        width: 82px;
+        height: 82px;
+        border-radius: 82px;
+    }
+
+    figure>img {
+        width: 82px;
+        height: 82px;
+        border-radius: 82px;
+    }
+
+    figcaption {
+        font-size: 11px;
+        top: 32px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+	figure {
+        width: 78px;
+        height: 78px;
+        border-radius: 78px;
+    }
+
+    figure>img {
+        width: 78px;
+        height: 78px;
+        border-radius: 78px;
+    }
+
+    figcaption {
+        top: 30px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+	figure {
+        width: 120px;
+        height: 120px;
+        border-radius: 120px;
+    }
+
+    figure>img {
+        width: 120px;
+        height: 120px;
+        border-radius: 120px;
+    }
+
+    figcaption {
+        font-size: 16px;
+        top: 48px;
     }
 }
 
@@ -384,12 +451,11 @@ body>div:nth-child(5){
     }
 
     figcaption {
-        font-size: 14px;
         top: 44px;
     }
 
     h1 {
-        font-size: 30px;
+        font-size: 26px;
     }
 }
 
