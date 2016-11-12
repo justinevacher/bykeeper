@@ -242,7 +242,7 @@ aside {
     border-left:1px solid white;
 }
 
-body>div:nth-child(5){
+body>div:nth-child(5) {
     color: black;
     text-align: center;
     margin: 10px 10px;
