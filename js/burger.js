@@ -1,5 +1,3 @@
-'use strict';
-
 (function() {
   var body = document.body;
   var burgerMenu = document.getElementsByClassName('b-menu')[0];
