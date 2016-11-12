@@ -476,6 +476,7 @@ header .glyphicon{
   top:80px;
   right:7px;
   opacity:0;
+  visibility: hidden;
   list-style: none;
 }
 
