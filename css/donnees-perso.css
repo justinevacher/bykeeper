@@ -6,19 +6,26 @@ form{
 	text-align: center;
 }
 
-input[type=text]{
+input{
   width: 15em;
   padding-left: 0.5em;
   margin-bottom: 0.2em;
-  border: 2px solid #72bbf9;
+  border: 1px solid #72bbf9;
   font-size: 0.8em;
   text-align : left;
 	color : black;
 }
+.btn-default{
+  margin-top:3%;
+  background: #ddd;
+}
 
-input[type=submit]{
-	background-color: #72bbf9;
-	color : white;
+.btn-default:hover{
+  background: #72BBF9;
+}
+
+label{
+  font-weight: 500;
 }
 
 
@@ -27,7 +34,7 @@ input[type=submit]{
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -*/
 
 @media screen and (min-width:992px){
-	input[type=text]{
+	input{
 		width: 20em;
 	}
 
