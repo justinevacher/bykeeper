@@ -432,6 +432,83 @@ header > div:nth-child(1) > div:nth-child(3) > div > p{
 }
 
 
+/*---- menu déroulant profil----*/
+
+div.col-xs-4:nth-child(4) > section:nth-child(1) > section:nth-child(1) > img:nth-child(1){
+  position: relative;
+  left: 5px;
+  top:25px;
+  cursor: pointer;
+}
+
+
+div.col-xs-4:nth-child(4) > section > section > p{
+  position:absolute;
+  visibility: visible;
+  font-family: Nunito;
+  font-size: 1.3em;  
+  left:80%;
+  top:85%;
+  color:white;
+  cursor: pointer;
+}
+
+.glyphicon{
+  position:absolute;
+  top:50px; 
+  left:25px;
+  cursor:pointer;
+  color: white;
+ }
+
+#menuProfil{
+  position: absolute;
+  padding:0px;
+  z-index: 9999;
+  top:80px;
+  right:7px;
+  opacity:0;
+  list-style: none;
+}
+
+#menuProfil > li{
+  padding:5px;
+  border: 1px solid #5a96c8;
+  font-size: 1.0em;
+  text-align: left;
+  background: white;
+}
+
+#menuProfil > li > a{
+color:#5a96c8;;
+}
+
+#menuProfil > li > a:hover{
+color:grey;
+}
+
+
+@keyframes profil{
+  0%{
+    opacity:0;
+    visibility: hidden;
+  }
+  100%{
+    opacity:1;
+    visibility: visible;
+  }
+
+}
+
+#menuProfil.profil{
+  animation-name:profil;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: all;
+  
+}
+
+/* Fin menu déroulant */
 
 
 
@@ -465,7 +542,15 @@ header > div:nth-child(1) > div:nth-child(3) > div > p{
 	header > div:nth-child(2) > nav > li{
 		display: none;
 	}
+  
+  div.col-xs-4:nth-child(4) > section > section > p{
+  visibility: hidden;
 
+  }
+  
+  div.col-xs-4:nth-child(4) > section:nth-child(1) > section:nth-child(1) > img{
+    width:40px;
+  }
 }
 
 
@@ -483,7 +568,31 @@ header > div:nth-child(1) > div:nth-child(3) > div > p{
 	height: 60%;
 	}
 
+  div.col-xs-4:nth-child(4) > section:nth-child(1) > section:nth-child(1) > img{
+    width:50px;
+  }
 
+  #menuProfil{
+    left:20%;
+    font-size:1.4em;
+   
+  }
+  
+  #menuProfil>li{
+     text-align: center;
+  }
+
+  div.col-xs-4:nth-child(4) > section > section > p{
+    visibility: visible;
+    font-size: 1.7em;
+    left:80%;
+    top:78%;
+  }
+
+  .glyphicon{
+    top:60px;
+    left:35px;
+  }
 }
 
 @media screen and (min-width:992px){
@@ -513,7 +622,63 @@ header > div:nth-child(1) > div:nth-child(3) > div > p{
 	font-size: 1.2em;
 	}
 
-	
+	div.col-xs-4:nth-child(4) > section:nth-child(1) > section:nth-child(1) > img{
+    width:50px;
+  }
+
+  #menuProfil{
+    left:20%;
+    font-size:1.4em;
+   
+  }
+  
+  #menuProfil>li{
+     text-align: center;
+  }
+
+  div.col-xs-4:nth-child(4) > section > section > p{
+    visibility: visible;
+    font-size: 1.7em;
+    left:80%;
+    top:78%;
+  }
+
+  .glyphicon{
+    top:60px;
+    left:35px;
+  }
+
+}
+
+@media screen and (min-width: 1260px){
+
+  div.col-xs-4:nth-child(4) > section:nth-child(1) > section:nth-child(1) > img{
+    width:60px;
+  }
+
+  #menuProfil{
+    left:20%;
+    top:100px;
+    font-size:1.4em;
+   
+  }
+  
+  #menuProfil>li{
+     text-align: center;
+  }
+
+  div.col-xs-4:nth-child(4) > section > section > p{
+    visibility: visible;
+    font-size: 1.9em;
+    left:73%;
+    top:60%;
+
+  }
+  
+  .glyphicon{
+   top:60px; 
+
+  }
 
 }
 
@@ -525,6 +690,9 @@ header > div:nth-child(1) > div:nth-child(3) > div > p{
 		height:125px;
 	}
 
+  .glyphicon{
+    left:0%;
+  }
 	
 }
 

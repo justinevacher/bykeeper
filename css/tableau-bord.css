@@ -1,13 +1,13 @@
 /*############################CORPS */
 
 /*données*/
-div > section:nth-child(1){
+body > div > section:nth-child(1){
 	height:200px;
 	font-family: Nunito;
 	display: flex;
 	align-items: center;
 }
-div > section:nth-child(1) div{
+body > div > section:nth-child(1) div{
 	width:48%;
 	text-align: center;
 }
@@ -50,18 +50,18 @@ div > section:nth-child(1) div{
 
 /*Enregistrer un trajet*/
 
-div>section:nth-of-type(2){
+body > div>section:nth-of-type(2){
 	height:100%;
 	background: white;
 	text-align: center;
 }
-div>section:nth-of-type(2) form {
+body > div > section:nth-of-type(2) form {
 	width: 54%;
 	margin:auto;
 	padding: 3% 0;
 }
 
-div>section:nth-of-type(2) button{
+body > div>section:nth-of-type(2) button{
 	width: 27%;
 	height: 58px;
 	border: 0;
@@ -73,16 +73,16 @@ div>section:nth-of-type(2) button{
 	background-position: right;
 }
 
-div>section:nth-of-type(2) button[type=submit]{
+body>div>section:nth-of-type(2) button[type=submit]{
 	background: url(../img/floppy.svg) no-repeat;
 	background-position: left;
 }
 
-div>section:nth-of-type(2) p{
+body>div>section:nth-of-type(2) p{
 	margin:5%;
 }
 
-div>section:nth-of-type(2) form label{
+body>div>section:nth-of-type(2) form label{
 	display: block;
 }
 
@@ -92,11 +92,11 @@ div>section:nth-of-type(2) form label{
 
 /* Mes trajets */
 
-section{
+body>section{
 	text-align: center;
 }
 
-section form{
+body> section form{
 	margin-top: 18px;
 }
 
@@ -112,7 +112,7 @@ section form{
 
 /*données*/
 
-section > div > div:nth-child(2){
+body > section > div > div:nth-child(2){
 	margin-top: 10px;
 	padding : 0px;
 }
@@ -157,12 +157,12 @@ section > div > div:nth-child(2){
 	left: 0;
 }
 
-section > div > div:nth-child(2) > section > div:nth-child(1){
+body > section > div > div:nth-child(2) > section > div:nth-child(1){
 	padding-left: 4%;
 	padding-right: 0px;
 }
 
-section > div > div:nth-child(2) > section > div:nth-child(3){
+body > section > div > div:nth-child(2) > section > div:nth-child(3){
 	padding-left: 0px;
 	padding-right: 4%;
 } 
@@ -172,7 +172,7 @@ section > div > div:nth-child(2) > section > div:nth-child(3){
 
 
 /* bouton supprimer */
-section:nth-child(4)>button{
+body > section:nth-child(4)>button{
 	width: 100px;
 	height: 35px;
 	border: none;
@@ -182,7 +182,7 @@ section:nth-child(4)>button{
 
 
 /* bouton ios */
-section > section{
+body > section > section{
 	margin: 20px 0 5px 0;
 } 
 
@@ -190,7 +190,7 @@ section > section{
 	text-align: right;
 	margin-left: 5%;
 }
-section > section > p{
+body > section > section > p{
 	padding: 5px 0 0 10px;
 	text-align: left;
 } 
