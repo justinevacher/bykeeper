@@ -1,88 +1,12 @@
-/*FONTS */
-@font-face {
-    font-family: "Nunito";
-    src: url("../fonts/NUNITO-REGULAR.TTF");
-}
-
-@font-face {
-    font-family: "Open Sans Condensed";
-    src: url("../fonts/OpenSans-CondLight.ttf");
-}
-
-
-html, body {
-	background: #ededed;
-	width: 100%;
-	font-size:.9em;
-}
-
-/*titre*/
-h1,h2{
-	font-family: "Nunito";
-	text-align: center;
-}
-
-h1{
-	font-size: 2em;
-	color: #5a96c8;
-}
-
-h2{
-	font-size:1.1em;
-}
-
-/*STYLE*/
-.clear{
-	clear:both;
-}
-
-
-/*##############################HEADER*/
-header{
-	height:55px;
-	background: url(../img/fond-mobile.jpg) no-repeat;
-	background-position-y: -53px;
-}
-
-header>div:first-of-type{
-	height:100%;
-	text-align: center;
-}
-
-nav{
-	height: 100%;
-}
-
-header>img{
-	max-height: 100%;
-}
-
-/*logo*/
-header>div:first-of-type img{
-	max-width: 100%;
-	height: 100%;
-}
-
-/*profil*/
-header>div+div{
-	height:100%;
-}
-
-/*#################################alarme connectée*/
-body>section:first-of-type{
-	height:30px;
-	text-align: center;
-	background: white;
-}
 
 /*menu parametre*/
-body>div:nth-child(3){
+body>div:nth-child(2){
 	height: 70px;
 	background: #72BBF9;
-	margin-top: 1%;
+	margin-top: 6%;
 }
 
-body>div:nth-child(3) div{
+body>div:nth-child(2) div{
 	width:140px;
 	height: 100%;
 	background:#ededed;
@@ -91,33 +15,32 @@ body>div:nth-child(3) div{
 }
 
 
-
-body>div:nth-child(3) div button{
+body>div:nth-child(2) div button{
 	width:70px;
 	height:70px;
 	float:left;
 	border:0;
 }
 
-body>div:nth-child(3) div button:nth-child(1){
+body>div:nth-child(2) div button:nth-child(1){
 	background: url(../img/alarmW.svg) no-repeat, #76BBF9;
 	background-position: 50%;
 	border-left:1px solid #ededed; 
 }
-body>div:nth-child(3) div button:nth-child(2){
+body>div:nth-child(2) div button:nth-child(2){
 	background: url(../img/sensibility.svg) no-repeat;
 	background-position: 50%;
 }
 
-div>i:nth-child(1){
+div>i:nth-child(2){
 	visibility: hidden;
 }
 
-body>div:nth-child(4){
+body>div:nth-child(3){
 	text-align: center;
 }
 
-body>div:nth-child(4) div{
+body>div:nth-child(3) div{
 	width:140px;
 	height: auto;
 	padding: 0;
@@ -125,7 +48,7 @@ body>div:nth-child(4) div{
 }
 
 
-body>div:nth-child(4) i{
+body>div:nth-child(3) i{
 	font-size: 2em;
 	color: #76BBF9;
 	width: 68px;
@@ -136,9 +59,21 @@ form{
 	text-align: center;
 }
 
+
 .btn-default{
+	background: #ddd;
+}
+
+.btn-default:hover{
 	background: #72BBF9;
 }
+/*valeur*/
+form>div>div:nth-of-type(2){
+	height:100%;
+	font-family: Nunito;
+	
+}
+
 
 /*Paramètre gauche*/
 form>div>section:nth-of-type(1){
@@ -169,27 +104,7 @@ form>div>section:nth-of-type(1) p{
 }
 /*Paramètres droite*/
 
-form>div>div:nth-of-type(2){
-	height:100%;
-	font-family: Nunito;
-	
-}
-
-form>div>div:nth-of-type(2) p{
-	margin:5%;
-}
-
-form>div>div:nth-of-type(2)>section>h3{
-	margin:5%;
-	text-align: left;
-}
-
-body>section:nth-child(1){
-	margin-bottom: 50px;
-}
-
-
-body form div:nth-child(2){
+form div:nth-child(2){
 	margin-top:8%;
 }
 
@@ -238,25 +153,12 @@ body form div:nth-child(2){
 }
 
 @media screen and (min-width: 549px){
-	.wrap{
-		width:90%;
-		margin:auto;
-	}
 	h2{
 		font-size:1.2em;
 	}
-
-
 }
 
 @media screen and (min-width:720px) and (max-width:992px){
-	/*arriere plan*/
-	header{
-	height:55px;
-	background: url(../img/fond-mobile.jpg) no-repeat;
-	background-size:cover;
-	}
-
 
 	#alerte1, #alerte2{
 		margin: 5% auto;
@@ -265,14 +167,6 @@ body form div:nth-child(2){
 }
 
 @media screen and (min-width:992px){
-	/*arriere plan*/
-	header{
-		height:115px;
-		background: url(../img/velo.jpg) no-repeat;
-		background-size: cover;
-		background-position-y: -258px;
-	}
-
 	/*parametre à droite*/
 	body form div:nth-child(2){
 		margin-top:0;
@@ -290,11 +184,6 @@ body form div:nth-child(2){
 }
 
 @media screen and (min-width:1700px){
-	/*arriere plan*/
-	header{
-		height:160px;
-	}
-
 	/*parametre gauche + droite*/
 	body>div>section:nth-of-type(1),body>div>section:nth-of-type(2){
 		height: 270px;

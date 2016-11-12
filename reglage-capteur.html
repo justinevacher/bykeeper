@@ -8,34 +8,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/png" href="img/fav.png" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css" >
 	<link rel="stylesheet" href="css/reglage-capteur.css" >
 	<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 </head>
 <body>
-	<header class="row">
-		<nav class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></nav>
-		<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" >
-			<img src="img/logo2.svg" alt="logo bykeeper">
+	<header>
+		<div class="row">
+			<!-- Navigation -->
+			<nav class="b-nav">
+				<li><a class="b-link" href="#">Tableau de bord</a></li>
+				<li><a class="b-link" href="#">Paramétrages</a></li>
+				<li><a class="b-link" href="#">Retrouver mon vélo</a></li>
+			</nav>
+
+			<!-- Burger-Icon -->
+			<div class="b-container">
+				<div class="b-menu">
+				    <div class="b-bun b-bun--top"></div>
+				    <div class="b-bun b-bun--mid"></div>
+				    <div class="b-bun b-bun--bottom"></div>
+				</div>
+			</div>
+			<div class="col-xs-4 col-xs-offset-4 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4" >
+				<img src="img/logo2.svg" alt="logo Bykeeper" />
+				<div class="toggle toggle--push toggle--push--glow">
+					<input type="checkbox" id="toggle--push--glow" class="toggle--checkbox">
+					<label class="toggle--btn" for="toggle--push--glow" data-label-on="on"  data-label-off="off"></label>
+					<p>Alarme</p>
+					<div class="stopFloat"></div>
+				</div>
+			</div>
+
+			<!-- Profil -->
+			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+				<section class="row">
+					<section class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+						<img src="img/Profil.svg" onclick="afficherMenuProfil()">
+						<p onclick="afficherMenuProfil()">Profil</p>
+					</section>
+					<section class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+						<i class="glyphicon glyphicon-triangle-bottom" onclick="afficherMenuProfil()"></i>
+					</section>
+					
+					<section>
+						<ul id="menuProfil">
+							<li><a href="donnees-perso.html"> Données personnelles </a></li>
+							<li><a href=""> Déconnexion </a></li>
+						</ul>
+					</section>
+				</section>
+			</div>
 		</div>
-		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-			
-			
+		<!-- menu desktop -->
+		<div class="row">
+			<nav class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 row">
+				<li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a class="d-link" href="#">Tableau de bord</a></li>
+				<li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a class="d-link" href="#">Paramétrages</a></li>
+				<li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a class="d-link" href="#">Retrouver mon vélo</a></li>
+			</nav>
 		</div>
 	</header>
 
-	<section class="row">
-	<p>Alarme activée</p>
-	
-
-	</section>
-
+	<!-- PARAMETRE -->
 	<div class="row">
 		<div>
 			<button id = "alarme" onclick="location.href='parametrage_alarme.html'"></button>
 			<button id = "capteur" onclick="location.href='reglage-capteur.html'""></button>
-			<div class="clear"></div>
+			<div class="stopFloat"></div>
 		</div>
 	</div>
 	<div class="row">
@@ -46,10 +88,10 @@
 	</div>
 
 	
-	
-	<section class="row wrap">
+	<!-- CORPS -->
+	<main>
 		<h1>Réglages Capteur</h1>
-		<form action="#">
+		<form action="#" class="row">
 				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 						<h2>1ère alerte : la sensibilité du capteur vibration</h2>
 						<p>Représente un mouvement suspect du vélo.</p>
@@ -67,14 +109,47 @@
 					<div id="alerte2"><span>10m</span><span>100m</span></div>
 					<div>Valeur : <span id="val2">50m</span></div>
 				</div>
-			
-				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<button class="btn btn-default">Valider</button>
-					</div>
-				</div>	
+
+				<button class="btn btn-default">Valider</button>
+
 		</form>
-	</section>
+	</main>
+	<footer>
+        <div></div><!-- image avant footer -->
+        <section class="container">
+            <div class="row">
+                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                    <h3>Informations</h3>
+                    <aside>
+                        <p><a href="faq.html">Foire aux questions</a></p>
+                        <p><a href="mentions.html">Mentions légales</a></p>
+                        <p><a href="sitemap.xml">Plan du site</a></p>
+                    </aside>
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                    <h3>Social</h3>
+                    <aside>
+                        <div>
+                            <a target="_blank" href="https://www.facebook.com/bykeeperconnect"><img src="img/facebook-icon.png" alt="Facebook"></a>
+                            <a target="_blank" href="https://www.twitter.com/bykeeperconnect"><img src="img/twitter-icon.png" alt="Twitter"></a>
+                        </div>
+                        <p><a href="mailto:bykeeper@gmail.com">bykeeper@gmail.com</a></p>
+                        <p><a href="tel:+33556845785">(+33)5 56 84 57 85</a></p>
+                    </aside>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                    <h3>Partenaires</h3>
+                    <aside class="partenaires">
+                        <a target="_blank" href="https://www.iut.u-bordeaux.fr/info/"><img src="img/logoiut.png" alt="IUT de Bordeaux"></a>
+                        <a target="_blank" href="https://mink.so/"><img src="img/minklogo.png" alt="Mink"></a>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <div>
+        <p>© 2016, ByKeeper. Tous drois réservés.</p>
+    </div>
 
 <script>
 
@@ -110,5 +185,7 @@ $( "#alerte2" ).on( "slide", function( event, ui ) {
 
 </script>
 	
+	<script type="text/javascript" src="js/burger.js" async></script>
+	<script type="text/javascript" src="js/main.js" async></script>
 </body>
 </html>
