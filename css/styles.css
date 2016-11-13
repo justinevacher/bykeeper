@@ -777,6 +777,13 @@ main{
 
 }
 
+@media screen and (min-width: 1900px) {
+    footer>div {      
+    height: 322px;
+    top: -234px;
+  }
+}
+
 
 
 @media screen and (min-width:1700px){

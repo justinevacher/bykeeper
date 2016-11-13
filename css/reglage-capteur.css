@@ -16,9 +16,9 @@ body>div:nth-child(2) div{
 
 
 body>div:nth-child(2) div button{
+	float:left;
 	width:70px;
 	height:70px;
-	float:left;
 	border:0;
 }
 
@@ -69,42 +69,23 @@ form{
 }
 /*valeur*/
 form>div>div:nth-of-type(2){
-	height:100%;
 	font-family: Nunito;
 	
 }
 
 
 /*Paramètre gauche*/
-form>div>section:nth-of-type(1){
-	height:170px;
-	font-family: Nunito;
-	align-items: center;
-}
-
-form>div>section:nth-of-type(1) div{
-	width:48%;
-	text-align: right;
-
-}
-
-form>div>section:nth-of-type(1) h3{
-	margin:5%;
-	text-align: center;
-}
-
-form>div>section:nth-of-type(1) p{
-	padding-left:50%;
-}
 .glyphicon-info-sign{
 	color:#72BBF9;
 	font-size:1.5em;
 	margin-right:2%; 
 	vertical-align: bottom;
 }
+
 /*Paramètres droite*/
 
-form div:nth-child(2){
+form>div:nth-child(2){
+	height: 280px;
 	margin-top:8%;
 }
 
@@ -168,25 +149,17 @@ form div:nth-child(2){
 
 @media screen and (min-width:992px){
 	/*parametre à droite*/
-	body form div:nth-child(2){
+	form>div:nth-child(2){
 		margin-top:0;
 	}
 
 
 }
 
-@media screen and (min-width:1400px){
-	/*parametre right*/
-	body>div>section>form {
-		padding: 2% 0;
-	}
-
-}
-
 @media screen and (min-width:1700px){
 	/*parametre gauche + droite*/
-	body>div>section:nth-of-type(1),body>div>section:nth-of-type(2){
-		height: 270px;
+	form>div:nth-child(2){
+		height: 400px;
 	}
 }
 
