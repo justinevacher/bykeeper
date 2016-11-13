@@ -7,18 +7,32 @@
   
 
   burgerMenu.addEventListener('click', function toggleClasses() {
-    [body, burgerContain, burgerNav].forEach(function (el) {
-      if (typeof burgerEstOuvert == "undefined") { // Test si variable existe => utile lors de la première initialisation
-  		burgerEstOuvert = true; // Au premier clic, on ouvre le burger
-	} else {
-		if(burgerEstOuvert == true){
-			el.classList.toggle('closeNav'); // Le burger était ouvert, on le ferme
-			burgerEstOuvert = false;
-		}else{
-			el.classList.toggle('open'); // Le burger était fermé, on l'ouvre
-			burgerEstOuvert = true;
-	}
+      if (typeof burgerEstOuvert == "undefined") { // Si la variable existe pas, on veut ouvrir le burger pour la première fois
+      body.classList.add('open'); // Le burger était fermé, on l'ouvre
+      burgerContain.classList.add('open'); 
+      burgerNav.classList.add('open');
+      burgerEstOuvert = true; // Au premier clic, on ouvre le burger
+  } else {
+    if(burgerEstOuvert == true){
+      body.classList.remove('open'); // On supprime la classe d'ouverture
+      burgerContain.classList.remove('open'); 
+      burgerNav.classList.remove('open');
+
+      body.classList.add('closeNav'); // Le burger était ouvert, on le ferme
+      burgerContain.classList.add('closeNav'); 
+      burgerNav.classList.add('closeNav');
+      burgerEstOuvert = false;
+    }else{
+      body.classList.remove('closeNav'); // On supprime la classe de fermeture
+      burgerContain.classList.remove('closeNav'); 
+      burgerNav.classList.remove('closeNav');
+      burgerEstOuvert = false;
+
+      body.classList.add('open'); // Le burger était fermé, on l'ouvre
+      burgerContain.classList.add('open'); 
+      burgerNav.classList.add('open');
+      burgerEstOuvert = true;
+  }
 }
-    });
   }, false);
 })();
