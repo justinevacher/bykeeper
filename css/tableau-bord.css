@@ -2,10 +2,10 @@
 
 /*données*/
 body > div > section:nth-child(1){
-	height:200px;
-	font-family: Nunito;
 	display: flex;
 	align-items: center;
+	height:200px;
+	font-family: Nunito;
 }
 body > div > section:nth-child(1) div{
 	width:48%;
