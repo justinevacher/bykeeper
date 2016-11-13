@@ -120,7 +120,6 @@ header > div:nth-child(1) > div:nth-child(4){
   0% {
     -webkit-transform: translate3d(-250px, 0, 0);
             transform: translate3d(-250px, 0, 0);
-    visibility: visible;
   }
   100% {
     -webkit-transform: translate3d(0, 0, 0);
@@ -131,7 +130,6 @@ header > div:nth-child(1) > div:nth-child(4){
   0% {
     -webkit-transform: translate3d(-250px, 0, 0);
             transform: translate3d(-250px, 0, 0);
-    visibility: visible;
   }
   100% {
     -webkit-transform: translate3d(0, 0, 0);
@@ -146,7 +144,6 @@ header > div:nth-child(1) > div:nth-child(4){
   100% {
     -webkit-transform: translate3d(-250px, 0, 0);
             transform: translate3d(-250px, 0, 0);
-    /*visibility: hidden;*/
   }
 }
 @keyframes slideOutLeft {
@@ -157,7 +154,6 @@ header > div:nth-child(1) > div:nth-child(4){
   100% {
     -webkit-transform: translate3d(-250px, 0, 0);
             transform: translate3d(-250px, 0, 0);
-    /*visibility: hidden;*/
   }
 }
 
@@ -170,17 +166,10 @@ header > div:nth-child(1) > div:nth-child(4){
     background: url(../img/fond-mobile.jpg) no-repeat;
     background-size:cover; 
     z-index: 11;
-    visibility: hidden;
+    -webkit-transform: translate3d(-250px, 0, 0);
+            transform: translate3d(-250px, 0, 0);
 }
 
-/*.b-nav:not(.open) {
-  -webkit-animation-duration: 1.0s;
-          animation-duration: 1.0s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-name: slideOutLeft;
-          animation-name: slideOutLeft;
-}*/
   .b-nav.closeNav {
   -webkit-animation-duration: 1.0s;
           animation-duration: 1.0s;
@@ -197,14 +186,7 @@ header > div:nth-child(1) > div:nth-child(4){
   -webkit-transform: translateX(-250px);
           transform: translateX(-250px);
 }
-/*.b-nav li:not(.open) {
-  -webkit-animation-duration: 1.0s;
-          animation-duration: 1.0s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
-  -webkit-animation-name: slideOutLeft;
-          animation-name: slideOutLeft;
-}*/
+
 .closeNav li {
   -webkit-animation-duration: 1.0s;
           animation-duration: 1.0s;
