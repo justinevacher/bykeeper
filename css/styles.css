@@ -748,9 +748,7 @@ main{
 
 @media screen and (min-width: 1260px){
 
-  div.col-xs-4:nth-child(4) > section:nth-child(1) > section:nth-child(1) > img{
-    width:60px;
-  }
+  
 
   #menuProfil{
     left:20%;
@@ -766,8 +764,8 @@ main{
   div.col-xs-4:nth-child(4) > section > section > p{
     visibility: visible;
     font-size: 1.9em;
-    left:73%;
-    top:60%;
+    left:75%;
+    top:70%;
 
   }
   
@@ -790,6 +788,12 @@ main{
     left:0%;
   }
 	
+  div.col-xs-4:nth-child(4) > section > section > p{
+    left:70%;
+    top:70%;
+
+  }
+
 }
 
 @media screen and (min-width: 1900px) {
