@@ -170,6 +170,7 @@ header > div:nth-child(1) > div:nth-child(4){
     background: url(../img/fond-mobile.jpg) no-repeat;
     background-size:cover; 
     z-index: 11;
+    visibility: hidden;
 }
 
 /*.b-nav:not(.open) {
@@ -180,7 +181,7 @@ header > div:nth-child(1) > div:nth-child(4){
   -webkit-animation-name: slideOutLeft;
           animation-name: slideOutLeft;
 }*/
-  .b-nav.close {
+  .b-nav.closeNav {
   -webkit-animation-duration: 1.0s;
           animation-duration: 1.0s;
   -webkit-animation-fill-mode: forwards;
@@ -204,7 +205,7 @@ header > div:nth-child(1) > div:nth-child(4){
   -webkit-animation-name: slideOutLeft;
           animation-name: slideOutLeft;
 }*/
-.close li {
+.closeNav li {
   -webkit-animation-duration: 1.0s;
           animation-duration: 1.0s;
   -webkit-animation-fill-mode: both;

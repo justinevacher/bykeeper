@@ -12,7 +12,7 @@
   		burgerEstOuvert = true; // Au premier clic, on ouvre le burger
 	} else {
 		if(burgerEstOuvert == true){
-			el.classList.toggle('close'); // Le burger était ouvert, on le ferme
+			el.classList.toggle('closeNav'); // Le burger était ouvert, on le ferme
 			burgerEstOuvert = false;
 		}else{
 			el.classList.toggle('open'); // Le burger était fermé, on l'ouvre
