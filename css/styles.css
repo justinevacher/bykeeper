@@ -172,15 +172,15 @@ header > div:nth-child(1) > div:nth-child(4){
     z-index: 11;
 }
 
-.b-nav:not(.open) {
+/*.b-nav:not(.open) {
   -webkit-animation-duration: 1.0s;
           animation-duration: 1.0s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-name: slideOutLeft;
           animation-name: slideOutLeft;
-}
-/*  .close {
+}*/
+  .b-nav.close {
   -webkit-animation-duration: 1.0s;
           animation-duration: 1.0s;
   -webkit-animation-fill-mode: forwards;
@@ -188,7 +188,7 @@ header > div:nth-child(1) > div:nth-child(4){
   -webkit-animation-name: slideOutLeft;
           animation-name: slideOutLeft;
 
-}*/
+}
 .b-nav li {
   	list-style-type: none;
   	padding: 10px;
@@ -196,7 +196,15 @@ header > div:nth-child(1) > div:nth-child(4){
   -webkit-transform: translateX(-250px);
           transform: translateX(-250px);
 }
-.b-nav li:not(.open) {
+/*.b-nav li:not(.open) {
+  -webkit-animation-duration: 1.0s;
+          animation-duration: 1.0s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-name: slideOutLeft;
+          animation-name: slideOutLeft;
+}*/
+.close li {
   -webkit-animation-duration: 1.0s;
           animation-duration: 1.0s;
   -webkit-animation-fill-mode: both;
