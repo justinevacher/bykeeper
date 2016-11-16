@@ -1,0 +1,7 @@
+[2016-11-16 15:47:54] php.DEBUG: unlink(web/bundles/framework): No such file or directory {"type":2,"file":"/mnt/c/Users/Baptiste/Documents/Cours LP DAWIN/ByKeeper/Développement/vendor/symfony/symfony/src/Symfony/Component/Filesystem/Filesystem.php","line":178,"level":28928} []
+[2016-11-16 15:48:52] php.DEBUG: fsockopen(): unable to connect to 127.0.0.1:8000 (Connection refused) {"type":2,"file":"/mnt/c/Users/Baptiste/Documents/Cours LP DAWIN/ByKeeper/Développement/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Command/ServerCommand.php","line":59,"level":28928} []
+[2016-11-16 15:49:08] request.INFO: Matched route "{route}". {"route":"homepage","route_parameters":{"_controller":"AppBundle\\Controller\\DefaultController::indexAction","_route":"homepage"},"request_uri":"http://localhost:8000/","method":"GET"} []
+[2016-11-16 15:49:08] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
+[2016-11-16 15:49:10] request.INFO: Matched route "{route}". {"route":"_wdt","route_parameters":{"_controller":"web_profiler.controller.profiler:toolbarAction","token":"989c0e","_route":"_wdt"},"request_uri":"http://localhost:8000/_wdt/989c0e","method":"GET"} []
+[2016-11-16 15:51:26] request.INFO: Matched route "{route}". {"route":"keeper_default_index","route_parameters":{"_controller":"KeeperBundle\\Controller\\DefaultController::indexAction","_route":"keeper_default_index"},"request_uri":"http://localhost:8000/","method":"GET"} []
+[2016-11-16 15:51:26] security.INFO: Populated the TokenStorage with an anonymous Token. [] []

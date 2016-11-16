@@ -1,0 +1,167 @@
+
+/*menu parametre*/
+body>div:nth-child(2){
+	height: 70px;
+	background: #72BBF9;
+	margin-top: 6%;
+}
+
+body>div:nth-child(2) div{
+	width:140px;
+	height: 100%;
+	background:#ededed;
+	padding: 0;
+	margin: auto;
+}
+
+
+body>div:nth-child(2) div button{
+	float:left;
+	width:70px;
+	height:70px;
+	border:0;
+}
+
+body>div:nth-child(2) div button:nth-child(1){
+	background: url(../img/alarmW.svg) no-repeat, #76BBF9;
+	background-position: 50%;
+	border-left:1px solid #ededed; 
+}
+body>div:nth-child(2) div button:nth-child(2){
+	background: url(../img/sensibility.svg) no-repeat;
+	background-position: 50%;
+}
+
+div>i:nth-child(1){
+	visibility: hidden;
+}
+
+body>div:nth-child(3){
+	text-align: center;
+}
+
+body>div:nth-child(3) div{
+	width:140px;
+	height: auto;
+	padding: 0;
+	margin: auto;
+}
+
+
+body>div:nth-child(3) i{
+	font-size: 2em;
+	color: #76BBF9;
+	width: 68px;
+}
+
+/*############################CORPS */
+form{
+	text-align: center;
+}
+
+
+.btn-default{
+	background: #ddd;
+}
+
+.btn-default:hover{
+	background: #72BBF9;
+}
+/*valeur*/
+form>div>div:nth-of-type(2){
+	font-family: Nunito;
+	
+}
+
+
+/*Paramètre gauche*/
+.glyphicon-info-sign{
+	color:#72BBF9;
+	font-size:1.5em;
+	margin-right:2%; 
+	vertical-align: bottom;
+}
+
+/*Paramètres droite*/
+
+form>div:nth-child(2){
+	height: 280px;
+	margin-top:8%;
+}
+
+/*curseur*/
+
+#alerte1, #alerte2{
+	width: 62%;
+	margin: 13% auto;
+}
+
+#alerte1 .ui-slider-range, #alerte2 .ui-slider-range { 
+	background: #72BBF9;
+}
+
+#alerte1 label {
+  position: absolute;
+  width: 20px;
+  margin-top: 20px;
+  margin-left: -10px;
+  text-align: center;
+}
+
+#alerte1>span:nth-child(1),#alerte2>span:nth-child(1){
+	position: relative;
+	top:12px;
+	left:0px;
+}
+
+#alerte1>span:nth-child(2),#alerte2>span:nth-child(2){
+	position: relative;
+	top:12px;
+	right: -85%;
+}
+
+
+
+
+
+/*media queries*/
+
+@media screen and (min-width: 390px){
+	#alerte1, #alerte2{
+		margin: 8% auto;
+	}
+
+}
+
+@media screen and (min-width: 549px){
+	h2{
+		font-size:1.2em;
+	}
+}
+
+@media screen and (min-width:720px) and (max-width:992px){
+
+	#alerte1, #alerte2{
+		margin: 5% auto;
+	}
+
+}
+
+@media screen and (min-width:992px){
+	/*parametre à droite*/
+	form>div:nth-child(2){
+		margin-top:0;
+	}
+
+
+}
+
+@media screen and (min-width:1700px){
+	/*parametre gauche + droite*/
+	form>div:nth-child(2){
+		height: 400px;
+	}
+}
+
+
+ 

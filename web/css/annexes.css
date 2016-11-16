@@ -1,0 +1,30 @@
+/*-----------------------------------
+	Structure générales (normalize) 
+-------------------------------------*/
+
+h1 {
+  margin-bottom: 50px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+p {
+  text-align: justify;
+  margin-bottom: 40px;
+}
+
+
+/*-----------------------------------
+		HEADER 
+-------------------------------------*/
+
+header {
+  background-size: cover;
+}
+
+/*logo*/
+header > div:nth-child(1) > div > img {
+	height: 100%;
+}
