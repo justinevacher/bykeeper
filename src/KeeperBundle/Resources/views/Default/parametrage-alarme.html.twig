@@ -1,0 +1,101 @@
+{# app/Resources/views/default/layout.html.twig #}
+{% extends 'layout.html.twig' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('css/parametrage_alarme.css') }}" >
+{% endblock %}
+
+{% block menu %}
+    <!-- menu desktop -->
+    <div class="row">
+        <nav class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 row">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a class="menu-inactive" href="{{ path('tableau_de_bord') }}">Tableau de bord</a></li>
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a class="menu-active" href="{{ path('parametrage_alarme') }}">Paramétrages</a></li>
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a class="menu-inactive" href="{{ path('retrouver_velo') }}">Retrouver mon vélo</a></li>
+        </nav>
+    </div>
+
+    <!-- menu mobile -->
+    <nav class="b-nav">
+        <li><a class="b-link" href="{{ path('tableau_de_bord') }}">Tableau de bord</a></li>
+        <li><a class="b-link" href="{{ path('parametrage_alarme') }}">Paramétrages</a></li>
+        <li><a class="b-link" href="{{ path('retrouver_velo') }}">Retrouver mon vélo</a></li>
+    </nav>
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div>
+            <button id="alarme" onclick="location.href='{{ path("parametrage_alarme") }}'"></button>
+            <button id="capteur" onclick="location.href='{{ path("reglage_capteur") }}'"></button>
+            <div class="stopFloat"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div>
+            <i class="glyphicon glyphicon-triangle-bottom"></i>
+            <i class="glyphicon glyphicon-triangle-bottom"></i>
+        </div>
+    </div>
+
+    <main>
+        <h1>Paramétrages de l'alarme</h1>
+
+        <form action="#" class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"> <!-- premier bloque -->
+                <h3> J'accepte de recevoir des notifications : </h3>
+                <div class="toggleWrapper"> <!-- switch 1 -->
+                    <input type="checkbox" name="toggle1" class="mobileToggle" id="toggle1"> 
+                    <label for="toggle1"></label>
+                    <p> Par SMS </p>
+                </div>
+                
+                <div class="toggleWrapper"> <!-- switch 2 -->
+                    <input type="checkbox" name="toggle2" class="mobileToggle" id="toggle2"> 
+                    <label for="toggle2"></label>
+                    <p> Par MAIL </p>
+                </div>
+            </div> <!-- end premier bloque --> 
+
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6"> <!--Deuxieme bloque -->
+                <div class="row">
+                    <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
+                        <div class="toggleWrapper"> <!-- switch 3 -->
+                            <input type="checkbox" name="toggle3" class="mobileToggle" id="toggle3"> 
+                            <label for="toggle3"></label>
+                        </div>
+                    </div>
+                    <div class="col-xs-9 col-sm-10 col-md-10 col-lg-10">
+                        <h3> J'accepte de recevoir une notification quand j'active mon alarme dans une zone à risque </h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
+                        <div class="toggleWrapper"> <!-- switch 4 -->
+                            <input type="checkbox" name="toggle4" class="mobileToggle" id="toggle4"> 
+                            <label for="toggle4"></label>
+                        </div>
+                    </div>
+                    <div class="col-xs-9 col-sm-10 col-md-10 col-lg-10">
+                        <h3> Activation et désactivation de l'alarme si mon smartphone est à proximité </h3>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-3 col-sm-2 col-md-2 col-lg-2">
+                        <div class="toggleWrapper"><!-- switch 5 -->
+                            <input type="checkbox" name="toggle5" class="mobileToggle" id="toggle5"> 
+                            <label for="toggle5"></label>
+                        </div>
+                    </div>
+                    <div class="col-xs-9 col-sm-10 col-md-10 col-lg-10">
+                        <h3> Activer l'alarme quand mon vélo reste trop longtemps sans bouger (tout en prenant compte les autres paramètres) </h3>
+                    </div>
+                </div>
+            </div>  <!-- end deuxieme bloque -->
+
+            <button class="btn btn-default">Valider</button>
+        </form>
+    </main>
+{% endblock %}

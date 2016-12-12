@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>ByKeeper</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="{{ asset('img/fav.png') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/styles.css') }}" >
+        {% block css %}{% endblock %}
+    </head>
+    <body {% block loadMap %}{% endblock %}>
+        <header>
+            <div class="row">
+                <!-- Burger-Icon -->
+                <div class="b-container">
+                    <div class="b-menu">
+                        <div class="b-bun b-bun--top"></div>
+                        <div class="b-bun b-bun--mid"></div>
+                        <div class="b-bun b-bun--bottom"></div>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-xs-offset-4 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4" >
+                    <img src="{{ asset('img/logo2.svg') }}" id="profil" alt="logo Bykeeper" />
+                    <div class="toggle toggle--push toggle--push--glow">
+                        <input type="checkbox" id="toggle--push--glow" class="toggle--checkbox">
+                        <label class="toggle--btn" for="toggle--push--glow" data-label-on="on"  data-label-off="off"></label>
+                        <p>Alarme</p>
+                        <div class="stopFloat"></div>
+                    </div>
+                </div>
+
+                <!-- Profil -->
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <section class="row">
+                        <section class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <img src="{{ asset('img/profil.svg') }}" onclick="afficherMenuProfil()">
+                            <p onclick="afficherMenuProfil()">Profil</p>
+                        </section>
+                        <section class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <i class="glyphicon glyphicon-triangle-bottom" onclick="afficherMenuProfil()"></i>
+                        </section>
+                        
+                        <section>
+                            <ul id="menuProfil">
+                                <li><a href="{{ path('donnees_perso') }}"> Données personnelles </a></li>
+                                <li><a href="{{ path('accueil') }}"> Déconnexion </a></li>
+                            </ul>
+                        </section>
+                    </section>
+                </div>
+            </div>
+
+            {% block menu %}{% endblock %}
+        </header>
+
+        {% block body %}{% endblock %}
+
+        <footer>
+            <div></div><!-- image avant footer -->
+            <section class="container">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                        <h3>Informations</h3>
+                        <aside>
+                            <p><a href="{{ path('faq') }}">Foire aux questions</a></p>
+                            <p><a href="{{ path('mentions_legales') }}">Mentions légales</a></p>
+                            <p><a href="sitemap.xml">Plan du site</a></p>
+                        </aside>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                        <h3>Social</h3>
+                        <aside>
+                            <div>
+                                <a target="_blank" href="https://www.facebook.com/bykeeperconnect"><img src="img/facebook-icon.png" alt="Facebook"></a>
+                                <a target="_blank" href="https://www.twitter.com/bykeeperconnect"><img src="img/twitter-icon.png" alt="Twitter"></a>
+                            </div>
+                            <p><a href="mailto:bykeeper@gmail.com">bykeeper@gmail.com</a></p>
+                            <p><a href="tel:+33556845785">(+33)5 56 84 57 85</a></p>
+                        </aside>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <h3>Partenaires</h3>
+                        <aside class="partenaires">
+                            <a target="_blank" href="https://www.iut.u-bordeaux.fr/info/"><img src="img/logoiut.png" alt="IUT de Bordeaux"></a>
+                            <a target="_blank" href="https://mink.so/"><img src="img/minklogo.png" alt="Mink"></a>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+        </footer>
+        <div>
+            <p>© 2016, ByKeeper. Tous drois réservés.</p>
+        </div>
+
+        <scripts>
+            {% block scripts %}{% endblock %}
+            <script type="text/javascript" src="{{ asset('js/burger.js') }}" async></script>
+            <script type="text/javascript" src="{{ asset('js/main.js') }}" async></script>
+        </scripts>
+    </body>
+</html>

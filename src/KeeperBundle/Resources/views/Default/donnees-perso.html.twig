@@ -1,0 +1,48 @@
+{# app/Resources/views/default/layout.html.twig #}
+{% extends 'layout.html.twig' %}
+
+{% block css %}
+    <link rel="stylesheet" href="{{ asset('css/donnees-perso.css') }}" >
+{% endblock %}
+
+{% block menu %}
+    <!-- menu desktop -->
+    <div class="row">
+        <nav class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 row">
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a class="menu-inactive" href="{{ path('tableau_de_bord') }}">Tableau de bord</a></li>
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a class="menu-inactive" href="{{ path('parametrage_alarme') }}">Paramétrages</a></li>
+            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a class="menu-inactive" href="{{ path('retrouver_velo') }}">Retrouver mon vélo</a></li>
+        </nav>
+    </div>
+
+    <!-- menu mobile -->
+    <nav class="b-nav">
+        <li><a class="b-link" href="{{ path('tableau_de_bord') }}">Tableau de bord</a></li>
+        <li><a class="b-link" href="{{ path('parametrage_alarme') }}">Paramétrages</a></li>
+        <li><a class="b-link" href="{{ path('retrouver_velo') }}">Retrouver mon vélo</a></li>
+    </nav>
+{% endblock %}
+
+{% block body %}
+    <main>
+        <h1>Données personnelles</h1>
+        <form action="#" class="row">
+                <label for="numBoitier">Numéro de boitier</label><br>
+                <input type="text" name="numBoitier" value="07398427342"><br>
+
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
+                <label for="prenom">Prénom</label><br>
+                <input type="text" name="prenom" value="Thomas"><br>
+                <label for="nom">Nom</label><br>
+                <input type="text" name="nom" value="Durand"><br>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <label for="telephone">Téléphone</label><br>
+                <input type="tel" name="telephone" value="0678954312"><br>
+                <label for="Email">Email</label><br>
+                <input type="email" name="email" value="thomas.durand@hotmail.fr"><br>
+            </div>
+            <button class="btn btn-default">Enregistrer</button>
+         </form>
+    </main>
+{% endblock %}

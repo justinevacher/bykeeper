@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
     <head>
         <meta charset="utf-8">
@@ -6,21 +6,22 @@
         <title>ByKeeper - Votre alarme connectée</title>
         <meta name="description" content="Avec ByKeeper, n'ayez plus aucune crainte de laisser votre vélo dans la rue !">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/png" href="img/fav.png" />
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/vitrine.css">
+        <link rel="alternate" href="http://bykeeper.fr/" hreflang="fr-fr" />
+        <link rel="icon" type="image/png" href="{{ asset('img/fav.png') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/vitrine.css') }}">
     </head>
     <body>
         <header>
             <div>
-                <img src="img/logo2.svg" alt="Logo ByKeeper">
+                <img src="{{ asset('img/logo2.svg') }}" alt="Logo ByKeeper">
             </div>
             <div>
                 <p>Vous possédez déjà un compte ByKeeper</p>
-                <a href="connexion.html">Connexion</a>
+                <a href="#"><span>Connexion</span></a>
                 <p>Vous souhaitez activer votre boîtier ByKeeper</p>
-                <a href="inscription.html">Inscription</a>
+                <a href="#"><span>Inscription</span></a>
             </div>
             <a class="js-scrollTo" href="#lekeeper">
                 <div class="hidden-xs">
@@ -37,16 +38,18 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="img/logo2Blanc.png" alt="Logo ByKeeper"></a>
+                    <a class="navbar-brand" href="#"><img src="{{ asset('img/logo2Blanc.png') }}" alt="Logo ByKeeper"></a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
-                        <li><a class="js-scrollTo" href="#lekeeper">Le Keeper</a></li>
+                        <li><a class="js-scrollTo" href="#lekeeper">Le Keeper, c'est quoi ?</a></li>
+                        <li><a class="js-scrollTo" href="#comment">Comment ça marche ?</a></li>
+                        <li><a class="js-scrollTo" href="#fonctionnalites">Les fonctionnalités</a></li>
                         <li><a class="js-scrollTo" href="#quisommesnous">Qui sommes-nous ?</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="inscription.html"><span class="glyphicon glyphicon-user"></span> Inscription</a></li>
-                        <li><a href="connexion.html"><span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Inscription</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>
                     </ul>
                 </div>
             </div>
@@ -56,35 +59,69 @@
             <section>
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <h1 id="lekeeper" aria-level="1">Le Keeper</h1>
-                        <p>Soyez avertis des mouvements suspects détectés sur votre vélo grâce à notre alarme connectée. Vous alertant par un SMS ou un email, ByKeeper vous prévient quand votre vélo subit des secousses suspectes ou encore lorsqu'il est en  mouvement. C’est à dire ici, c’est le contraire, au lieu de panacée, la congolexicomatisation autour de l'ergonométrie peut se baser sur l'upensmie provenant d'une dynamique syncronique, merci. Vous avez le système de check-up vers les anti-valeurs, vous avez le curuna, or la réflexologie vers la compromettance pour des saint-bioules consiste à mettre un accent sur cet environnement de 2 345 410 km² dans ces prestances, mais oui. Quand on parle de relaxation, l'ittérativisme de toute la République Démocratique du Congo sert à prévaloir les grabuses lastiques provenant d'une dynamique syncronique, Bonne Année. Comme la coumbacérie ou le script de Aze, le savoir éventualiste sous cet angle là nous incite à informatiser les encadrés off-shore, c’est clair. Parallèlement, la pédagogie de toute la République Démocratique du Congo s'applique à réglementer le panafricanisme provenant d'une dynamique syncronique, je vous en prie.</p>
+                        <h1 id="lekeeper" aria-level="1">Le Keeper, c'est quoi ?</h1>
+                        <p>Le Keeper, c'est une alarme connectée pour vélos. Il détecte les mouvements suspects pouvant être subis par votre vélo et vous alerte en temps réel, par SMS ou par e-mail. Un dispositif de géolocalisation vous permet de déterminer en temps réel sa position, vous proposant ainsi une surveillance accrue. Mais si, toutefois, votre vélo venait à se faire voler, une alarme sonore se déclencherait afin de dissuader toute personne mal intentionnée de disparaître discrètement avec votre bien. Ce dispositif vous permet donc de veiller sur votre deux-roues tout en vous assurant une sérénité totale !</p>
                     </div>
                 </div>
 
                 <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <h1 id="comment" aria-level="1">Comment ça marche ?</h1>
+                        <p>Le Keeper fonctionne grâce à deux capteurs ainsi qu'une puce GPS. Les capteurs analysent la sensibilité et les mouvements provoqués sur le vélo. La puce GPS, elle, trace les différents trajets effectués à bord de celui-ci. Lorsqu'une tentative de vol a lieu, les capteurs de sensibilité et de mouvements s'enclenchent et permettent l'envoi d'une alerte SMS ou mail chez l'utilisateur. Si le vélo se fait tout de même voler, l'alarme sonore se déclenchera au bout d'une certaine distance parcourue, analysée par la puce GPS.</p>
+                        <p>Les capteurs sont issus de la solution Sigfox.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-sm-12">
+                        <h1 id="fonctionnalites" aria-level="1">Les fonctionnalités</h1>
+                    </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-sm-6">
-                        <img src="img/vitesse-distance.png" alt="image">
+                        <img src="{{ asset('img/vitesse-distance.png') }}" alt="Image statistiques">
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-sm-6">
-                        <p>On ne peut pas parler de politique administrative scientifique, la réflexologie de l'orthodoxisation continue à soutenir une certaine compétitivité dans les camps militaires non-voyants, merci. Vous avez le système de check-up vers les anti-valeurs, vous avez le curuna, or la contextualisation autour de la Géo Physique Spatiale se résume à partager une position axisienne vers le monde entier, tu sais ça. Parallèlement, la société civile purement technique tarde à porter d'avis sur ce qu'on appelle les grabuses lastiques avec la formule 1+(2x5), bonnes fêtes.</p>
+                        <h3>Statistiques d'utilisation</h3>
+                        <p>Analysez vos performances, établissez des statistiques concernant l'utilisation générale de votre vélo, en regardant votre distance totale parcourue ainsi que la vitesse moyenne obtenue lors de vos différents trajets.</p>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                        <p>Se consolidant dans le système de insiding et outsiding, l'activisme des lois du marché suffit à incristaliser mes frères propres vers Lovanium, tu sais ça. Au nom de toute la communauté des savants, la compétence à forciori, parvient à intentionner ce système phénoménal avéré(e)(s), merci. Comme la coumbacérie ou le script de Aze, la systématique à l'égard de la complexité sert à aider une position axisienne belvédère, tu sais ça.</p>
+                        <h3>Enregistrement des trajets</h3>
+                        <p>Enregistrez les trajets que vous effectuez avec votre vélo afin de mettre en place des statistiques d'utilisation précises pour chaque trajet effectué.</p>
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                        <img src="img/enregistrer-trajet.png" alt="image">
+                        <img src="{{ asset('img/enregistrer-trajet.png') }}" alt="Image enregistrer trajet">
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                        <img src="img/trajets.png" alt="image">
+                        <img src="{{ asset('img/trajets.png') }}" alt="Image trajets">
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                        <p>Se consolidant dans le système de insiding et outsiding, l'activisme des lois du marché suffit à incristaliser mes frères propres vers Lovanium, tu sais ça. Au nom de toute la communauté des savants, la compétence à forciori, parvient à intentionner ce système phénoménal avéré(e)(s), merci. Comme la coumbacérie ou le script de Aze, la systématique à l'égard de la complexité sert à aider une position axisienne belvédère, tu sais ça.</p>
+                        <h3>Liste des trajets effectués</h3>
+                        <p>Consultez et analysez vos performances pour chaque trajet. Choisssez-en un dans la liste déroulante et accédez à l'ensemble des données le concernant. Il apparaîtra aussi sur la carte interactive, à partir de laquelle vous pourrez vous tenir au courant des "zones sensibles", dans lesquelles il est préférable de ne pas laisser votre vélo sans surveillance. Ces zones sont établies à partir des différentes alertes recensées par l'ensemble des utilisateurs.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <h3>Paramétrages de l'alarme</h3>
+                        <p>Paramétrez votre alarme comme bon vous semble en choisissant le mode de réception des alertes. Celles-ci peuvent vous être envoyées par SMS ou par mail. Définissez ou non des alarmes lorsque vous entrez dans des zones à risques, activez ou non la fonctionnalité permettant de désactiver automatiquement l'alarme lorsque votre smartphone se trouve à proximité du vélo ou activez ou non l'alarme automatiquement lorsque le vélo est statique pendant une certaine durée.</p>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <img src="{{ asset('img/parametrage.png') }}" alt="Image paramétrages alarme">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <img src="{{ asset('img/reglage.png') }}" alt="Image réglages capteur">
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <h3>Réglages du capteur</h3>
+                        <p>Réglez la sensibilité des différents capteurs, en choisisant à quel moment envoyer une alerte. Pour cela, servez-vous du slider à partir duquel vous mettrez en place vos paramètres personnalisés.</p>
                     </div>
                 </div>
             </section>
@@ -93,13 +130,13 @@
                 <div class="col-xs-12 col-md-12 col-sm-12">
                     <h1 id="quisommesnous" aria-level="1">Qui sommes-nous ?</h1>
                     <div id="photos">
-                        <figure role="group"><img src="img/baptiste.png" alt="Baptiste"/><figcaption>Baptiste Castagnet</figcaption></figure>
-                        <figure role="group"><img src="img/roger.png" alt="Jérémy"/><figcaption>Jérémy Cuesta-Oger</figcaption></figure>
-                        <figure role="group"><img src="img/gautier.png" alt="Gautier"/><figcaption>Gautier Maire</figcaption></figure>
-                        <figure role="group"><img src="img/greg.png" alt="Grégory"/><figcaption>Grégory Prince</figcaption></figure>
-                        <figure role="group"><img src="img/justine.png" alt="Justine"/><figcaption>Justine Vacher</figcaption></figure>
+                        <figure role="group"><img src="{{ asset('img/baptiste.png') }}" alt="Baptiste"/><figcaption>Baptiste Castagnet</figcaption></figure>
+                        <figure role="group"><img src="{{ asset('img/roger.png') }}" alt="Jérémy"/><figcaption>Jérémy Cuesta-Oger</figcaption></figure>
+                        <figure role="group"><img src="{{ asset('img/gautier.png') }}" alt="Gautier"/><figcaption>Gautier Maire</figcaption></figure>
+                        <figure role="group"><img src="{{ asset('img/greg.png') }}" alt="Grégory"/><figcaption>Grégory Prince</figcaption></figure>
+                        <figure role="group"><img src="{{ asset('img/justine.png') }}" alt="Justine"/><figcaption>Justine Vacher</figcaption></figure>
                     </div>
-                    <p>Nous somme une équipe composée de 5 étudiants en Licence Professionnelle Développement d'Applications Web et Innovation Numérique. Comme image la coumbacérie ou le script de Aze, la prédestination de la Théorie Générale des Organisations tarde à faceter ce système phénoménal autour des dialogues intercommunautaires, merci. Comme la coumbacérie ou le script de Aze, la prédestination éventualiste sous cet angle là se résoud à régler les encadrés dans les camps militaires non-voyants, mais oui. Comme la coumbacérie ou le script de Aze, le rédynamisme de la Théorie Générale des Organisations parvient à réglementer les grabuses lastiques propre(s) aux congolais, je vous en prie. L’émergence ici c’est l’émulsion, c’est pas l’immersion donc le savoir des lois du marché continue à faceter l'upensmie belvédère, je vous en prie. Retrouvez-nous sur Facebook, Twitter. Merci à l'enteprise Mink.</p>
+                    <p>Nous sommes une équipe composée de 5 étudiants en Licence Professionnelle Développement d'Applications Web et Innovation Numérique.</p>
                 </div>
             </section>
             <a href="#" class="back-to-top">
@@ -116,8 +153,8 @@
                     <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
                         <h3>Informations</h3>
                         <aside>
-                            <p><a href="faq.html">Foire aux questions</a></p>
-                            <p><a href="mentions.html">Mentions légales</a></p>
+                            <p><a href="{{ path('faq') }}">Foire aux questions</a></p>
+                            <p><a href="{{ path('mentions_legales') }}">Mentions légales</a></p>
                             <p><a href="sitemap.xml">Plan du site</a></p>
                         </aside>
                     </div>
@@ -125,8 +162,8 @@
                         <h3>Social</h3>
                         <aside>
                             <div>
-                                <a target="_blank" href="https://www.facebook.com/bykeeperconnect"><img src="img/facebook-icon.png" alt="Facebook"></a>
-                                <a target="_blank" href="https://www.twitter.com/bykeeperconnect"><img src="img/twitter-icon.png" alt="Twitter"></a>
+                                <a target="_blank" href="https://www.facebook.com/bykeeperconnect"><img src="{{ asset('img/facebook-icon.png') }}" alt="Facebook"></a>
+                                <a target="_blank" href="https://www.twitter.com/bykeeperconnect"><img src="{{ asset('img/twitter-icon.png') }}" alt="Twitter"></a>
                             </div>
                             <p><a href="mailto:bykeeper@gmail.com">bykeeper@gmail.com</a></p>
                             <p><a href="tel:+33556845785">(+33)5 56 84 57 85</a></p>
@@ -135,8 +172,8 @@
                     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                         <h3>Partenaires</h3>
                         <aside class="partenaires">
-                            <a target="_blank" href="https://www.iut.u-bordeaux.fr/info/"><img src="img/logoiut.png" alt="IUT de Bordeaux"></a>
-                            <a target="_blank" href="https://mink.so/"><img src="img/minklogo.png" alt="Mink"></a>
+                            <a target="_blank" href="https://www.iut.u-bordeaux.fr/info/"><img src="{{ asset('img/logoiut.png') }}" alt="IUT de Bordeaux"></a>
+                            <a target="_blank" href="https://mink.so/"><img src="{{ asset('img/minklogo.png') }}" alt="Mink"></a>
                         </aside>
                     </div>
                 </div>
@@ -146,10 +183,10 @@
             <p>© 2016, ByKeeper. Tous drois réservés.</p>
         </div>
 
-        <script type="application/javascript" src="js/jquery-3.1.1.js"></script>
-        <script type="application/javascript" src="js/jquery.sticky.js"></script>
-        <script type="application/javascript" src="js/bootstrap.min.js"></script>
-        <script type="application/javascript" src="js/main.js"></script>
-        <script type="application/javascript" src="js/vitrine.js"></script>
+        <script type="application/javascript" src="{{ asset('js/jquery-3.1.1.js') }}"></script>
+        <script type="application/javascript" src="{{ asset('js/jquery.sticky.js') }}"></script>
+        <script type="application/javascript" src="{{ asset('js/bootstrap.min.js') }}"></script>
+        <script type="application/javascript" src="{{ asset('js/main.js') }}"></script>
+        <script type="application/javascript" src="{{ asset('js/vitrine.js') }}"></script>
     </body>
  </html>

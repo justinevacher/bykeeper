@@ -20,7 +20,7 @@ function afficherMenuProfil(){
     if (liste.className == 'profil')
     {
         liste.classList.remove('profil');
-        img.src = 'img/Profil.svg';
+        img.src = 'img/profil.svg';
         arrow[0].style.color='white';
         profil.style.color = 'white';
     }

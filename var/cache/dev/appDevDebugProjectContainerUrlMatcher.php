@@ -100,13 +100,51 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        // keeper_default_index
+        // accueil
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'keeper_default_index');
+                return $this->redirect($pathinfo.'/', 'accueil');
             }
 
-            return array (  '_controller' => 'KeeperBundle\\Controller\\DefaultController::indexAction',  '_route' => 'keeper_default_index',);
+            return array (  '_controller' => 'KeeperBundle\\Controller\\DefaultController::indexAction',  '_route' => 'accueil',);
+        }
+
+        // tableau_de_bord
+        if ($pathinfo === '/tableau-bord') {
+            return array (  '_controller' => 'KeeperBundle\\Controller\\DefaultController::tableauBordAction',  '_route' => 'tableau_de_bord',);
+        }
+
+        // parametrage_alarme
+        if ($pathinfo === '/parametrage-alarme') {
+            return array (  '_controller' => 'KeeperBundle\\Controller\\DefaultController::parametrageAlarmeAction',  '_route' => 'parametrage_alarme',);
+        }
+
+        if (0 === strpos($pathinfo, '/re')) {
+            // reglage_capteur
+            if ($pathinfo === '/reglage-capteur') {
+                return array (  '_controller' => 'KeeperBundle\\Controller\\DefaultController::reglageCapteurAction',  '_route' => 'reglage_capteur',);
+            }
+
+            // retrouver_velo
+            if ($pathinfo === '/retrouver-velo') {
+                return array (  '_controller' => 'KeeperBundle\\Controller\\DefaultController::retrouverVeloAction',  '_route' => 'retrouver_velo',);
+            }
+
+        }
+
+        // donnees_perso
+        if ($pathinfo === '/donnees-perso') {
+            return array (  '_controller' => 'KeeperBundle\\Controller\\DefaultController::donneesPersoAction',  '_route' => 'donnees_perso',);
+        }
+
+        // faq
+        if ($pathinfo === '/faq') {
+            return array (  '_controller' => 'KeeperBundle\\Controller\\DefaultController::faqAction',  '_route' => 'faq',);
+        }
+
+        // mentions_legales
+        if ($pathinfo === '/mentions-legales') {
+            return array (  '_controller' => 'KeeperBundle\\Controller\\DefaultController::mentionsLegalesAction',  '_route' => 'mentions_legales',);
         }
 
         // homepage

@@ -2,6 +2,19 @@
 <?xml-stylesheet type='text/xsl' href='css/xml-sitemap.xsl'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://bykeeper.fr/</loc>
+  <loc>http://bykeeper.fr/</loc>
+  <lastmod>2016-11-23T15:02:01+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://bykeeper.fr/faq.html</loc>
+    <lastmod>2016-11-23T14:54:32+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://bykeeper.fr/mentions.html</loc>
+    <lastmod>2016-11-23T14:54:30+00:00</lastmod>
+  </url>
+  <url>
+    <loc>http://bykeeper.fr/index.html</loc>
+    <lastmod>2016-11-23T15:02:01+00:00</lastmod>
   </url>
 </urlset>

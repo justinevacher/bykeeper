@@ -438,7 +438,7 @@ header > div:nth-child(2) > nav > li > a:hover, header > div:nth-child(2) > nav 
 	float: left;
 }
 
-header > div:nth-child(1) > div:nth-child(3) > div > p{
+header > div:nth-child(1) > div:nth-child(3) > div > p:nth-of-type(1){
 	padding-top: 6px;
 	padding-left: 12px;
 	font-family: Nunito, Helvetica, Arial, sans-serif;
@@ -449,7 +449,7 @@ header > div:nth-child(1) > div:nth-child(3) > div > p{
 
 /*---- menu déroulant profil----*/
 
-div.col-xs-4:nth-child(4) > section:nth-child(1) > section:nth-child(1) > img:nth-child(1){
+div.col-xs-4:nth-child(4) > section:nth-child(1) > section:nth-child(1) > img:nth-of-type(1){
   position: relative;
   left: 5px;
   top:25px;
