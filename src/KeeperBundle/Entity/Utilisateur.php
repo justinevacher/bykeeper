@@ -2,6 +2,7 @@
 
 namespace KeeperBundle\Entity;
 
+use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -10,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="utilisateur")
  * @ORM\Entity(repositoryClass="KeeperBundle\Repository\UtilisateurRepository")
  */
-class Utilisateur
+class Utilisateur extends BaseUser
 {
     /**
      * @var int
@@ -19,28 +20,7 @@ class Utilisateur
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="pseudo", type="string", length=255, unique=true)
-     */
-    private $pseudo;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="email", type="string", length=255, unique=true)
-     */
-    private $email;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="mdp", type="string", length=255)
-     */
-    private $mdp;
+    protected $id;
 
     /**
      * @var string
@@ -52,41 +32,40 @@ class Utilisateur
     /**
      * @var int
      *
-     * @ORM\Column(name="vitesseMoyenneGlob", type="integer")
+     * @ORM\Column(name="vitesseMoyenneGlob", type="integer", nullable=true)
      */
     private $vitesseMoyenneGlob;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="distanceGlob", type="integer")
+     * @ORM\Column(name="distanceGlob", type="integer", nullable=true)
      */
     private $distanceGlob;
 
     /**
      * @var bool
      *
-     * @ORM\Column(name="notifSMS", type="boolean")
+     * @ORM\Column(name="notifSMS", type="boolean", nullable=true)
      */
     private $notifSMS;
 
     /**
      * @var bool
      *
-     * @ORM\Column(name="notifEmail", type="boolean")
+     * @ORM\Column(name="notifEmail", type="boolean", nullable=true)
      */
     private $notifEmail;
 
     /**
      * @var bool
      *
-     * @ORM\Column(name="notifZonesRisques", type="boolean")
+     * @ORM\Column(name="notifZonesRisques", type="boolean", nullable=true)
      */
     private $notifZonesRisques;
 
     /** 
      * @ORM\OneToOne(targetEntity="Boitier", cascade={"remove"})
-     * @ORM\JoinColumn(nullable=false)
      */
     private $boitier;
 
@@ -105,78 +84,6 @@ class Utilisateur
     public function getId()
     {
         return $this->id;
-    }
-
-    /**
-     * Set pseudo
-     *
-     * @param string $pseudo
-     *
-     * @return Utilisateur
-     */
-    public function setPseudo($pseudo)
-    {
-        $this->pseudo = $pseudo;
-
-        return $this;
-    }
-
-    /**
-     * Get pseudo
-     *
-     * @return string
-     */
-    public function getPseudo()
-    {
-        return $this->pseudo;
-    }
-
-    /**
-     * Set email
-     *
-     * @param string $email
-     *
-     * @return Utilisateur
-     */
-    public function setEmail($email)
-    {
-        $this->email = $email;
-
-        return $this;
-    }
-
-    /**
-     * Get email
-     *
-     * @return string
-     */
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    /**
-     * Set mdp
-     *
-     * @param string $mdp
-     *
-     * @return Utilisateur
-     */
-    public function setMdp($mdp)
-    {
-        $this->mdp = $mdp;
-
-        return $this;
-    }
-
-    /**
-     * Get mdp
-     *
-     * @return string
-     */
-    public function getMdp()
-    {
-        return $this->mdp;
     }
 
     /**
@@ -327,6 +234,7 @@ class Utilisateur
      */
     public function __construct()
     {
+        parent::__construct();
         $this->trajets = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
