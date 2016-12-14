@@ -24,9 +24,9 @@ class Utilisateur
     /**
      * @var string
      *
-     * @ORM\Column(name="nom", type="string", length=255, unique=true)
+     * @ORM\Column(name="pseudo", type="string", length=255, unique=true)
      */
-    private $nom;
+    private $pseudo;
 
     /**
      * @var string
@@ -43,88 +43,58 @@ class Utilisateur
     private $mdp;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="numTel", type="integer")
+     * @ORM\Column(name="numTel", type="string", length=255)
      */
     private $numTel;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="numBoitier", type="integer")
+     * @ORM\Column(name="vitesseMoyenneGlob", type="integer")
      */
-    private $numBoitier;
+    private $vitesseMoyenneGlob;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="vitMoyGlob", type="integer", nullable=true)
-     */
-    private $vitMoyGlob;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="distanceGlob", type="integer", nullable=true)
+     * @ORM\Column(name="distanceGlob", type="integer")
      */
     private $distanceGlob;
 
     /**
      * @var bool
      *
-     * @ORM\Column(name="notifSMS", type="boolean", nullable=true)
+     * @ORM\Column(name="notifSMS", type="boolean")
      */
     private $notifSMS;
 
     /**
      * @var bool
      *
-     * @ORM\Column(name="notifMail", type="boolean", nullable=true)
+     * @ORM\Column(name="notifEmail", type="boolean")
      */
-    private $notifMail;
+    private $notifEmail;
 
     /**
      * @var bool
      *
-     * @ORM\Column(name="notifZonesRisque", type="boolean", nullable=true)
+     * @ORM\Column(name="notifZonesRisques", type="boolean")
      */
-    private $notifZonesRisque;
+    private $notifZonesRisques;
 
-    /**
-     * @var bool
-     *
-     * @ORM\Column(name="onOffTelProx", type="boolean", nullable=true)
+    /** 
+     * @ORM\OneToOne(targetEntity="Boitier", cascade={"remove"})
+     * @ORM\JoinColumn(nullable=false)
      */
-    private $onOffTelProx;
+    private $boitier;
 
-    /**
-     * @var bool
-     *
-     * @ORM\Column(name="onOffVeloStatic", type="boolean", nullable=true)
+    /** 
+     * @ORM\OneToMany(targetEntity="Trajet", mappedBy="utilisateur", cascade={"remove"})
+     * @ORM\JoinColumn(nullable=false)
      */
-    private $onOffVeloStatic;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="sensiVibration", type="integer", nullable=true)
-     */
-    private $sensiVibration;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="sensiDistance", type="integer", nullable=true)
-     */
-    private $sensiDistance;
-
-    /**
-     * @var bool
-     *
-     * @ORM\Column(name="etatBoitier", type="boolean", nullable=true)
-     */
-    private $etatBoitier;
+    private $trajets;
 
 
     /**
@@ -138,27 +108,27 @@ class Utilisateur
     }
 
     /**
-     * Set nom
+     * Set pseudo
      *
-     * @param string $nom
+     * @param string $pseudo
      *
      * @return Utilisateur
      */
-    public function setNom($nom)
+    public function setPseudo($pseudo)
     {
-        $this->nom = $nom;
+        $this->pseudo = $pseudo;
 
         return $this;
     }
 
     /**
-     * Get nom
+     * Get pseudo
      *
      * @return string
      */
-    public function getNom()
+    public function getPseudo()
     {
-        return $this->nom;
+        return $this->pseudo;
     }
 
     /**
@@ -234,51 +204,27 @@ class Utilisateur
     }
 
     /**
-     * Set numBoitier
+     * Set vitesseMoyenneGlob
      *
-     * @param integer $numBoitier
+     * @param integer $vitesseMoyenneGlob
      *
      * @return Utilisateur
      */
-    public function setNumBoitier($numBoitier)
+    public function setVitesseMoyenneGlob($vitesseMoyenneGlob)
     {
-        $this->numBoitier = $numBoitier;
+        $this->vitesseMoyenneGlob = $vitesseMoyenneGlob;
 
         return $this;
     }
 
     /**
-     * Get numBoitier
+     * Get vitesseMoyenneGlob
      *
      * @return int
      */
-    public function getNumBoitier()
+    public function getVitesseMoyenneGlob()
     {
-        return $this->numBoitier;
-    }
-
-    /**
-     * Set vitMoyGlob
-     *
-     * @param integer $vitMoyGlob
-     *
-     * @return Utilisateur
-     */
-    public function setVitMoyGlob($vitMoyGlob)
-    {
-        $this->vitMoyGlob = $vitMoyGlob;
-
-        return $this;
-    }
-
-    /**
-     * Get vitMoyGlob
-     *
-     * @return int
-     */
-    public function getVitMoyGlob()
-    {
-        return $this->vitMoyGlob;
+        return $this->vitesseMoyenneGlob;
     }
 
     /**
@@ -330,171 +276,115 @@ class Utilisateur
     }
 
     /**
-     * Set notifMail
+     * Set notifEmail
      *
-     * @param boolean $notifMail
+     * @param boolean $notifEmail
      *
      * @return Utilisateur
      */
-    public function setNotifMail($notifMail)
+    public function setNotifEmail($notifEmail)
     {
-        $this->notifMail = $notifMail;
+        $this->notifEmail = $notifEmail;
 
         return $this;
     }
 
     /**
-     * Get notifMail
+     * Get notifEmail
      *
      * @return bool
      */
-    public function getNotifMail()
+    public function getNotifEmail()
     {
-        return $this->notifMail;
+        return $this->notifEmail;
     }
 
     /**
-     * Set notifZonesRisque
+     * Set notifZonesRisques
      *
-     * @param boolean $notifZonesRisque
+     * @param boolean $notifZonesRisques
      *
      * @return Utilisateur
      */
-    public function setNotifZonesRisque($notifZonesRisque)
+    public function setNotifZonesRisques($notifZonesRisques)
     {
-        $this->notifZonesRisque = $notifZonesRisque;
+        $this->notifZonesRisques = $notifZonesRisques;
 
         return $this;
     }
 
     /**
-     * Get notifZonesRisque
+     * Get notifZonesRisques
      *
      * @return bool
      */
-    public function getNotifZonesRisque()
+    public function getNotifZonesRisques()
     {
-        return $this->notifZonesRisque;
+        return $this->notifZonesRisques;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->trajets = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     /**
-     * Set onOffTelProx
+     * Set boitier
      *
-     * @param boolean $onOffTelProx
+     * @param \KeeperBundle\Entity\Boitier $boitier
      *
      * @return Utilisateur
      */
-    public function setOnOffTelProx($onOffTelProx)
+    public function setBoitier(\KeeperBundle\Entity\Boitier $boitier)
     {
-        $this->onOffTelProx = $onOffTelProx;
+        $this->boitier = $boitier;
 
         return $this;
     }
 
     /**
-     * Get onOffTelProx
+     * Get boitier
      *
-     * @return bool
+     * @return \KeeperBundle\Entity\Boitier
      */
-    public function getOnOffTelProx()
+    public function getBoitier()
     {
-        return $this->onOffTelProx;
+        return $this->boitier;
     }
 
     /**
-     * Set onOffVeloStatic
+     * Add trajet
      *
-     * @param boolean $onOffVeloStatic
+     * @param \KeeperBundle\Entity\Trajet $trajet
      *
      * @return Utilisateur
      */
-    public function setOnOffVeloStatic($onOffVeloStatic)
+    public function addTrajet(\KeeperBundle\Entity\Trajet $trajet)
     {
-        $this->onOffVeloStatic = $onOffVeloStatic;
+        $this->trajets[] = $trajet;
 
         return $this;
     }
 
     /**
-     * Get onOffVeloStatic
+     * Remove trajet
      *
-     * @return bool
+     * @param \KeeperBundle\Entity\Trajet $trajet
      */
-    public function getOnOffVeloStatic()
+    public function removeTrajet(\KeeperBundle\Entity\Trajet $trajet)
     {
-        return $this->onOffVeloStatic;
+        $this->trajets->removeElement($trajet);
     }
 
     /**
-     * Set sensiVibration
+     * Get trajets
      *
-     * @param integer $sensiVibration
-     *
-     * @return Utilisateur
+     * @return \Doctrine\Common\Collections\Collection
      */
-    public function setSensiVibration($sensiVibration)
+    public function getTrajets()
     {
-        $this->sensiVibration = $sensiVibration;
-
-        return $this;
-    }
-
-    /**
-     * Get sensiVibration
-     *
-     * @return int
-     */
-    public function getSensiVibration()
-    {
-        return $this->sensiVibration;
-    }
-
-    /**
-     * Set sensiDistance
-     *
-     * @param integer $sensiDistance
-     *
-     * @return Utilisateur
-     */
-    public function setSensiDistance($sensiDistance)
-    {
-        $this->sensiDistance = $sensiDistance;
-
-        return $this;
-    }
-
-    /**
-     * Get sensiDistance
-     *
-     * @return int
-     */
-    public function getSensiDistance()
-    {
-        return $this->sensiDistance;
-    }
-
-    /**
-     * Set etatBoitier
-     *
-     * @param boolean $etatBoitier
-     *
-     * @return Utilisateur
-     */
-    public function setEtatBoitier($etatBoitier)
-    {
-        $this->etatBoitier = $etatBoitier;
-
-        return $this;
-    }
-
-    /**
-     * Get etatBoitier
-     *
-     * @return bool
-     */
-    public function getEtatBoitier()
-    {
-        return $this->etatBoitier;
+        return $this->trajets;
     }
 }
-

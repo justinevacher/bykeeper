@@ -5,12 +5,12 @@ namespace KeeperBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Coordonnees
+ * Coordonnee
  *
- * @ORM\Table(name="coordonnees")
- * @ORM\Entity(repositoryClass="KeeperBundle\Repository\CoordonneesRepository")
+ * @ORM\Table(name="coordonnee")
+ * @ORM\Entity(repositoryClass="KeeperBundle\Repository\CoordonneeRepository")
  */
-class Coordonnees
+class Coordonnee
 {
     /**
      * @var int
@@ -35,12 +35,11 @@ class Coordonnees
      */
     private $longitude;
 
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="idTrajet", type="integer")
+    /** 
+     * @ORM\ManyToOne(targetEntity="Trajet", inversedBy="coordonnees", cascade={"remove"})
+     * @ORM\JoinColumn(nullable=false)
      */
-    private $idTrajet;
+    private $trajet;
 
 
     /**
@@ -58,7 +57,7 @@ class Coordonnees
      *
      * @param float $latitude
      *
-     * @return Coordonnees
+     * @return Coordonnee
      */
     public function setLatitude($latitude)
     {
@@ -82,7 +81,7 @@ class Coordonnees
      *
      * @param float $longitude
      *
-     * @return Coordonnees
+     * @return Coordonnee
      */
     public function setLongitude($longitude)
     {
@@ -102,27 +101,26 @@ class Coordonnees
     }
 
     /**
-     * Set idTrajet
+     * Set trajet
      *
-     * @param integer $idTrajet
+     * @param \KeeperBundle\Entity\Trajet $trajet
      *
-     * @return Coordonnees
+     * @return Coordonnee
      */
-    public function setIdTrajet($idTrajet)
+    public function setTrajet(\KeeperBundle\Entity\Trajet $trajet)
     {
-        $this->idTrajet = $idTrajet;
+        $this->trajet = $trajet;
 
         return $this;
     }
 
     /**
-     * Get idTrajet
+     * Get trajet
      *
-     * @return int
+     * @return \KeeperBundle\Entity\Trajet
      */
-    public function getIdTrajet()
+    public function getTrajet()
     {
-        return $this->idTrajet;
+        return $this->trajet;
     }
 }
-

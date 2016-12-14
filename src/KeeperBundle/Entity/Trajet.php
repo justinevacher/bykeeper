@@ -45,30 +45,35 @@ class Trajet
     /**
      * @var int
      *
-     * @ORM\Column(name="vitM", type="integer", nullable=true)
+     * @ORM\Column(name="vitesseMoyenne", type="integer")
      */
-    private $vitM;
+    private $vitesseMoyenne;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="distance", type="integer", nullable=true)
+     * @ORM\Column(name="distance", type="integer")
      */
     private $distance;
 
     /**
-     * @var int
+     * @var \DateTime
      *
-     * @ORM\Column(name="duree", type="integer", nullable=true)
+     * @ORM\Column(name="duree", type="time")
      */
     private $duree;
 
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="idUtilisateur", type="integer")
+    /** 
+     * @ORM\ManyToOne(targetEntity="Utilisateur", inversedBy="trajets", cascade={"remove"})
+     * @ORM\JoinColumn(nullable=false)
      */
-    private $idUtilisateur;
+    private $utilisateur;
+
+    /** 
+     * @ORM\OneToMany(targetEntity="Coordonnee", mappedBy="trajet", cascade={"remove"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $coordonnees;
 
 
     /**
@@ -154,27 +159,27 @@ class Trajet
     }
 
     /**
-     * Set vitM
+     * Set vitesseMoyenne
      *
-     * @param integer $vitM
+     * @param integer $vitesseMoyenne
      *
      * @return Trajet
      */
-    public function setVitM($vitM)
+    public function setVitesseMoyenne($vitesseMoyenne)
     {
-        $this->vitM = $vitM;
+        $this->vitesseMoyenne = $vitesseMoyenne;
 
         return $this;
     }
 
     /**
-     * Get vitM
+     * Get vitesseMoyenne
      *
      * @return int
      */
-    public function getVitM()
+    public function getVitesseMoyenne()
     {
-        return $this->vitM;
+        return $this->vitesseMoyenne;
     }
 
     /**
@@ -204,7 +209,7 @@ class Trajet
     /**
      * Set duree
      *
-     * @param integer $duree
+     * @param \DateTime $duree
      *
      * @return Trajet
      */
@@ -218,35 +223,75 @@ class Trajet
     /**
      * Get duree
      *
-     * @return int
+     * @return \DateTime
      */
     public function getDuree()
     {
         return $this->duree;
     }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->coordonnees = new \Doctrine\Common\Collections\ArrayCollection();
+    }
 
     /**
-     * Set idUtilisateur
+     * Set utilisateur
      *
-     * @param integer $idUtilisateur
+     * @param \KeeperBundle\Entity\Utilisateur $utilisateur
      *
      * @return Trajet
      */
-    public function setIdUtilisateur($idUtilisateur)
+    public function setUtilisateur(\KeeperBundle\Entity\Utilisateur $utilisateur)
     {
-        $this->idUtilisateur = $idUtilisateur;
+        $this->utilisateur = $utilisateur;
 
         return $this;
     }
 
     /**
-     * Get idUtilisateur
+     * Get utilisateur
      *
-     * @return int
+     * @return \KeeperBundle\Entity\Utilisateur
      */
-    public function getIdUtilisateur()
+    public function getUtilisateur()
     {
-        return $this->idUtilisateur;
+        return $this->utilisateur;
+    }
+
+    /**
+     * Add coordonnee
+     *
+     * @param \KeeperBundle\Entity\Coordonnee $coordonnee
+     *
+     * @return Trajet
+     */
+    public function addCoordonnee(\KeeperBundle\Entity\Coordonnee $coordonnee)
+    {
+        $this->coordonnees[] = $coordonnee;
+
+        return $this;
+    }
+
+    /**
+     * Remove coordonnee
+     *
+     * @param \KeeperBundle\Entity\Coordonnee $coordonnee
+     */
+    public function removeCoordonnee(\KeeperBundle\Entity\Coordonnee $coordonnee)
+    {
+        $this->coordonnees->removeElement($coordonnee);
+    }
+
+    /**
+     * Get coordonnees
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCoordonnees()
+    {
+        return $this->coordonnees;
     }
 }
-
