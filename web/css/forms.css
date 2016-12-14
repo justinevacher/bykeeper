@@ -46,7 +46,7 @@ input {
     border-right-color: #76BBF9; 
 }
 
-input[name=login] {
+input[name=_username] {
     background: url(../img/profilBlue.svg) no-repeat;
     background-position: 99% 3px;
     background-size: 20px;
@@ -63,13 +63,14 @@ input[type=email] {
     background-position: 99% 3px;
     background-size: 20px;  
 }
+
 input[type=tel] {
     background: url(../img/phone.svg) no-repeat;
     background-position: 99% 4px;
     background-size: 20px; 
 }
 
-form button {
+input[type=submit] {
     width: 100%;
     color: white;
     background-color: #76BBF9;
@@ -82,11 +83,11 @@ form button {
     margin-bottom: 10px;
 }
 
-button[type=submit]+a+span {
+input[type=submit]+a+span {
     float: right;
 }
 
-button[type=submit]+a {
+input[type=submit]+a {
     width: auto;
     background-color: #ccc;
     color: white;
@@ -112,12 +113,12 @@ button[type=submit]+a {
         margin: auto;
         
     }
-     button[type=submit]+a+span{
+    input[type=submit]+a+span{
         display: block;
         float: none;
     	margin-top: 16px;
     }
-    button[type=submit]+a {
+    input[type=submit]+a {
         display: block;
         width: 100%;
         text-align: center;

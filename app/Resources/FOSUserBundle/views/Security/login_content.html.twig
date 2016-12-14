@@ -9,14 +9,24 @@
         <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
     {% endif %}
 
-    <label for="username">{{ 'security.login.username'|trans }}</label>
-    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <label for="username">{{ "Nom d'utilisateur"|trans }}</label>
+            <input type="text" id="username" name="_username" value="{{ last_username }}" placeholder="Entrer un nom d'utilisateur" required="required" />
 
-    <label for="password">{{ 'security.login.password'|trans }}</label>
-    <input type="password" id="password" name="_password" required="required" />
+            <label for="password">{{ 'Mot de passe'|trans }}</label>
+            <input type="password" id="password" name="_password" placeholder="Entrer un mot de passe" required="required" />
 
-    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
-    <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
-
-    <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+            <input type="checkbox" id="remember_me" name="_remember_me" value="on" checked="checked" />
+            <label for="remember_me">{{ 'Se souvenir de moi'|trans }}</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <input type="submit" id="_submit" name="_submit" value="{{ 'Connexion'|trans }}" />
+            <a href="{{ path('accueil') }}">Annuler</a>
+            <span><a href="#">Mot de passe oublié ?</a></span>
+            <div class="clear"></div>
+        </div>
+    </div>
 </form>
