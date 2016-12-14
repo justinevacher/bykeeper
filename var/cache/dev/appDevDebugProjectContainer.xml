@@ -25,14 +25,9 @@
     <parameter key="kernel.charset">UTF-8</parameter>
     <parameter key="kernel.container_class">appDevDebugProjectContainer</parameter>
     <parameter key="database_host">127.0.0.1</parameter>
-    <parameter key="database_port">null</parameter>
     <parameter key="database_name">symfony</parameter>
     <parameter key="database_user">root</parameter>
     <parameter key="database_password">root</parameter>
-    <parameter key="mailer_transport">smtp</parameter>
-    <parameter key="mailer_host">127.0.0.1</parameter>
-    <parameter key="mailer_user">null</parameter>
-    <parameter key="mailer_password">null</parameter>
     <parameter key="secret">ThisTokenIsNotSoSecretChangeIt</parameter>
     <parameter key="locale">en</parameter>
     <parameter key="fragment.renderer.hinclude.global_template">null</parameter>
@@ -167,17 +162,16 @@
     <parameter key="swiftmailer.mailer.default.delivery.enabled">true</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.encryption">null</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.port">25</parameter>
-    <parameter key="swiftmailer.mailer.default.transport.smtp.host">127.0.0.1</parameter>
+    <parameter key="swiftmailer.mailer.default.transport.smtp.host">localhost</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.username">null</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.password">null</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.auth_mode">null</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.timeout">30</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.source_ip">null</parameter>
-    <parameter key="swiftmailer.spool.default.memory.path">/mnt/c/Users/Baptiste/Documents/Cours LP DAWIN/ByKeeper/Développement/var/cache/dev/swiftmailer/spool/default</parameter>
-    <parameter key="swiftmailer.mailer.default.spool.enabled">true</parameter>
+    <parameter key="swiftmailer.mailer.default.spool.enabled">false</parameter>
     <parameter key="swiftmailer.mailer.default.plugin.impersonate">null</parameter>
     <parameter key="swiftmailer.mailer.default.single_address">null</parameter>
-    <parameter key="swiftmailer.spool.enabled">true</parameter>
+    <parameter key="swiftmailer.spool.enabled">false</parameter>
     <parameter key="swiftmailer.delivery.enabled">true</parameter>
     <parameter key="swiftmailer.single_address">null</parameter>
     <parameter key="swiftmailer.mailers" type="collection">
@@ -488,7 +482,7 @@
                   <tag name="cache.pool"/>
                   <argument>2Pvfc646Js</argument>
                   <argument>0</argument>
-                  <argument>ooSr2YIyV0TzFHvov7Lxyw</argument>
+                  <argument>5KnmWn3uCOVA7JxgRo+Q8A</argument>
                   <argument>/mnt/c/Users/Baptiste/Documents/Cours LP DAWIN/ByKeeper/Développement/var/cache/dev/pools</argument>
                   <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                   <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -501,7 +495,7 @@
                   <tag name="cache.pool"/>
                   <argument>Z8JVJYByg7</argument>
                   <argument>0</argument>
-                  <argument>ooSr2YIyV0TzFHvov7Lxyw</argument>
+                  <argument>5KnmWn3uCOVA7JxgRo+Q8A</argument>
                   <argument>/mnt/c/Users/Baptiste/Documents/Cours LP DAWIN/ByKeeper/Développement/var/cache/dev/pools</argument>
                   <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
                   <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -833,7 +827,7 @@
       <tag name="cache.pool"/>
       <argument>IN0+A61QEv</argument>
       <argument>0</argument>
-      <argument>ooSr2YIyV0TzFHvov7Lxyw</argument>
+      <argument>5KnmWn3uCOVA7JxgRo+Q8A</argument>
       <argument>/mnt/c/Users/Baptiste/Documents/Cours LP DAWIN/ByKeeper/Développement/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
@@ -1569,7 +1563,7 @@
       <argument type="collection">
         <argument type="service">
           <service class="Symfony\Component\Security\Core\Authentication\Provider\AnonymousAuthenticationProvider" public="false">
-            <argument>582c80db0f4fb9.23212773</argument>
+            <argument>584ecf5c5f7499.01368125</argument>
           </service>
         </argument>
       </argument>
@@ -1703,7 +1697,7 @@
         <argument type="service">
           <service class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
             <argument type="service" id="security.token_storage"/>
-            <argument>582c80db0f4fb9.23212773</argument>
+            <argument>584ecf5c5f7499.01368125</argument>
             <argument type="service" id="monolog.logger.security" on-invalid="null"/>
             <argument type="service" id="security.authentication.manager"/>
           </service>
@@ -1976,7 +1970,6 @@
       <argument type="service" id="service_container"/>
       <argument type="service" id="logger" on-invalid="null"/>
     </service>
-    <service id="swiftmailer.mailer.default.transport.eventdispatcher" class="Swift_Events_SimpleEventDispatcher" public="false"/>
     <service id="swiftmailer.mailer.default" class="Swift_Mailer">
       <argument type="service" id="swiftmailer.mailer.default.transport"/>
     </service>
@@ -2002,11 +1995,11 @@
       <argument type="collection">
         <argument key="driver">pdo_mysql</argument>
         <argument key="host">127.0.0.1</argument>
-        <argument key="port">null</argument>
         <argument key="dbname">symfony</argument>
         <argument key="user">root</argument>
         <argument key="password">root</argument>
         <argument key="charset">UTF8</argument>
+        <argument key="port">null</argument>
         <argument key="driverOptions" type="collection"/>
         <argument key="defaultTableOptions" type="collection"/>
       </argument>
@@ -2090,7 +2083,9 @@
       <argument type="service">
         <service class="Doctrine\ORM\Configuration" public="false">
           <call method="setEntityNamespaces">
-            <argument type="collection"/>
+            <argument type="collection">
+              <argument key="KeeperBundle">KeeperBundle\Entity</argument>
+            </argument>
           </call>
           <call method="setMetadataCacheImpl">
             <argument type="service" id="doctrine_cache.providers.doctrine.orm.default_metadata_cache"/>
@@ -2103,7 +2098,19 @@
           </call>
           <call method="setMetadataDriverImpl">
             <argument type="service">
-              <service class="Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain" public="false"/>
+              <service class="Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain" public="false">
+                <call method="addDriver">
+                  <argument type="service">
+                    <service class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
+                      <argument type="service" id="annotation_reader"/>
+                      <argument type="collection">
+                        <argument>/mnt/c/Users/Baptiste/Documents/Cours LP DAWIN/ByKeeper/Développement/src/KeeperBundle/Entity</argument>
+                      </argument>
+                    </service>
+                  </argument>
+                  <argument>KeeperBundle\Entity</argument>
+                </call>
+              </service>
             </argument>
           </call>
           <call method="setProxyDir">
@@ -2554,15 +2561,7 @@
       </call>
       <autowiring-type>Psr\Log\LoggerInterface</autowiring-type>
     </service>
-    <service id="swiftmailer.mailer.default.transport" class="Swift_Transport_SpoolTransport">
-      <argument type="service" id="swiftmailer.mailer.default.transport.eventdispatcher"/>
-      <argument type="service" id="swiftmailer.mailer.default.spool"/>
-      <call method="registerPlugin">
-        <argument type="service" id="swiftmailer.mailer.default.plugin.messagelogger"/>
-      </call>
-    </service>
-    <service id="swiftmailer.mailer.default.spool" class="Swift_MemorySpool"/>
-    <service id="swiftmailer.mailer.default.transport.real" class="Swift_Transport_EsmtpTransport">
+    <service id="swiftmailer.mailer.default.transport" class="Swift_Transport_EsmtpTransport">
       <argument type="service">
         <service class="Swift_Transport_StreamBuffer" public="false">
           <argument type="service">
@@ -2596,9 +2595,11 @@
           </service>
         </argument>
       </argument>
-      <argument type="service" id="swiftmailer.mailer.default.transport.eventdispatcher"/>
+      <argument type="service">
+        <service class="Swift_Events_SimpleEventDispatcher" public="false"/>
+      </argument>
       <call method="setHost">
-        <argument>127.0.0.1</argument>
+        <argument>localhost</argument>
       </call>
       <call method="setPort">
         <argument>25</argument>
@@ -2612,11 +2613,12 @@
       <call method="setSourceIp">
         <argument>null</argument>
       </call>
+      <call method="registerPlugin">
+        <argument type="service" id="swiftmailer.mailer.default.plugin.messagelogger"/>
+      </call>
     </service>
     <service id="session.storage" alias="session.storage.native"/>
     <service id="event_dispatcher" alias="debug.event_dispatcher"/>
-    <service id="swiftmailer.spool" alias="swiftmailer.mailer.default.spool"/>
-    <service id="swiftmailer.transport.real" alias="swiftmailer.mailer.default.transport.real"/>
     <service id="swiftmailer.plugin.messagelogger" alias="swiftmailer.mailer.default.plugin.messagelogger"/>
     <service id="swiftmailer.mailer" alias="swiftmailer.mailer.default"/>
     <service id="swiftmailer.transport" alias="swiftmailer.mailer.default.transport"/>
