@@ -16,4 +16,4 @@ ByKeeper est un projet créé à l'occasion des Startup Days de la Licence profe
 
 > - Un dispositif de géolocalisation en temps réel qui indique aux utilisateurs à quel endroit se situe leur vélo.
 > - Un système d'alertes permettant aux utilisateurs de savoir si leur vélo est manipulé, en vue d'être volé.
-> - Une alarme sonore embarquée qui se déclenche dès lors que le vélo est volé.
+> - Une alarme sonore embarquée qui se déclenche dès lors que le vélo est volé.#bykeeper
