@@ -28,8 +28,7 @@
         <h1>Données personnelles</h1>
         <form action="#" class="row">
                 <label for="numBoitier">Numéro de boitier</label><br>
-                <input type="text" name="numBoitier" value="07398427342"><br>
-
+                <input type="text" name="numBoitier" value="26458698" disabled="true"><br>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" >
                 <label for="prenom">Prénom</label><br>
                 <input type="text" name="prenom" value="Thomas"><br>
@@ -44,5 +43,12 @@
             </div>
             <button class="btn btn-default">Enregistrer</button>
          </form>
+
+<label for="numBoitier">Numéro de boitier</label><br>
+<input type="text" name="numBoitier" value="{{numBoitier}}" disabled="true"><br>
+{{ form_start(form) }}
+{{ form_widget(form) }}
+{{ form_end(form) }}
+
     </main>
 {% endblock %}
