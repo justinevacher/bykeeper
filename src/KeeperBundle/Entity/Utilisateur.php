@@ -25,49 +25,100 @@ class Utilisateur extends BaseUser
     /**
      * @var string
      *
-     * @ORM\Column(name="numTel", type="string", length=255,nullable=true)
+     * @ORM\Column(name="numTel", type="string", length=255)
      */
     private $numTel;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="vitesseMoyenneGlob", type="integer", nullable=true)
+     * @ORM\Column(name="vitesseMoyenneGlob", type="integer")
      */
-    private $vitesseMoyenneGlob;
+    private $vitesseMoyenneGlob = 0;
 
     /**
      * @var int
      *
-     * @ORM\Column(name="distanceGlob", type="integer", nullable=true)
+     * @ORM\Column(name="distanceGlob", type="integer")
      */
-    private $distanceGlob;
+    private $distanceGlob = 0;
 
     /**
      * @var bool
      *
-     * @ORM\Column(name="notifSMS", type="boolean", nullable=true)
+     * @ORM\Column(name="notifSMS", type="boolean")
      */
-    private $notifSMS;
+    private $notifSMS = false;
 
     /**
      * @var bool
      *
-     * @ORM\Column(name="notifEmail", type="boolean", nullable=true)
+     * @ORM\Column(name="notifEmail", type="boolean")
      */
-    private $notifEmail;
+    private $notifEmail = false;
 
     /**
      * @var bool
      *
-     * @ORM\Column(name="notifZonesRisques", type="boolean", nullable=true)
+     * @ORM\Column(name="notifZonesRisques", type="boolean")
      */
-    private $notifZonesRisques;
+    private $notifZonesRisques = false;
 
-    /** 
-     * @ORM\OneToOne(targetEntity="Boitier", cascade={"remove"})
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="numBoitier", type="integer", unique=true)
      */
-    private $boitier;
+    private $numBoitier;
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="etatBoitier", type="boolean")
+     */
+    private $etatBoitier = false;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="sensibiliteDistanceBoitier", type="integer")
+     */
+    private $sensibiliteDistanceBoitier = 0;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="sensibiliteVibrationBoitier", type="integer")
+     */
+    private $sensibiliteVibrationBoitier = 0;
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="optionBoitierVeloStatique", type="boolean")
+     */
+    private $optionBoitierVeloStatique = false;
+
+    /**
+     * @var bool
+     *
+     * @ORM\Column(name="optionBoitierProximiteTel", type="boolean")
+     */
+    private $optionBoitierProximiteTel = false;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="latitudeBoitier", type="float")
+     */
+    private $latitudeBoitier = 0;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="longitudeBoitier", type="float")
+     */
+    private $longitudeBoitier = 0;
 
     /** 
      * @ORM\OneToMany(targetEntity="Trajet", mappedBy="utilisateur", cascade={"remove"})
@@ -229,6 +280,199 @@ class Utilisateur extends BaseUser
     {
         return $this->notifZonesRisques;
     }
+
+    /**
+     * Set numBoitier
+     *
+     * @param integer $numBoitier
+     *
+     * @return Utilisateur
+     */
+    public function setNumBoitier($numBoitier)
+    {
+        $this->numBoitier = $numBoitier;
+
+        return $this;
+    }
+
+    /**
+     * Get numBoitier
+     *
+     * @return integer
+     */
+    public function getNumBoitier()
+    {
+        return $this->numBoitier;
+    }
+
+    /**
+     * Set etatBoitier
+     *
+     * @param boolean $etatBoitier
+     *
+     * @return Utilisateur
+     */
+    public function setEtatBoitier($etatBoitier)
+    {
+        $this->etatBoitier = $etatBoitier;
+
+        return $this;
+    }
+
+    /**
+     * Get etatBoitier
+     *
+     * @return boolean
+     */
+    public function getEtatBoitier()
+    {
+        return $this->etatBoitier;
+    }
+
+    /**
+     * Set sensibiliteDistanceBoitier
+     *
+     * @param integer $sensibiliteDistanceBoitier
+     *
+     * @return Utilisateur
+     */
+    public function setSensibiliteDistanceBoitier($sensibiliteDistanceBoitier)
+    {
+        $this->sensibiliteDistanceBoitier = $sensibiliteDistanceBoitier;
+
+        return $this;
+    }
+
+    /**
+     * Get sensibiliteDistanceBoitier
+     *
+     * @return integer
+     */
+    public function getSensibiliteDistanceBoitier()
+    {
+        return $this->sensibiliteDistanceBoitier;
+    }
+
+    /**
+     * Set sensibiliteVibrationBoitier
+     *
+     * @param integer $sensibiliteVibrationBoitier
+     *
+     * @return Utilisateur
+     */
+    public function setSensibiliteVibrationBoitier($sensibiliteVibrationBoitier)
+    {
+        $this->sensibiliteVibrationBoitier = $sensibiliteVibrationBoitier;
+
+        return $this;
+    }
+
+    /**
+     * Get sensibiliteVibrationBoitier
+     *
+     * @return integer
+     */
+    public function getSensibiliteVibrationBoitier()
+    {
+        return $this->sensibiliteVibrationBoitier;
+    }
+
+    /**
+     * Set optionBoitierVeloStatique
+     *
+     * @param boolean $optionBoitierVeloStatique
+     *
+     * @return Utilisateur
+     */
+    public function setOptionBoitierVeloStatique($optionBoitierVeloStatique)
+    {
+        $this->optionBoitierVeloStatique = $optionBoitierVeloStatique;
+
+        return $this;
+    }
+
+    /**
+     * Get optionBoitierVeloStatique
+     *
+     * @return boolean
+     */
+    public function getOptionBoitierVeloStatique()
+    {
+        return $this->optionBoitierVeloStatique;
+    }
+
+    /**
+     * Set optionBoitierProximiteTel
+     *
+     * @param boolean $optionBoitierProximiteTel
+     *
+     * @return Utilisateur
+     */
+    public function setOptionBoitierProximiteTel($optionBoitierProximiteTel)
+    {
+        $this->optionBoitierProximiteTel = $optionBoitierProximiteTel;
+
+        return $this;
+    }
+
+    /**
+     * Get optionBoitierProximiteTel
+     *
+     * @return boolean
+     */
+    public function getOptionBoitierProximiteTel()
+    {
+        return $this->optionBoitierProximiteTel;
+    }
+
+    /**
+     * Set latitudeBoitier
+     *
+     * @param float $latitudeBoitier
+     *
+     * @return Utilisateur
+     */
+    public function setLatitudeBoitier($latitudeBoitier)
+    {
+        $this->latitudeBoitier = $latitudeBoitier;
+
+        return $this;
+    }
+
+    /**
+     * Get latitudeBoitier
+     *
+     * @return float
+     */
+    public function getLatitudeBoitier()
+    {
+        return $this->latitudeBoitier;
+    }
+
+    /**
+     * Set longitudeBoitier
+     *
+     * @param float $longitudeBoitier
+     *
+     * @return Utilisateur
+     */
+    public function setLongitudeBoitier($longitudeBoitier)
+    {
+        $this->longitudeBoitier = $longitudeBoitier;
+
+        return $this;
+    }
+
+    /**
+     * Get longitudeBoitier
+     *
+     * @return float
+     */
+    public function getLongitudeBoitier()
+    {
+        return $this->longitudeBoitier;
+    }
+
     /**
      * Constructor
      */
@@ -236,30 +480,6 @@ class Utilisateur extends BaseUser
     {
         parent::__construct();
         $this->trajets = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
-     * Set boitier
-     *
-     * @param \KeeperBundle\Entity\Boitier $boitier
-     *
-     * @return Utilisateur
-     */
-    public function setBoitier(\KeeperBundle\Entity\Boitier $boitier)
-    {
-        $this->boitier = $boitier;
-
-        return $this;
-    }
-
-    /**
-     * Get boitier
-     *
-     * @return \KeeperBundle\Entity\Boitier
-     */
-    public function getBoitier()
-    {
-        return $this->boitier;
     }
 
     /**

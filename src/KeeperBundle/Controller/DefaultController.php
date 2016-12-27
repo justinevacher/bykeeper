@@ -88,7 +88,7 @@ class DefaultController extends Controller
         $userManager = $this->get('fos_user.user_manager');
         $userId = $this->getUser()->getId();
         $user = $userManager->findUserBy(array('id' => $userId));
-        $numBoitier = $user->getBoitier()->getNumBoitier();
+        $numBoitier = $user->getNumBoitier();
 
         $form = $this->createFormBuilder($user)
         ->add('username', TextType::class, array('label' => 'Nom d\'Utilisateur',
