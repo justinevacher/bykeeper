@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Client :  127.0.0.1
--- Généré le :  Mer 14 Décembre 2016 à 13:23
+-- Généré le :  Mar 27 Décembre 2016 à 19:32
 -- Version du serveur :  5.7.14
 -- Version de PHP :  7.0.10
 
@@ -19,22 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `symfony`
 --
-
--- --------------------------------------------------------
-
---
--- Structure de la table `boitier`
---
-
-CREATE TABLE `boitier` (
-  `id` int(11) NOT NULL,
-  `numBoitier` int(11) NOT NULL,
-  `etatBoitier` tinyint(1) NOT NULL,
-  `sensibiliteDistance` int(11) NOT NULL,
-  `sensibiliteVibration` int(11) NOT NULL,
-  `veloStatique` tinyint(1) NOT NULL,
-  `proximiteTel` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -74,28 +58,43 @@ CREATE TABLE `trajet` (
 
 CREATE TABLE `utilisateur` (
   `id` int(11) NOT NULL,
-  `boitier_id` int(11) NOT NULL,
-  `pseudo` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `mdp` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `username` varchar(180) COLLATE utf8_unicode_ci NOT NULL,
+  `username_canonical` varchar(180) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(180) COLLATE utf8_unicode_ci NOT NULL,
+  `email_canonical` varchar(180) COLLATE utf8_unicode_ci NOT NULL,
+  `enabled` tinyint(1) NOT NULL,
+  `salt` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `last_login` datetime DEFAULT NULL,
+  `confirmation_token` varchar(180) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `password_requested_at` datetime DEFAULT NULL,
+  `roles` longtext COLLATE utf8_unicode_ci NOT NULL COMMENT '(DC2Type:array)',
   `numTel` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `vitesseMoyenneGlob` int(11) NOT NULL,
   `distanceGlob` int(11) NOT NULL,
   `notifSMS` tinyint(1) NOT NULL,
   `notifEmail` tinyint(1) NOT NULL,
-  `notifZonesRisques` tinyint(1) NOT NULL
+  `notifZonesRisques` tinyint(1) NOT NULL,
+  `numBoitier` int(11) NOT NULL,
+  `etatBoitier` tinyint(1) NOT NULL,
+  `sensibiliteDistanceBoitier` int(11) NOT NULL,
+  `sensibiliteVibrationBoitier` int(11) NOT NULL,
+  `optionBoitierVeloStatique` tinyint(1) NOT NULL,
+  `optionBoitierProximiteTel` tinyint(1) NOT NULL,
+  `latitudeBoitier` double NOT NULL,
+  `longitudeBoitier` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Contenu de la table `utilisateur`
+--
+
+INSERT INTO `utilisateur` (`id`, `username`, `username_canonical`, `email`, `email_canonical`, `enabled`, `salt`, `password`, `last_login`, `confirmation_token`, `password_requested_at`, `roles`, `numTel`, `vitesseMoyenneGlob`, `distanceGlob`, `notifSMS`, `notifEmail`, `notifZonesRisques`, `numBoitier`, `etatBoitier`, `sensibiliteDistanceBoitier`, `sensibiliteVibrationBoitier`, `optionBoitierVeloStatique`, `optionBoitierProximiteTel`, `latitudeBoitier`, `longitudeBoitier`) VALUES
+(1, 'admin', 'admin', 'admin@testtest.fr', 'admin@testtest.fr', 1, NULL, '$2y$13$EkHf1qkGmFHzrUhFBmalPuRM0bx/dA3kHk5mS9oHfUUgML6nbtsE2', '2016-12-27 19:28:20', NULL, NULL, 'a:1:{i:0;s:10:"ROLE_ADMIN";}', '0102030405', 0, 0, 1, 1, 0, 454545444, 0, 0, 0, 0, 0, 0, 0);
 
 --
 -- Index pour les tables exportées
 --
-
---
--- Index pour la table `boitier`
---
-ALTER TABLE `boitier`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `UNIQ_E91F629766B0EB30` (`numBoitier`);
 
 --
 -- Index pour la table `coordonnee`
@@ -116,19 +115,15 @@ ALTER TABLE `trajet`
 --
 ALTER TABLE `utilisateur`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `UNIQ_1D1C63B386CC499D` (`pseudo`),
-  ADD UNIQUE KEY `UNIQ_1D1C63B3E7927C74` (`email`),
-  ADD UNIQUE KEY `UNIQ_1D1C63B344DE6F7C` (`boitier_id`);
+  ADD UNIQUE KEY `UNIQ_1D1C63B392FC23A8` (`username_canonical`),
+  ADD UNIQUE KEY `UNIQ_1D1C63B3A0D96FBF` (`email_canonical`),
+  ADD UNIQUE KEY `UNIQ_1D1C63B366B0EB30` (`numBoitier`),
+  ADD UNIQUE KEY `UNIQ_1D1C63B3C05FB297` (`confirmation_token`);
 
 --
 -- AUTO_INCREMENT pour les tables exportées
 --
 
---
--- AUTO_INCREMENT pour la table `boitier`
---
-ALTER TABLE `boitier`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `coordonnee`
 --
@@ -143,7 +138,7 @@ ALTER TABLE `trajet`
 -- AUTO_INCREMENT pour la table `utilisateur`
 --
 ALTER TABLE `utilisateur`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- Contraintes pour les tables exportées
 --
@@ -159,12 +154,6 @@ ALTER TABLE `coordonnee`
 --
 ALTER TABLE `trajet`
   ADD CONSTRAINT `FK_2B5BA98CFB88E14F` FOREIGN KEY (`utilisateur_id`) REFERENCES `utilisateur` (`id`);
-
---
--- Contraintes pour la table `utilisateur`
---
-ALTER TABLE `utilisateur`
-  ADD CONSTRAINT `FK_1D1C63B344DE6F7C` FOREIGN KEY (`boitier_id`) REFERENCES `boitier` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
