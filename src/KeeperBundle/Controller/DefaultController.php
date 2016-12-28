@@ -11,6 +11,8 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
+use Symfony\Component\Form\Extension\Core\Type\RangeType;
+
 
 
 class DefaultController extends Controller
@@ -46,7 +48,9 @@ class DefaultController extends Controller
         ->add('notifEmail', CheckboxType::class, array('label' => 'Par MAIL',
             'required' =>false))
         ->add('notifZonesRisques', CheckboxType::class, array('label'=> "Lorsque j'active mon alarme dans une zone à risques",'required' =>false))
-        ->add('submit', SubmitType::class, array('label' => 'Enregistrer'))
+        ->add('optionBoitierProximiteTel', CheckboxType::class, array('label'=> "Activation et désactivation de l'alarme si mon smartphone est à proximité ",'required' =>false))
+        ->add('optionBoitierVeloStatique', CheckboxType::class, array('label'=> "Activer l'alarme quand mon vélo reste trop longtemps sans bouger (tout en prenant compte les autres paramètres)",'required' =>false))
+        ->add('submit', SubmitType::class, array('label' => 'Valider'))
         ->getForm();
 
         $form->handleRequest($request);
@@ -68,7 +72,43 @@ class DefaultController extends Controller
      */
     public function reglageCapteurAction(Request $request)
     {
-        return $this->render('KeeperBundle:Default:reglage-capteur.html.twig');
+        $userManager = $this->get('fos_user.user_manager');
+        $userId = $this->getUser()->getId();
+        $user = $userManager->findUserBy(array('id' => $userId));
+
+        $valVibration = $user->getSensibiliteVibrationBoitier();
+        $valDistance = $user->getSensibiliteDistanceBoitier();
+
+        $form = $this->createFormBuilder($user)
+        ->add('sensibiliteVibrationBoitier', RangeType::class,array(
+    'attr' => array(
+        'min' => 0,
+        'max' => 100,
+        'step' => 10,
+        'onchange' => 'updateVibration(this.value);')))
+        ->add('sensibiliteDistanceBoitier', RangeType::class,array(
+    'attr' => array(
+        'min' => 10,
+        'max' => 100,
+        'step' => 10,
+        'onchange' => 'updateDistance(this.value);')))
+        ->add('submit', SubmitType::class, array('label' => 'Valider'))
+        ->getForm();
+
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $user = $form->getData();
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($user);
+            $entityManager->flush();
+        }
+
+        return $this->render('KeeperBundle:Default:reglage-capteur.html.twig', array(
+            'form' => $form->createView(),
+            'valVibration' => $valVibration,
+            'valDistance' => $valDistance
+            ));
     }
 
     /**
@@ -88,9 +128,9 @@ class DefaultController extends Controller
         $userManager = $this->get('fos_user.user_manager');
         $userId = $this->getUser()->getId();
         $user = $userManager->findUserBy(array('id' => $userId));
-        $numBoitier = $user->getNumBoitier();
 
         $form = $this->createFormBuilder($user)
+        ->add('numBoitier', TextType::class, array('label' => 'Numéro de boitier', 'disabled' => true))
         ->add('username', TextType::class, array('label' => 'Nom d\'Utilisateur',
             'disabled' => 'true'))
         ->add('numTel', TextType::class, array('label' => 'Numéro de téléphone portable'))
@@ -109,7 +149,6 @@ class DefaultController extends Controller
 
         return $this->render('KeeperBundle:Default:donnees-perso.html.twig', array(
             'form' => $form->createView(),
-            'numBoitier' => $numBoitier
             ));
     }
 

@@ -2,103 +2,85 @@
 {% extends 'layout.html.twig' %}
 
 {% block css %}
-    <link rel="stylesheet" href="{{ asset('css/reglage-capteur.css') }}" >
-    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('css/reglage-capteur.css') }}" >
+<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
 {% endblock %}
 
 {% block menu %}
-    <!-- menu desktop -->
-    <div class="row">
-        <nav class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 row">
-            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a class="menu-inactive" href="{{ path('tableau_de_bord') }}">Tableau de bord</a></li>
-            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a class="menu-active" href="{{ path('parametrage_alarme') }}">Paramétrages</a></li>
-            <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a class="menu-inactive" href="{{ path('retrouver_velo') }}">Retrouver mon vélo</a></li>
-        </nav>
-    </div>
-
-    <!-- menu mobile -->
-    <nav class="b-nav">
-        <li><a class="b-link" href="{{ path('tableau_de_bord') }}">Tableau de bord</a></li>
-        <li><a class="b-link" href="{{ path('parametrage_alarme') }}">Paramétrages</a></li>
-        <li><a class="b-link" href="{{ path('retrouver_velo') }}">Retrouver mon vélo</a></li>
+<!-- menu desktop -->
+<div class="row">
+    <nav class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 row">
+        <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a class="menu-inactive" href="{{ path('tableau_de_bord') }}">Tableau de bord</a></li>
+        <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a class="menu-active" href="{{ path('parametrage_alarme') }}">Paramétrages</a></li>
+        <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><a class="menu-inactive" href="{{ path('retrouver_velo') }}">Retrouver mon vélo</a></li>
     </nav>
+</div>
+
+<!-- menu mobile -->
+<nav class="b-nav">
+    <li><a class="b-link" href="{{ path('tableau_de_bord') }}">Tableau de bord</a></li>
+    <li><a class="b-link" href="{{ path('parametrage_alarme') }}">Paramétrages</a></li>
+    <li><a class="b-link" href="{{ path('retrouver_velo') }}">Retrouver mon vélo</a></li>
+</nav>
 {% endblock %}
 
 {% block body %}
-    <div class="row">
-        <div>
-            <button id="alarme" onclick="location.href='{{ path("parametrage_alarme") }}'"></button>
-            <button id="capteur" onclick="location.href='{{ path("reglage_capteur") }}'"></button>
-            <div class="stopFloat"></div>
-        </div>
+<div class="row">
+    <div>
+        <button id="alarme" onclick="location.href='{{ path("parametrage_alarme") }}'"></button>
+        <button id="capteur" onclick="location.href='{{ path("reglage_capteur") }}'"></button>
+        <div class="stopFloat"></div>
     </div>
-    <div class="row">
-        <div>
-            <i class="glyphicon glyphicon-triangle-bottom"></i>
-            <i class="glyphicon glyphicon-triangle-bottom"></i>
-        </div>
+</div>
+<div class="row">
+    <div>
+        <i class="glyphicon glyphicon-triangle-bottom"></i>
+        <i class="glyphicon glyphicon-triangle-bottom"></i>
     </div>
-    
-    <!-- CORPS -->
-    <main>
-        <h1>Réglages du capteur</h1>
-        <form action="#" class="row">
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                        <h2>1ère alerte : la sensibilité du capteur vibration</h2>
-                        <p>Représente un mouvement suspect du vélo.</p>
-                        <p>Simple envoie de sms/email.</p>
-                        <div id="alerte1"><span>0%</span><span>100%</span></div>
-                        <div>Valeur : <span id="val1">50%</span></div>
-                        <p><i class="glyphicon glyphicon-info-sign"></i>À 0%, vous ne recevrez pas la première alerte</p>
-                        
-                </div>
-                
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                    <h2>2ème alerte : la sensibilité de la distance</h2>
-                    <p>Représente un déplacement du vélo.</p>
-                    <p>Envoie de sms/email et activation de l'alarme.</p>
-                    <div id="alerte2"><span>10m</span><span>100m</span></div>
-                    <div>Valeur : <span id="val2">50m</span></div>
-                </div>
+</div>
 
-                <button class="btn btn-default">Valider</button>
+<!-- CORPS -->
+<main>
+    <h1>Réglages du capteur</h1>
+    <form action="#" class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <h2>1ère alerte : la sensibilité du capteur vibration</h2>
+            <p>Représente un mouvement suspect du vélo.</p>
+            <p>Simple envoie de sms/email.</p>
+            <div id="alerte1"><span>0%</span><span>100%</span></div>
+            <div>Valeur : <span id="valVibration">{{ valVibration }}</span>%</div>
+            <p><i class="glyphicon glyphicon-info-sign"></i>À 0%, vous ne recevrez pas la première alerte</p>
 
-        </form>
-    </main>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <h2>2ème alerte : la sensibilité de la distance</h2>
+            <p>Représente un déplacement du vélo.</p>
+            <p>Envoie de sms/email et activation de l'alarme.</p>
+            <div id="alerte2"><span>10m</span><span>100m</span></div>
+            <div>Valeur : <span id="valDistance">{{ valDistance }}</span>m</div>
+        </div>
+
+        <button class="btn btn-default">Valider</button>
+
+    </form>
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+</main>
 {% endblock %}
 
 {% block scripts %}
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-    <script>
-        // Slider de la sensibilité
-        $("#alerte1").slider({
-            min: 0,
-            max: 100,
-            step: 10,
-            value: 50,
-            range: "min",
-            slide: function(event, ui){}
-        });
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script>
+    function updateVibration(val){
+        $("#valVibration").html(val); 
+    }
 
-        //Affichage valeur
-        $( "#alerte1" ).on( "slide", function( event, ui ) {
-            $("#val1").text(ui.value + "%");
-        } );
-
-        // Slider de la distance
-        $("#alerte2").slider({
-            min: 10,
-            max: 100,
-            step: 10,
-            value: 50,
-            range: "min",
-            slide: function(event, ui){}
-        });
-
-        // Affichage valeur
-        $( "#alerte2" ).on( "slide", function( event, ui ) {
-            $("#val2").text(ui.value + "m");
-        });
-    </script>
+    function updateDistance(val){
+      $("#valDistance").html(val); 
+  }
+</script>
 {% endblock %}
